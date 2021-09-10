@@ -168,11 +168,11 @@ export class AppComponent implements OnInit {
       targetY = mouseY * 0.001;
 
       // Update objects
-      sphere.rotation.y = 0.5 * elapsedTime;
+      sphere.rotation.y = 0.7 * elapsedTime;
 
-      sphere.rotation.y += 0.04 * (targetX - sphere.rotation.y);
-      sphere.rotation.x += 0.08 * (targetY - sphere.rotation.x);
-      sphere.position.z += -0.06 * (targetY - sphere.rotation.x);
+      sphere.rotation.y += 0.1 * (targetX - sphere.rotation.y);
+      sphere.rotation.x += 0.21 * (targetY - sphere.rotation.x);
+      sphere.position.z += -0.16 * (targetY - sphere.rotation.x);
 
       // Update Orbital Controls
       // controls.update()

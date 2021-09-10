@@ -1,4 +1,127 @@
-* {
-  padding: 20px;
-  margin: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Overlock&family=Rubik+Mono+One&display=swap");
+.sections {
+  position: relative;
+  z-index: -1;
+  display: grid;
+  place-content: center;
+}
+.section-1 {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 100vh;
+}
+.section-1::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  bottom: 0%;
+  left: 0;
+  width: 1200%;
+  height: 250px;
+  background-size: cover;
+  background: url("/assets/theHills.png") no-repeat;
+}
+/* .section-1 img {
+  position: absolute;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 50vh;
+} */
+.box1 {
+  position: relative;
+  margin-right: 10%;
+  margin-left: 10%;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.056);
+  z-index: 1;
+  backdrop-filter: blur(40px);
+  color: white;
+  border-radius: 3em;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.131);
+}
+.section-2 {
+  background: #6190e8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a7bfe8,
+    #6190e8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a7bfe8,
+    #6190e8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 90vh;
+}
+.section-2 .tech-header {
+  font-family: "Press Start 2P", cursive;
+  color: rgba(230, 230, 230, 0.453);
+}
+.section-2 .jumbotron {
+  position: relative;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  backdrop-filter: blur(600px);
+  color: white;
+  border-radius: 3em;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.03);
+}
+.section-2 .tech {
+}
+
+.about-header,
+.about-footer {
+  font-family: "Press Start 2P", cursive;
+  color: rgba(14, 150, 240, 0.453);
+}
+.about-header {
+  top: 0;
+}
+.about-footer {
+  bottom: 0;
+  padding-top: 3px;
+}
+.section-1 p {
+  /* font-family: "Overlock", cursive; */
+  font-family: "IBM Plex Mono", monospace;
+}
+.section-1 ul {
+  font-family: "IBM Plex Mono", monospace;
+}
+@media only screen and (max-width: 600px) {
+  .section-1 {
+    height: 130vh;
+  }
+}
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+  .section-1 {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+  .section-1 {
+    height: 95vh;
+  }
 }

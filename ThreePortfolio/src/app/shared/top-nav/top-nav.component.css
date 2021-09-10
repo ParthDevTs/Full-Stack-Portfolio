@@ -1,6 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 mat-toolbar {
-  position: sticky;
+  box-shadow: black 0px 0px 5px 0px;
+  width: 100%;
 }
-p {
-  text-align: center;
+.example-spacer {
+  flex: 1 1 auto;
+}
+ul li {
+  list-style: none;
+}
+ul li button {
+  transform: scale(0.8);
+}
+ul {
+  padding-top: 5px;
+  font-size: 1.5rem;
+  position: relative;
+}
+span {
+  font-family: "Rubik Mono One", sans-serif;
+}
+.naving {
+  position: sticky;
+  top: 0px;
 }
