@@ -32,7 +32,7 @@
   width: 1200%;
   height: 250px;
   background-size: cover;
-  background: url("/assets/theHills.png") no-repeat;
+  background: url("/assets/mountains.png") no-repeat;
 }
 /* .section-1 img {
   position: absolute;
@@ -57,44 +57,10 @@
   border: solid 2px transparent;
   box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.131);
 }
-.section-2 {
-  background: #6190e8; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #a7bfe8,
-    #6190e8
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #a7bfe8,
-    #6190e8
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  height: 90vh;
-}
-.section-2 .tech-header {
-  font-family: "Press Start 2P", cursive;
-  color: rgba(230, 230, 230, 0.453);
-}
-.section-2 .jumbotron {
-  position: relative;
-  padding: 3rem;
-  background: rgba(255, 255, 255, 0.2);
-  z-index: 1;
-  backdrop-filter: blur(600px);
-  color: white;
-  border-radius: 3em;
-  background-clip: padding-box;
-  border: solid 2px transparent;
-  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.03);
-}
-.section-2 .tech {
-}
-
 .about-header,
 .about-footer {
   font-family: "Press Start 2P", cursive;
-  color: rgba(14, 150, 240, 0.453);
+  color: rgba(237, 75, 75, 0.474);
 }
 .about-header {
   top: 0;
@@ -110,18 +76,92 @@
 .section-1 ul {
   font-family: "IBM Plex Mono", monospace;
 }
+
+/*Section 1 ends here*/
+/*Section 2 starts here*/
+
+.section-2 {
+  background: #536976;
+  background: -webkit-linear-gradient(to right, #292e49, #536976);
+  background: linear-gradient(to right, #292e49, #536976);
+
+  height: 100vh;
+}
+.section-2::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  bottom: 0%;
+  left: 0;
+  width: 1200%;
+  height: 450px;
+  background-size: cover;
+  background: url("/assets/wave1.png") no-repeat;
+}
+.section-2 .tech-header {
+  padding-top: 10px;
+  margin-top: 10px;
+  font-family: "Press Start 2P", cursive;
+  color: rgba(237, 75, 75, 0.734);
+}
+/* .section-2 .jumbotron {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  backdrop-filter: blur(60px);
+  color: white;
+  border-radius: 3em;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.03);
+} */
+div.container {
+  margin: 5px;
+  padding: 5px;
+}
+mat-card {
+  height: 200px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.056);
+  z-index: 1;
+  backdrop-filter: blur(40px);
+  color: white;
+  border-radius: 2em;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.131);
+}
+
 @media only screen and (max-width: 600px) {
   .section-1 {
     height: 130vh;
+  }
+  .section-2 {
+    height: 100vh;
+  }
+  .section-2 mat-card {
+    height: 25px;
+    width: 25px;
   }
 }
 @media only screen and (max-width: 900px) and (min-width: 600px) {
   .section-1 {
     height: 100vh;
   }
+  .section-2 {
+    height: 100vh;
+  }
+  .section-2 mat-card {
+    height: 50px;
+    width: 50px;
+  }
 }
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .section-1 {
-    height: 95vh;
+    height: 100vh;
+  }
+  .section-2 {
+    height: 100vh;
   }
 }
