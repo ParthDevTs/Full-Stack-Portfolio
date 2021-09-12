@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.main();
-    this.animeMethod();
+    this.scrollDown();
   }
   main() {
     //Loader
@@ -188,23 +188,22 @@ export class AppComponent implements OnInit {
 
     tick();
   }
-  animeMethod() {
+
+  scrollDown() {
     anime
       .timeline({ loop: true })
       .add({
-        targets: '.ml15 .word',
-        scale: [14, 1],
-        opacity: [0, 1],
-        easing: 'easeOutCirc',
-        duration: 800,
-        delay: (el, i) => 800 * i,
+        targets: '.scrollDown',
+        translateY: 60,
+        easing: 'easeInOutQuad',
+        duration: 400,
       })
+
       .add({
-        targets: '.ml15',
-        opacity: 0,
+        targets: '.scrollDown',
+        translateY: 0,
+
         duration: 1000,
-        easing: 'easeOutExpo',
-        delay: 5000,
       });
   }
 }

@@ -24,8 +24,10 @@
     "@angular/router": "~10.2.4",
     "animejs": "^3.2.1",
     "bootstrap": "^5.1.1",
+    "gsap": "^3.7.1",
     "ng-animate": "^1.0.0",
     "rxjs": "~6.6.0",
+    "scrollmagic": "^2.0.8",
     "three": "^0.132.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

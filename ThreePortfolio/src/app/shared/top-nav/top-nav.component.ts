@@ -13,28 +13,44 @@ export class TopNavComponent implements OnInit {
   }
 
   animate() {
-    anime
-      .timeline({ loop: true })
-      .add({
-        targets: '.parth',
-        translateX: 60,
-        duration: 750,
-        // delay: anime.stagger(300, { easing: 'easeOutQuad' }), // increase delay by 100ms for each elements.
-      })
-      .add({
-        targets: '.parth',
-        translateX: 0,
-        delay: anime.stagger(10000), // increase delay by 100ms for each elements.
-      })
-      .add({
-        targets: '.parth',
-        translateX: 0,
-        delay: anime.stagger(10000), // increase delay by 100ms for each elements.
-      })
-      .add({
-        targets: '.parth',
-        translateX: 0,
-        delay: anime.stagger(20000), // increase delay by 100ms for each elements.
-      });
+    // anime
+    //   .timeline({ loop: true })
+    //   .add({
+    //     targets: '.parth',
+    //     translateX: 60,
+    //     duration: 750,
+    //     // delay: anime.stagger(300, { easing: 'easeOutQuad' }), // increase delay by 100ms for each elements.
+    //   })
+    //   .add({
+    //     targets: '.parth',
+    //     translateX: 0,
+    //     delay: anime.stagger(10000), // increase delay by 100ms for each elements.
+    //   })
+    //   .add({
+    //     targets: '.parth',
+    //     translateX: 0,
+    //     delay: anime.stagger(10000), // increase delay by 100ms for each elements.
+    //   })
+    //   .add({
+    //     targets: '.parth',
+    //     translateX: 0,
+    //     delay: anime.stagger(20000), // increase delay by 100ms for each elements.
+    //   });
+    var animation = anime({
+      targets: '.parth',
+      translateX: 50,
+      direction: 'alternate',
+      loop: true,
+      easing: 'steps(3)',
+      autoplay: false,
+      delay: 2000,
+    });
+
+    function loop(t) {
+      animation.tick(t);
+      let customRAF = requestAnimationFrame(loop);
+    }
+
+    requestAnimationFrame(loop);
   }
 }

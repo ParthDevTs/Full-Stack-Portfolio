@@ -3,7 +3,7 @@
 .sections {
   position: relative;
   z-index: -1;
-  display: grid;
+  display: flex;
   place-content: center;
 }
 .section-1 {
@@ -34,19 +34,10 @@
   background-size: cover;
   background: url("/assets/mountains.png") no-repeat;
 }
-/* .section-1 img {
-  position: absolute;
-  z-index: -1;
-  mix-blend-mode: multiply;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-height: 50vh;
-} */
+
 .box1 {
   position: relative;
-  margin-right: 10%;
-  margin-left: 10%;
+  margin: 10%;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.056);
   z-index: 1;
@@ -84,10 +75,13 @@
   background: #536976;
   background: -webkit-linear-gradient(to right, #292e49, #536976);
   background: linear-gradient(to right, #292e49, #536976);
-
+  position: relative;
   height: 100vh;
 }
-.section-2::before {
+.section-2 .tech {
+  margin: 10%;
+}
+/* .section-2::before {
   position: absolute;
   z-index: -1;
   content: "";
@@ -97,7 +91,7 @@
   height: 450px;
   background-size: cover;
   background: url("/assets/wave1.png") no-repeat;
-}
+} */
 .section-2 .tech-header {
   padding-top: 10px;
   margin-top: 10px;
@@ -116,13 +110,10 @@
   border: solid 2px transparent;
   box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.03);
 } */
-div.container {
-  margin: 5px;
-  padding: 5px;
-}
+
 mat-card {
-  height: 200px;
-  width: 200px;
+  /* height: 120px;
+  width: 120px; */
   background: rgba(255, 255, 255, 0.056);
   z-index: 1;
   backdrop-filter: blur(40px);
@@ -130,7 +121,7 @@ mat-card {
   border-radius: 2em;
   background-clip: padding-box;
   border: solid 2px transparent;
-  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.131);
+  box-shadow: 20px 20px 20px rgba(51, 50, 49, 0.131);
 }
 
 @media only screen and (max-width: 600px) {
@@ -140,10 +131,10 @@ mat-card {
   .section-2 {
     height: 100vh;
   }
-  .section-2 mat-card {
+  /* .section-2 mat-card {
     height: 25px;
     width: 25px;
-  }
+  } */
 }
 @media only screen and (max-width: 900px) and (min-width: 600px) {
   .section-1 {
@@ -152,10 +143,10 @@ mat-card {
   .section-2 {
     height: 100vh;
   }
-  .section-2 mat-card {
+  /* .section-2 mat-card {
     height: 50px;
     width: 50px;
-  }
+  } */
 }
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .section-1 {

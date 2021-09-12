@@ -43,3 +43,12 @@ p {
 .word {
   padding: 4px;
 }
+.scrollDown {
+  position: absolute;
+  top: 80%;
+  color: white;
+  font-weight: 200;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
