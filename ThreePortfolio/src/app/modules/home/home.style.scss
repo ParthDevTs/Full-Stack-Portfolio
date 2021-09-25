@@ -1,12 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Overlock&family=Rubik+Mono+One&display=swap");
 .section-2 {
-  mat-card {
-    background: rgba(255, 255, 255, 0.056);
+  .card-body {
+    background-color: transparent;
+    color: black;
+  }
+
+  .sec2-container {
+    position: relative;
+    margin: 15vh;
+    padding: 3rem;
+    background: rgba(151, 149, 149, 0.056);
     z-index: 1;
     backdrop-filter: blur(40px);
-    border-radius: 2em;
+    color: white;
+    border-radius: 3em;
     background-clip: padding-box;
     border: solid 2px transparent;
-    box-shadow: 20px 20px 20px rgba(51, 50, 49, 0.131);
+    box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
+    position: relative;
+    .tech-stack-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      position: relative;
+      font-family: "Press Start 2P", cursive;
+      color: rgba(235, 66, 66, 0.652);
+      // border: solid 2px black;
+      top: 0;
+    }
+    .tech-stack {
+      // border: solid 2px black;
+    }
   }
 }
 

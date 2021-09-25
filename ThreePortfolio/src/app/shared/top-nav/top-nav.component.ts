@@ -1,6 +1,5 @@
 import { ViewportScroller } from '@angular/common';
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
-import anime from 'animejs/lib/anime.es.js';
 import Typewriter from 't-writer.js';
 
 @Component({
