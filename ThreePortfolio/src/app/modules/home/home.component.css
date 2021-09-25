@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Overlock&family=Rubik+Mono+One&display=swap");
+@import "aos/dist/aos.css";
 .sections {
   position: relative;
   z-index: -1;
@@ -51,7 +52,7 @@
 .about-header,
 .about-footer {
   font-family: "Press Start 2P", cursive;
-  color: rgba(237, 75, 75, 0.474);
+  color: rgba(235, 66, 66, 0.652);
 }
 .about-header {
   top: 0;
@@ -72,9 +73,10 @@
 /*Section 2 starts here*/
 
 .section-2 {
-  background: #536976;
-  background: -webkit-linear-gradient(to right, #292e49, #536976);
-  background: linear-gradient(to right, #292e49, #536976);
+  background: #c9d6ff;
+  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+
   position: relative;
   height: 100vh;
 }
@@ -93,48 +95,28 @@
   background: url("/assets/wave1.png") no-repeat;
 } */
 .section-2 .tech-header {
-  padding-top: 10px;
-  margin-top: 10px;
+  padding: 10px;
+  margin: 10px;
   font-family: "Press Start 2P", cursive;
   color: rgba(237, 75, 75, 0.734);
 }
-/* .section-2 .jumbotron {
-  position: relative;
 
-  background: rgba(255, 255, 255, 0.2);
-  z-index: 1;
-  backdrop-filter: blur(60px);
-  color: white;
-  border-radius: 3em;
-  background-clip: padding-box;
-  border: solid 2px transparent;
-  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.03);
-} */
-
-mat-card {
-  /* height: 120px;
-  width: 120px; */
-  background: rgba(255, 255, 255, 0.056);
-  z-index: 1;
-  backdrop-filter: blur(40px);
-  color: white;
-  border-radius: 2em;
-  background-clip: padding-box;
-  border: solid 2px transparent;
-  box-shadow: 20px 20px 20px rgba(51, 50, 49, 0.131);
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 375px) {
   .section-1 {
-    height: 130vh;
+    height: 135vh;
   }
   .section-2 {
     height: 100vh;
   }
-  /* .section-2 mat-card {
-    height: 25px;
-    width: 25px;
-  } */
+}
+
+@media only screen and (max-width: 600px) and (min-width: 376px) {
+  .section-1 {
+    height: 100vh;
+  }
+  .section-2 {
+    height: 100vh;
+  }
 }
 @media only screen and (max-width: 900px) and (min-width: 600px) {
   .section-1 {
@@ -143,10 +125,6 @@ mat-card {
   .section-2 {
     height: 100vh;
   }
-  /* .section-2 mat-card {
-    height: 50px;
-    width: 50px;
-  } */
 }
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .section-1 {

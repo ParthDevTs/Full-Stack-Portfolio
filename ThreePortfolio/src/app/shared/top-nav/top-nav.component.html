@@ -3,10 +3,44 @@
     <span class="parth">PK</span>
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="2px">
-        <li>
-          <button mat-button>
-            Nav Menu <mat-icon>arrow_drop_down</mat-icon>
+        <li fxHide.lt-md>
+          <button [matMenuTriggerFor]="menu" mat-button>
+            Menu <mat-icon>arrow_drop_down</mat-icon>
           </button>
+        </li>
+        <li>
+          <button
+            mat-icon-button
+            fxHide
+            fxHide.lt-md="false"
+            [matMenuTriggerFor]="menu"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button
+              routerLinkActive="active"
+              (click)="goToAbout()"
+              mat-menu-item
+            >
+              About
+            </button>
+
+            <button
+              routerLinkActive="active"
+              (click)="goToTechStack()"
+              mat-menu-item
+            >
+              Tech Stack
+            </button>
+            <button
+              routerLinkActive="active"
+              (click)="goToProjects()"
+              mat-menu-item
+            >
+              Projects
+            </button>
+          </mat-menu>
         </li>
       </ul>
     </div>

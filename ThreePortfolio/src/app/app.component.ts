@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GUI } from 'three/examples/jsm/libs/dat.gui.module';
 import anime from 'animejs/lib/anime.es.js';
+import { Platform } from '@angular/cdk/platform';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +11,7 @@ import anime from 'animejs/lib/anime.es.js';
 })
 export class AppComponent implements OnInit {
   title = 'ThreePortfolio';
+  constructor(private platform: Platform) {}
 
   ngOnInit(): void {
     this.main();
@@ -29,12 +31,12 @@ export class AppComponent implements OnInit {
     const scene = new THREE.Scene();
 
     // Objects
-    const geometry = new THREE.SphereBufferGeometry(0.5, 64, 64);
+    const geometry = new THREE.SphereBufferGeometry(0.5, 30, 30);
 
     // Materials
 
     const material = new THREE.MeshStandardMaterial();
-    material.metalness = 0.7;
+    material.metalness = 0.9;
     material.roughness = 0.2;
     // material.color = new THREE.Color(0x292929);
     material.normalMap = normalTexture;
@@ -166,15 +168,17 @@ export class AppComponent implements OnInit {
     const tick = () => {
       const elapsedTime = clock.getElapsedTime();
 
-      targetX = mouseX * 0.001;
-      targetY = mouseY * 0.001;
+      if (!this.platform.IOS) {
+        targetX = mouseX * 0.001;
+        targetY = mouseY * 0.001;
 
-      // Update objects
-      sphere.rotation.y = 0.7 * elapsedTime;
+        // Update objects
+        sphere.rotation.y = 0.7 * elapsedTime;
 
-      sphere.rotation.y += 0.1 * (targetX - sphere.rotation.y);
-      sphere.rotation.x += 0.21 * (targetY - sphere.rotation.x);
-      sphere.position.z += -0.16 * (targetY - sphere.rotation.x);
+        sphere.rotation.y += 0.1 * (targetX - sphere.rotation.y);
+        sphere.rotation.x += 0.21 * (targetY - sphere.rotation.x);
+        sphere.position.z += -0.16 * (targetY - sphere.rotation.x);
+      }
 
       // Update Orbital Controls
       // controls.update()

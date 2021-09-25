@@ -5,8 +5,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
-
+import { PlatformModule } from '@angular/cdk/platform';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +32,8 @@ import { HomeComponent } from './modules/home/home.component';
     MatButtonModule,
     MatCardModule,
     MatGridListModule,
+    MatMenuModule,
+    PlatformModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,1 +1,32 @@
+.section-2 {
+  mat-card {
+    background: rgba(255, 255, 255, 0.056);
+    z-index: 1;
+    backdrop-filter: blur(40px);
+    border-radius: 2em;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    box-shadow: 20px 20px 20px rgba(51, 50, 49, 0.131);
+  }
+}
 
+.section-2::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  bottom: 0%;
+  left: 0;
+  width: 1200%;
+  height: 350px;
+  background-size: cover;
+  background: url("/assets/wave1.png") no-repeat;
+}
+
+.section-3 {
+  height: 100vh;
+  position: relative;
+  background: #abbaab;
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+  background: linear-gradient(to right, #ffffff, #abbaab);
+  overflow: hidden;
+}
