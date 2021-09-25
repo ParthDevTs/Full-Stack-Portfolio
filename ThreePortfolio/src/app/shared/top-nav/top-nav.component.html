@@ -1,12 +1,20 @@
-<mat-toolbar color="primary" class="naving">
+<mat-toolbar
+  (scroll)="onScroll()"
+  color="primary"
+  [ngClass]="navbarFixed ? 'naving' : 'notNaving'"
+>
   <mat-toolbar-row>
-    <span class="parth">PK</span>
+    <span class="parth"></span>
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="2px">
         <li fxHide.lt-md>
-          <button [matMenuTriggerFor]="menu" mat-button>
-            Menu <mat-icon>arrow_drop_down</mat-icon>
-          </button>
+          <span class="navlink" (click)="goToAbout()">About</span>
+        </li>
+        <li fxHide.lt-md>
+          <span class="navlink" (click)="goToTechStack()">TechStack</span>
+        </li>
+        <li fxHide.lt-md>
+          <span class="navlink" (click)="goToProjects()">Projects</span>
         </li>
         <li>
           <button

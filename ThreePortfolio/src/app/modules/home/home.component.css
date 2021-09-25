@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Overlock&family=Rubik+Mono+One&display=swap");
-@import "aos/dist/aos.css";
 .sections {
   position: relative;
   z-index: -1;

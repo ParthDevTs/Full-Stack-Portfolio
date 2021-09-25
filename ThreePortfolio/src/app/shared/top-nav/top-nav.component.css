@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
-@import "aos/dist/aos.css";
+
 mat-toolbar {
-  box-shadow: black 0px 0px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.268) 0px 0px 10px 0px;
   width: 100%;
   z-index: 100;
 }
@@ -14,6 +14,14 @@ ul li {
 ul li button {
   font-family: "Rubik Mono One", sans-serif;
 }
+.navlink {
+  font-size: 12px;
+  transition: all;
+}
+.navlink:hover {
+  color: gainsboro;
+  transform: scale(1.1);
+}
 ul {
   padding-top: 5px;
   font-size: 1.5rem;
@@ -21,11 +29,28 @@ ul {
 }
 span {
   font-family: "Rubik Mono One", sans-serif;
+  margin: 5px;
 }
 .naving {
   position: sticky;
   top: 0px;
+  width: 100%;
+  transition: 0.2s linear;
+}
+.notNaving {
+  position: static;
+  width: 100%;
+  top: -50px;
+  transition: 0.2s linear;
+}
+.parth {
+  font-size: 20px;
 }
 .active {
-  color: pinks;
+  color: pink !important;
+}
+@media only screen and (max-width: 800px) and (min-width: 376px) {
+  .parth {
+    font-size: 15px;
+  }
 }

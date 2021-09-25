@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { GUI } from 'three/examples/jsm/libs/dat.gui.module';
 import anime from 'animejs/lib/anime.es.js';
 import { Platform } from '@angular/cdk/platform';
 @Component({
@@ -141,9 +139,6 @@ export class AppComponent implements OnInit {
     /**
      * Animate
      */
-
-    document.addEventListener('mousemove', onDocumentMouseMove);
-
     let mouseX = 0;
     let mouseY = 0;
 
@@ -152,16 +147,19 @@ export class AppComponent implements OnInit {
 
     const windowHalfX = window.innerWidth / 2;
     const windowHalfY = window.innerHeight / 2;
+    if (!this.platform.IOS) {
+      document.addEventListener('mousemove', onDocumentMouseMove);
 
-    function onDocumentMouseMove(event) {
-      mouseX = event.clientX - windowHalfX;
-      mouseY = event.clientY - windowHalfY;
+      function onDocumentMouseMove(event) {
+        mouseX = event.clientX - windowHalfX;
+        mouseY = event.clientY - windowHalfY;
+      }
+
+      const updateSphere = (event) => {
+        sphere.position.y = window.scrollY * 0.004;
+      };
+      window.addEventListener('scroll', updateSphere);
     }
-
-    const updateSphere = (event) => {
-      sphere.position.y = window.scrollY * 0.004;
-    };
-    window.addEventListener('scroll', updateSphere);
 
     const clock = new THREE.Clock();
 

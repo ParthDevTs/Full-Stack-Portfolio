@@ -11,5 +11,12 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
+  background-image: #232526;
+  background-image: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ) !important;
+  background-image: linear-gradient(to right, #414345, #232526) !important;
   overflow-x: hidden;
 }
