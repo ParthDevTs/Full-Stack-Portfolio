@@ -69,36 +69,6 @@
 }
 
 /*Section 1 ends here*/
-/*Section 2 starts here*/
-
-.section-2 {
-  background: #c9d6ff;
-  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
-  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-
-  position: relative;
-  height: 100vh;
-}
-.section-2 .tech {
-  margin: 10%;
-}
-/* .section-2::before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  bottom: 0%;
-  left: 0;
-  width: 1200%;
-  height: 450px;
-  background-size: cover;
-  background: url("/assets/wave1.png") no-repeat;
-} */
-.section-2 .tech-header {
-  padding: 10px;
-  margin: 10px;
-  font-family: "Press Start 2P", cursive;
-  color: rgba(237, 75, 75, 0.734);
-}
 
 @media only screen and (max-width: 375px) {
   .section-1 {

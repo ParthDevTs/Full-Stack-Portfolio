@@ -50,13 +50,13 @@ span {
   color: pink !important;
 }
 .row-2 {
-  height: 10px;
+  height: 1em;
 }
 @media only screen and (max-width: 800px) and (min-width: 0px) {
   .parth {
     font-size: 15px;
   }
   .row-1 {
-    height: 0.5em;
+    height: 2em;
   }
 }

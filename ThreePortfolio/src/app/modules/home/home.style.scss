@@ -1,51 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Overlock&family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-// .section-2 {
-//   .card-body {
-//     background-color: transparent;
-//     color: black;
-//   }
-
-//   .sec2-container {
-//     position: relative;
-//     margin: 10vh;
-//     padding: 3rem;
-//     background: rgba(151, 149, 149, 0.056);
-//     z-index: 1;
-//     backdrop-filter: blur(40px);
-//     color: white;
-//     border-radius: 3em;
-//     background-clip: padding-box;
-//     border: solid 2px transparent;
-//     box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
-//     position: relative;
-//     .tech-stack-heading {
-//       display: flex;
-//       flex-wrap: wrap;
-//       align-content: center;
-//       position: relative;
-//       font-family: "Press Start 2P", cursive;
-//       color: rgba(235, 66, 66, 0.652);
-//       top: 0;
-//     }
-//     .tech-stack {
-//       border: solid 2px black;
-//     }
-//   }
-// }
-
-// .section-2::before {
-//   position: absolute;
-//   z-index: -1;
-//   content: "";
-//   bottom: 0%;
-//   left: 0;
-//   width: 1200%;
-//   height: 350px;
-//   background-size: cover;
-//   background: url("/assets/wave1.png") no-repeat;
-// }
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap");
 
 .section-3 {
   position: relative;
@@ -83,6 +39,8 @@
   .split {
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
   .stack-text {
     h3 {
@@ -92,6 +50,8 @@
     }
     p {
       justify-self: center;
+      font-family: "Gemunu Libre", sans-serif;
+      font-size: 1.2em;
     }
   }
 
@@ -115,7 +75,54 @@
       flex-basis: 100%;
     }
     .split > * + * {
-      margin-left: 6em;
+      margin-left: 3em;
+    }
+  }
+}
+
+//Section-4
+
+.section-4 {
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  overflow: hidden;
+  padding: 6rem;
+  position: relative;
+  .tech-heading {
+    font-family: "Press Start 2P", cursive;
+    color: rgba(20, 150, 237, 0.796);
+    margin: 3vh;
+    font-size: 1.8em;
+  }
+  .container {
+    margin-inline: auto;
+    width: min(90%, 80.5rems);
+    margin-top: 3em;
+    position: relative;
+    padding: 2em;
+  }
+  .split {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .section-4 {
+    .tech-heading {
+      font-size: 3em;
+    }
+    .split {
+      flex-direction: row;
+      margin-top: 2em;
+    }
+    .split > * {
+      flex-basis: 100%;
+    }
+    .split > * + * {
+      margin-left: 3em;
     }
   }
 }

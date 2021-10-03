@@ -1,12 +1,12 @@
 <mat-toolbar
   (scroll)="onScroll()"
-  color="primary"
   [ngClass]="navbarFixed ? 'naving' : 'notNaving'"
+  color="primary"
 >
-  <mat-toolbar-row>
+  <mat-toolbar-row class="row-1">
     <span class="parth"></span>
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
-      <ul fxLayout="row" fxLayoutGap="2px">
+      <ul fxLayout="row" fxLayoutGap="10px">
         <li fxHide.lt-md>
           <span class="navlink" (click)="goToAbout()">About</span>
         </li>
@@ -14,13 +14,13 @@
           <span class="navlink" (click)="goToTechStack()">TechStack</span>
         </li>
         <li fxHide.lt-md>
-          <span class="navlink">Projects</span>
+          <span class="navlink" (click)="goToProjects()">Education</span>
         </li>
       </ul>
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row class="row-2" fxHide fxHide.lt-md="false">
-    <div fxFlex fxLayout="row" fxLayoutAlign="space-evenly center">
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-around center">
       <ul fxLayout="row" fxLayoutGap="2px">
         <li>
           <span class="navlink" (click)="goToAbout()">About</span>
@@ -29,7 +29,7 @@
           <span class="navlink" (click)="goToTechStack()">TechStack</span>
         </li>
         <li>
-          <span class="navlink">Projects</span>
+          <span class="navlink" (click)="goToProjects()">Education</span>
         </li>
       </ul>
     </div>
