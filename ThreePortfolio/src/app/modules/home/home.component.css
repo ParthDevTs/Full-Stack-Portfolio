@@ -104,16 +104,10 @@
   .section-1 {
     height: 135vh;
   }
-  .section-2 {
-    height: 100vh;
-  }
 }
 
 @media only screen and (max-width: 600px) and (min-width: 376px) {
   .section-1 {
-    height: 100vh;
-  }
-  .section-2 {
     height: 100vh;
   }
 }
@@ -121,15 +115,9 @@
   .section-1 {
     height: 100vh;
   }
-  .section-2 {
-    height: 100vh;
-  }
 }
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .section-1 {
-    height: 100vh;
-  }
-  .section-2 {
     height: 100vh;
   }
 }

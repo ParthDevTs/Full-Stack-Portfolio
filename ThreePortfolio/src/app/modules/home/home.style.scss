@@ -1,57 +1,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Overlock&family=Rubik+Mono+One&display=swap");
-.section-2 {
-  .card-body {
-    background-color: transparent;
-    color: black;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+// .section-2 {
+//   .card-body {
+//     background-color: transparent;
+//     color: black;
+//   }
 
-  .sec2-container {
-    position: relative;
-    margin: 15vh;
-    padding: 3rem;
-    background: rgba(151, 149, 149, 0.056);
-    z-index: 1;
-    backdrop-filter: blur(40px);
-    color: white;
-    border-radius: 3em;
-    background-clip: padding-box;
-    border: solid 2px transparent;
-    box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
-    position: relative;
-    .tech-stack-heading {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      position: relative;
-      font-family: "Press Start 2P", cursive;
-      color: rgba(235, 66, 66, 0.652);
-      // border: solid 2px black;
-      top: 0;
-    }
-    .tech-stack {
-      // border: solid 2px black;
-    }
-  }
-}
+//   .sec2-container {
+//     position: relative;
+//     margin: 10vh;
+//     padding: 3rem;
+//     background: rgba(151, 149, 149, 0.056);
+//     z-index: 1;
+//     backdrop-filter: blur(40px);
+//     color: white;
+//     border-radius: 3em;
+//     background-clip: padding-box;
+//     border: solid 2px transparent;
+//     box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
+//     position: relative;
+//     .tech-stack-heading {
+//       display: flex;
+//       flex-wrap: wrap;
+//       align-content: center;
+//       position: relative;
+//       font-family: "Press Start 2P", cursive;
+//       color: rgba(235, 66, 66, 0.652);
+//       top: 0;
+//     }
+//     .tech-stack {
+//       border: solid 2px black;
+//     }
+//   }
+// }
 
-.section-2::before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  bottom: 0%;
-  left: 0;
-  width: 1200%;
-  height: 350px;
-  background-size: cover;
-  background: url("/assets/wave1.png") no-repeat;
-}
+// .section-2::before {
+//   position: absolute;
+//   z-index: -1;
+//   content: "";
+//   bottom: 0%;
+//   left: 0;
+//   width: 1200%;
+//   height: 350px;
+//   background-size: cover;
+//   background: url("/assets/wave1.png") no-repeat;
+// }
 
 .section-3 {
-  height: 100vh;
   position: relative;
   background: #abbaab;
   background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
   background: linear-gradient(to right, #ffffff, #abbaab);
   overflow: hidden;
+  padding: 6rem;
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background: url("/assets/circles.png");
+    overflow: hidden;
+  }
+  .container {
+    margin-inline: auto;
+    width: min(90%, 80.5rems);
+    margin-top: 3em;
+    background: rgba(151, 149, 149, 0.056);
+    z-index: 1;
+    backdrop-filter: blur(40px);
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
+    position: relative;
+    padding: 2em;
+    border-radius: 1.5em;
+  }
+  .split {
+    display: flex;
+    flex-direction: column;
+  }
+  .stack-text {
+    h3 {
+      font-family: "Staatliches", cursive;
+      text-align: center;
+      font-size: 2em;
+    }
+    p {
+      justify-self: center;
+    }
+  }
+
+  .tech-heading {
+    font-family: "Press Start 2P", cursive;
+    color: rgba(235, 66, 66, 0.796);
+    margin: 3vh;
+  }
+  img {
+    display: block;
+    border-radius: 50%;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .section-3 {
+    .split {
+      flex-direction: row;
+      margin-top: 2em;
+    }
+    .split > * {
+      flex-basis: 100%;
+    }
+    .split > * + * {
+      margin-left: 6em;
+    }
+  }
 }

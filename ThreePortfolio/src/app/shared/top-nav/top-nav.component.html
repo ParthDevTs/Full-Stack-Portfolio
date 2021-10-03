@@ -14,41 +14,22 @@
           <span class="navlink" (click)="goToTechStack()">TechStack</span>
         </li>
         <li fxHide.lt-md>
-          <span class="navlink" (click)="goToProjects()">Projects</span>
+          <span class="navlink">Projects</span>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="row-2" fxHide fxHide.lt-md="false">
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-evenly center">
+      <ul fxLayout="row" fxLayoutGap="2px">
+        <li>
+          <span class="navlink" (click)="goToAbout()">About</span>
         </li>
         <li>
-          <button
-            mat-icon-button
-            fxHide
-            fxHide.lt-md="false"
-            [matMenuTriggerFor]="menu"
-          >
-            <mat-icon>menu</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button
-              routerLinkActive="active"
-              (click)="goToAbout()"
-              mat-menu-item
-            >
-              About
-            </button>
-
-            <button
-              routerLinkActive="active"
-              (click)="goToTechStack()"
-              mat-menu-item
-            >
-              Tech Stack
-            </button>
-            <button
-              routerLinkActive="active"
-              (click)="goToProjects()"
-              mat-menu-item
-            >
-              Projects
-            </button>
-          </mat-menu>
+          <span class="navlink" (click)="goToTechStack()">TechStack</span>
+        </li>
+        <li>
+          <span class="navlink">Projects</span>
         </li>
       </ul>
     </div>

@@ -41,13 +41,13 @@ export class TopNavComponent implements OnInit, AfterViewInit {
   goToTechStack() {
     this.viewportScroller.scrollToAnchor('techStack');
   }
-  goToProjects() {
-    this.viewportScroller.scrollToAnchor('projects');
-  }
+  // goToProjects() {
+  //   this.viewportScroller.scrollToAnchor('projects');
+  // }
   navbarFixed: boolean = false;
 
   @HostListener('window:scroll', ['$event']) onScroll() {
-    if (window.scrollY > 730) {
+    if (window.scrollY > 700) {
       this.navbarFixed = true;
     } else {
       this.navbarFixed = false;
