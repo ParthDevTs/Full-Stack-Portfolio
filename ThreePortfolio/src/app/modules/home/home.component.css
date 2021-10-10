@@ -44,6 +44,7 @@
   backdrop-filter: blur(40px);
   color: white;
   border-radius: 3em;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: solid 2px transparent;
   box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.131);

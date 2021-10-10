@@ -29,6 +29,7 @@
     background: rgba(151, 149, 149, 0.056);
     z-index: 1;
     backdrop-filter: blur(40px);
+    -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: solid 2px transparent;
     box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);

@@ -31,6 +31,12 @@ span {
   font-family: "Rubik Mono One", sans-serif;
   margin: 5px;
 }
+a{
+  font-family: "Rubik Mono One", sans-serif;
+  margin: 5px;
+  text-decoration:none;
+  color: grey;
+}
 .naving {
   position: sticky;
   top: 0px;
