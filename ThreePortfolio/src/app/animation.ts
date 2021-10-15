@@ -9,7 +9,7 @@ import {
 } from '@angular/animations';
 
 export const slideInAnimation = trigger('routeAnimations', [
-  transition('1 => 2, 2 => 3,1=>3', [
+  transition('1 => 2, 2 => 3,1=>3,1=>4,3=>4,2=>4', [
     style({ height: '!' }),
     query(':enter', style({ transform: 'translateX(100%)' })),
     query(
@@ -34,7 +34,7 @@ export const slideInAnimation = trigger('routeAnimations', [
       ),
     ]),
   ]),
-  transition('3 => 2, 2 => 1, 3=>1', [
+  transition('3 => 2, 2 => 1, 3=>1,4=>2,4=>1,4=>3', [
     style({ height: '!' }),
     query(':enter', style({ transform: 'translateX(-100%)' })),
     query(
