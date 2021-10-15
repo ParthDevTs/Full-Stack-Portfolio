@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
 .canvas {
   position: absolute;
   top: 0;
@@ -52,4 +53,17 @@ p {
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+.scroll-down {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  transition: all 1s cubic-bezier();
+}
+.scroll-down:hover {
+  text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
 }

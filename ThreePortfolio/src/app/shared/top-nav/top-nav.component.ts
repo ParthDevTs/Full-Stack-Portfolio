@@ -26,11 +26,14 @@ export class TopNavComponent implements OnInit, AfterViewInit {
       .type(' Kathuria')
       .rest(5000)
       .changeOps({ deleteSpeed: 80 })
-      .remove(15)
-      .type('P')
+      .clear()
+      .type('Full')
       .rest(500)
-      .type('K')
-      .rest(5000)
+      .type(' Stack')
+      .rest(500)
+      .clear()
+      .type('Developer')
+      .rest(500)
       .clear()
       .start();
   }

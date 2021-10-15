@@ -9,7 +9,8 @@
   background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
   background: linear-gradient(to right, #ffffff, #abbaab);
   overflow: hidden;
-  padding: 3rem;
+  padding-block-start: 6rem;
+  padding-block-end: 3rem;
   &::before {
     position: absolute;
     z-index: -1;
@@ -29,7 +30,7 @@
 
     .heading {
       font-family: "Staatliches", cursive;
-      font-size: 3em;
+      font-size: 2.2em;
     }
   }
   .split {
@@ -55,7 +56,7 @@
     h3 {
       font-family: "Staatliches", cursive;
       text-align: center;
-      font-size: 2em;
+      font-size: 1.5em;
       top: 0;
     }
     p {
@@ -103,7 +104,8 @@
   background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
   overflow: hidden;
-  padding: 6rem;
+  padding-block-start: 6rem;
+  padding-block-end: 3rem;
   position: relative;
   &::before {
     position: absolute;
@@ -118,14 +120,19 @@
   }
   .tech-heading {
     font-family: "Press Start 2P", cursive;
-    color: rgba(20, 150, 237, 0.796);
+    color: rgba(158, 233, 243, 0.652);
+    text-shadow: 2px 2px 2px #ffffff, 2px 2px 2px #202020, #ffffff 2px 2px 2px;
     margin: 3vh;
     font-size: 1.8em;
+  }
+  bottom {
+    bottom: 0;
   }
   .container {
     margin-inline: auto;
     width: min(90%, 80.5rem);
     margin-top: 3em;
+    margin-bottom: 3em;
     position: relative;
     padding: 2em;
     h2 {
@@ -150,9 +157,15 @@
   .infosys {
     border-radius: 50%;
     height: 200px;
-    width: 200px;
-    padding: 1em;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.782);
+    background: rgba(151, 149, 149, 0.056);
+    z-index: 1;
+    backdrop-filter: blur(40px);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
+    position: relative;
+    padding: 0;
   }
   .exp-heading {
     h3 {
@@ -204,6 +217,7 @@
     }
     .infosys {
       height: 270px;
+      padding: 1em;
     }
   }
 }

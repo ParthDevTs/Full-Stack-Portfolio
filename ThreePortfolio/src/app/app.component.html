@@ -1,7 +1,9 @@
 <div class="containers">
   <p class="display-1">The Portfolio.</p>
   <canvas id="canvas" class="canvas"></canvas>
-  <div class="scrollDown"><mat-icon>arrow_downward</mat-icon></div>
+  <div class="scrollDown">
+    <mat-icon>arrow_downward</mat-icon>
+  </div>
 </div>
-
-<section><app-default></app-default></section>
+<a class="scroll-down" (click)="scroll()">Click Me</a>
+<section id="first"><app-default></app-default></section>

@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import * as THREE from 'three';
 import anime from 'animejs/lib/anime.es.js';
@@ -9,11 +10,13 @@ import { Platform } from '@angular/cdk/platform';
 })
 export class AppComponent implements OnInit {
   title = 'ThreePortfolio';
-  constructor(private platform: Platform) {}
+  constructor(
+    private platform: Platform,
+    private viewportScroller: ViewportScroller
+  ) {}
 
   ngOnInit(): void {
     this.main();
-
     this.scrollDown();
   }
   main() {
@@ -208,5 +211,8 @@ export class AppComponent implements OnInit {
 
         duration: 1000,
       });
+  }
+  scroll() {
+    this.viewportScroller.scrollToAnchor('first');
   }
 }
