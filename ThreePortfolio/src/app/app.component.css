@@ -63,6 +63,7 @@ p {
   color: white;
   font-family: "Press Start 2P", cursive;
   transition: all 1s cubic-bezier();
+  user-select: none;
 }
 .scroll-down:hover {
   text-shadow: 1px 1px 1px red, 3px 3px 5px blue;

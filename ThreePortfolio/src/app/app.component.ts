@@ -10,10 +10,7 @@ import { Platform } from '@angular/cdk/platform';
 })
 export class AppComponent implements OnInit {
   title = 'ThreePortfolio';
-  constructor(
-    private platform: Platform,
-    private viewportScroller: ViewportScroller
-  ) {}
+  constructor(private viewportScroller: ViewportScroller) {}
 
   ngOnInit(): void {
     this.main();
@@ -151,36 +148,32 @@ export class AppComponent implements OnInit {
 
     const windowHalfX = window.innerWidth / 2;
     const windowHalfY = window.innerHeight / 2;
-    if (!this.platform.IOS) {
-      document.addEventListener('mousemove', onDocumentMouseMove);
+    document.addEventListener('mousemove', onDocumentMouseMove);
 
-      function onDocumentMouseMove(event) {
-        mouseX = event.clientX - windowHalfX;
-        mouseY = event.clientY - windowHalfY;
-      }
-
-      const updateSphere = (event) => {
-        sphere.position.y = window.scrollY * 0.004;
-      };
-      window.addEventListener('scroll', updateSphere);
+    function onDocumentMouseMove(event) {
+      mouseX = event.clientX - windowHalfX;
+      mouseY = event.clientY - windowHalfY;
     }
+
+    const updateSphere = (event) => {
+      sphere.position.y = window.scrollY * 0.004;
+    };
+    window.addEventListener('scroll', updateSphere);
 
     const clock = new THREE.Clock();
 
     const tick = () => {
       const elapsedTime = clock.getElapsedTime();
 
-      if (!this.platform.IOS) {
-        targetX = mouseX * 0.001;
-        targetY = mouseY * 0.001;
+      targetX = mouseX * 0.001;
+      targetY = mouseY * 0.001;
 
-        // Update objects
-        sphere.rotation.y = 0.7 * elapsedTime;
+      // Update objects
+      sphere.rotation.y = 0.7 * elapsedTime;
 
-        sphere.rotation.y += 0.1 * (targetX - sphere.rotation.y);
-        sphere.rotation.x += 0.21 * (targetY - sphere.rotation.x);
-        sphere.position.z += -0.16 * (targetY - sphere.rotation.x);
-      }
+      sphere.rotation.y += 0.1 * (targetX - sphere.rotation.y);
+      sphere.rotation.x += 0.21 * (targetY - sphere.rotation.x);
+      sphere.position.z += -0.16 * (targetY - sphere.rotation.x);
 
       // Update Orbital Controls
       // controls.update()

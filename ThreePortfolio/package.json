@@ -30,6 +30,7 @@
     "rxjs": "~6.6.0",
     "scrollmagic": "^2.0.8",
     "simplebar-angular": "^2.3.6",
+    "smoothscroll-polyfill": "^0.4.4",
     "t-writer.js": "^1.0.4",
     "three": "^0.132.2",
     "tslib": "^2.0.0",
