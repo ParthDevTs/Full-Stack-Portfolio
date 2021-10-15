@@ -1,3 +1,7 @@
 .display {
   overflow-x: hidden;
+  position: relative;
+}
+.display > * {
+  display: block;
 }

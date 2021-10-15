@@ -1,0 +1,11 @@
+section {
+  height: 100vh;
+  width: 100%vw;
+  background-color: white;
+  h1 {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -17,10 +17,12 @@ ul li button {
 .navlink {
   font-size: 12px;
   transition: all;
+  color: white;
 }
-.navlink:hover {
-  color: gainsboro;
-  transform: scale(1.1);
+.navlink:hover,
+.navlink:focus {
+  text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
+  transform: scale(1.2);
 }
 ul {
   padding-top: 5px;
@@ -35,9 +37,9 @@ a {
   font-family: "Rubik Mono One", sans-serif;
   margin: 5px;
   text-decoration: none;
-  color: grey;
   cursor: pointer;
   user-select: none;
+  color: white;
 }
 .naving {
   position: -webkit-sticky;
@@ -59,7 +61,8 @@ a {
   font-size: 20px;
 }
 .active {
-  color: pink !important;
+  text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
+  transform: scale(1.2);
 }
 .row-2 {
   height: 1em;

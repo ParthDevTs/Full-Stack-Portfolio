@@ -2,11 +2,12 @@ import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import * as THREE from 'three';
 import anime from 'animejs/lib/anime.es.js';
-import { Platform } from '@angular/cdk/platform';
+import { slideInAnimation } from './animation';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  animations: [slideInAnimation],
 })
 export class AppComponent implements OnInit {
   title = 'ThreePortfolio';
@@ -130,7 +131,7 @@ export class AppComponent implements OnInit {
     /**
      * Renderer
      */
-    const renderer = new THREE.WebGLRenderer({
+    const renderer = new THREE.WebGL1Renderer({
       canvas: canvas,
       alpha: true,
     });

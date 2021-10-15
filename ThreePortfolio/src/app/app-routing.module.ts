@@ -3,15 +3,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent, data: { depth: 1 } },
   {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
+    data: { depth: 2 },
   },
   {
     path: 'project',
     loadChildren: () =>
       import('./project/project.module').then((m) => m.ProjectModule),
+    data: { depth: 3 },
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
 ];
 

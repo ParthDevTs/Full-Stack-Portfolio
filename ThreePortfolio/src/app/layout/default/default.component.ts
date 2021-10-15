@@ -1,33 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { slideInAnimation } from 'src/app/animation';
 
 @Component({
   selector: 'app-default',
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.css'],
+  animations: [slideInAnimation],
 })
 export class DefaultComponent implements OnInit {
   constructor() {}
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet.activatedRouteData['depth'];
+  }
 
   ngOnInit(): void {}
-
-  // main() {
-  //   window.onscroll = function () {
-  //     myFunction();
-  //   };
-
-  //   // Get the navbar
-  //   var navbar = document.getElementById('navbar');
-
-  //   // Get the offset position of the navbar
-  //   var sticky = navbar.offsetTop;
-
-  //   // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  //   function myFunction() {
-  //     if (window.pageYOffset >= sticky) {
-  //       navbar.classList.add('sticky');
-  //     } else {
-  //       navbar.classList.remove('sticky');
-  //     }
-  //   }
-  // }
 }

@@ -7,7 +7,7 @@
     <span class="parth"></span>
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="10px">
-        <li fxHide.lt-md>
+        <!-- <li fxHide.lt-md>
           <a class="navlink" (click)="goToAbout()">About</a>
         </li>
         <li fxHide.lt-md>
@@ -15,6 +15,15 @@
         </li>
         <li fxHide.lt-md>
           <a class="navlink" (click)="goToExperience()">experience</a>
+        </li> -->
+        <li fxHide.lt-md>
+          <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
+        </li>
+        <li fxHide.lt-md>
+          <a [routerLink]="['/blog']" routerLinkActive="active">Blog</a>
+        </li>
+        <li fxHide.lt-md>
+          <a [routerLink]="['/project']" routerLinkActive="active">Projects</a>
         </li>
       </ul>
     </div>
@@ -23,13 +32,18 @@
     <div fxFlex fxLayout="row" fxLayoutAlign="space-around center">
       <ul fxLayout="row" fxLayoutGap="2px">
         <li>
-          <a class="navlink" (click)="goToAbout()">About</a>
+          <a
+            [routerLink]="['/home']"
+            routerLinkActive="active"
+            (click)="goToAbout()"
+            >Home</a
+          >
         </li>
         <li>
-          <a class="navlink" (click)="goToTechStack()">TechStack</a>
+          <a [routerLink]="['/blog']" routerLinkActive="active">Blog</a>
         </li>
         <li>
-          <a class="navlink" (click)="goToExperience()">experience</a>
+          <a [routerLink]="['/project']" routerLinkActive="active">Project</a>
         </li>
       </ul>
     </div>
