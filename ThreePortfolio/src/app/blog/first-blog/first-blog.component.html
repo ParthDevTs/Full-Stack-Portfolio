@@ -1,35 +1,130 @@
-<section>
-  <p class="display-1 text-center">First BLOG!</p>
+<section id="start" class="nav-section">
+  <nav
+    style="
+      --bs-breadcrumb-divider: url(
+        &#34;data:image/svg + xml,
+        %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='currentColor'/%3E%3C/svg%3E&#34;
+      );
+    "
+    aria-label="breadcrumb"
+  >
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a class="routerLink" routerLink="/home">Home</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        <a class="routerLink" routerLink="/blog">Blogs</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">First Blog</li>
+    </ol>
+  </nav>
+</section>
+<section class="hero">
+  <p class="display-1 text-center">CSS Positioning</p>
+</section>
 
-  <div class="container main col-md-8">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit accusamus
-      non ipsa natus, rerum vitae aperiam maxime laboriosam sequi sint illum cum
-      perferendis? Ducimus, amet consequatur praesentium consequuntur atque
-      quisquam.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit accusamus
-      non ipsa natus, rerum vitae aperiam maxime laboriosam sequi sint illum cum
-      perferendis? Ducimus, amet consequatur praesentium consequuntur atque
-      quisquam.
+<section>
+  <div class="container col-md-8">
+    <br />
+    <p class="text-right">October 16th, 2021</p>
+    <br />
+    <p class="start-note">
+      There are many ways to position content inside a container in CSS. We can
+      achieve this using multiple way, which are as follows:
     </p>
   </div>
-  <div class="container col-md-6"></div>
-  <div class="container col-md-6">
-    <pre><code class="language-typescript">
-      let a:number;
-      for(let d=0; d<5; d++)&#123;
-        a=d*d;
+  <div class="container col-md-6 first-method">
+    <h1>Using Transform and Absolute</h1>
+    <p>
+      Using THE "OG" WAY i.e Transform, this guarantees that you text is in the
+      center of the container, no matter what.
+      <br />
+      It is a primitive way to handle positioning but as they say, OLD IS GOLD.
+      This method might get the job done but its least FLEX-ible(pun intended).
+    </p>
+    <p>
+      Here, <code>.any-content</code> is the target class which you want to
+      position in the center of the container. Making it
+      <code>position: absolute;</code> guarantees that our transformation works
+      but be careful with it.
+      <br />
+      Lastly, adding <code>top:50%;</code> and <code>left:50%;</code> to force
+      the element to be in center of container no matter what the size of the
+      screen. and then the icing on the cake
+      <code>transform: translate(-50%,-50%);</code> to adjust for element height
+      and width
+    </p>
+    <br />
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    ><code class="language-typescript">
+      .any-content&#123;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
       &#125;
       </code></pre>
   </div>
-  <div class="container col-md-6">
-    <pre><code class="language-typescript" ata-dependencies="markup,css!">
-        let a:number;
-        for(let d=0; d<5; d++)&#123;
-          a=d*d;
-        &#125;
-      </code></pre>
+  <div class="container col-md-10">
+    <mat-divider></mat-divider>
+  </div>
+  <div class="container col-md-6 second-method">
+    <h1>Using Flex</h1>
+    <p>
+      This is a more user-friendly approach where instead of element, you
+      manipulate your container itself. Using this method makes your container a
+      flexbox and then you can make all elements in a container behave a certain
+      way.
+    </p>
+    <p>
+      Here <code>display:flex;</code> is used to make your container a flexbox
+      and then you can add direction of flexbox as
+      <code>flex-direction:row;</code> or
+      <code>flex-direction: column;</code> for simplicity, i will use
+      <code>flex-direction: column;</code>.
+
+      <br />
+
+      After configuring direction, just add
+      <code>align-items: center;</code> and
+      <code>justify-content: center;</code> and voila!, you have made all of
+      your content align to center by default and it's more Responsive.
+      <br /><br />
+      <b>Note</b>: <code>display: flex;</code> has some more Functionalities
+      which can be quite handy but are beyond the scope of this topic so you
+      might want to check this space for more such content :D
+    </p>
+
+    <div data-prismjs-copy-timeout="5000">
+      <pre
+        lang="en"
+        data-prismjs-copy="Copy"
+        data-prismjs-copy-error="Try Again"
+        data-prismjs-copy-success=" Code Copied!"
+      ><code class="language-typescript" data-dependencies="markup,css!">
+          .any-container&#123;
+            display: flex;
+            flex-directon: column;
+            align-items: center;
+            justify-content: center;
+          &#125;
+        </code></pre>
+    </div>
+  </div>
+  <div class="container col-md-12">
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="display-6 end-note">
+    So, there you have it! Two easy ways to make your content responsive and
+    allign to center. Happy Coding!
+  </div>
+  <div class="gif container col-md-6">
+    <img src="assets/success.gif" alt="" />
   </div>
 </section>

@@ -13,6 +13,7 @@ import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-sass';
 import 'prismjs/components/prism-scss';
+
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min';
 import 'prismjs/plugins/autoloader/prism-autoloader.min';
 import 'prismjs/plugins/download-button/prism-download-button';

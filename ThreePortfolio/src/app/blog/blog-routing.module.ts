@@ -6,7 +6,7 @@ import { BlogComponent } from './blog.component';
 
 const routes: Routes = [
   { path: '', component: BlogComponent },
-  { path: 'abc', component: FirstBlogComponent, data: { depth: 4 } },
+  { path: 'positioning', component: FirstBlogComponent, data: { depth: 3 } },
 ];
 
 @NgModule({

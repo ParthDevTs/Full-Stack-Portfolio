@@ -1,50 +1,90 @@
-<section>
-  <div class="card col-md-6">
-    <div class="card-header">First Blog</div>
-    <div class="card-body">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
-      aspernatur cupiditate, alias magni mollitia vero! Commodi nisi debitis
-      fuga quae odit natus, perferendis ipsum tempora tempore, hic iure
-      accusantium nostrum.
-    </div>
-    <div class="card-footer">
-      <a routerLink="/blog/abc"
-        ><button type="button" class="btn btn-success">First Blog</button></a
-      >
-    </div>
-  </div>
+<section class="nav-section">
+  <nav
+    style="
+      --bs-breadcrumb-divider: url(
+        &#34;data:image/svg + xml,
+        %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='currentColor'/%3E%3C/svg%3E&#34;
+      );
+    "
+    aria-label="breadcrumb"
+  >
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a class="routerLink" routerLink="/home">Home</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Blogs</li>
+    </ol>
+  </nav>
+</section>
+
+<section class="hero section-1">
+  <p class="display-1">My Blogs</p>
 </section>
 
 <section>
-  <div class="card col-md-6">
-    <div class="card-header">First Blog</div>
-    <div class="card-body">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
-      aspernatur cupiditate, alias magni mollitia vero! Commodi nisi debitis
-      fuga quae odit natus, perferendis ipsum tempora tempore, hic iure
-      accusantium nostrum.
-    </div>
-    <div class="card-footer">
-      <a routerLink="/blog/abc"
-        ><button type="button" class="btn btn-success">First Blog</button></a
-      >
-    </div>
-  </div>
+  <mat-card class="example-card col-md-5">
+    <mat-card-header>
+      <mat-card-title>Content Positioning</mat-card-title>
+      <mat-card-subtitle>CSS/SCSS</mat-card-subtitle>
+    </mat-card-header>
+    <p class="text-right">October 16th, 2021</p>
+    <img mat-card-image src="assets/code1jpg.jpg" alt="code img" />
+    <mat-card-content>
+      <p>
+        We all know how content postioning can be very painful. <br />
+        In this Blog, I have tackled the problem of content positioning using
+        some CSS tricks and properties.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" routerLink="/blog/positioning">
+        Read More
+      </button>
+    </mat-card-actions>
+  </mat-card>
 </section>
-
+<mat-divider [inset]="true"> </mat-divider>
 <section>
-  <div class="card col-md-6">
-    <div class="card-header">First Blog</div>
-    <div class="card-body">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
-      aspernatur cupiditate, alias magni mollitia vero! Commodi nisi debitis
-      fuga quae odit natus, perferendis ipsum tempora tempore, hic iure
-      accusantium nostrum.
-    </div>
-    <div class="card-footer">
-      <a routerLink="/blog/abc"
-        ><button type="button" class="btn btn-success">First Blog</button></a
-      >
-    </div>
-  </div>
+  <mat-card class="example-card col-md-5">
+    <mat-card-header>
+      <mat-card-title>Blog-2</mat-card-title>
+      <mat-card-subtitle>Angular</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/code1jpg.jpg" alt="code" />
+    <mat-card-content>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, provident
+        iste. Architecto dignissimos ullam iure minima, itaque natus rem saepe.
+        Nihil ex repellendus odit laudantium quo corporis nisi maiores iste.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button disabled mat-raised-button color="accent" routerLink="/blog/abc">
+        Read More
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <mat-card class="example-card col-md-5">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Blog-3</mat-card-title>
+      <mat-card-subtitle>Angular</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/code1jpg.jpg" alt="Photo of a Shiba Inu" />
+    <mat-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit soluta
+        quas aperiam tenetur est culpa dignissimos, quisquam aut iure itaque
+        repellendus a illo, sunt qui molestiae assumenda quidem officia nobis.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button disabled mat-raised-button color="accent" routerLink="/blog/abc">
+        Read More
+      </button>
+    </mat-card-actions>
+  </mat-card>
 </section>

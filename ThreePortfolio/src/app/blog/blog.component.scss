@@ -1,5 +1,19 @@
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
 @import "~prismjs/themes/prism-coy";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+$breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
+.breadcrumb-item{
+  a{
+    text-decoration: none !important;
+    color: black ;
+    transition: all 400 ease-in-out;
+    font-family: 'Mulish', sans-serif;
+
+    &:hover{
+        color: blue;
+    }
+  } 
+}
 
 section {
   background-color: white;
@@ -11,4 +25,28 @@ section {
     background-color: rgb(223, 223, 223);
   }
   padding: 4vh;
+
+  .card,mat-card{
+    margin: 2vh;
+  }
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
 }
+.hero{
+  background: #aa4b6b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 30vh;
+
+  .display-1{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+  }
+}
+

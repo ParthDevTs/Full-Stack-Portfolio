@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultComponent } from './layout/default/default.component';
 import { TopNavComponent } from './shared/top-nav/top-nav.component';
 import { HomeComponent } from './modules/home/home.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HomeComponent } from './modules/home/home.component';
     MatGridListModule,
     MatMenuModule,
     PlatformModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

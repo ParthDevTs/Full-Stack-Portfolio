@@ -32,12 +32,7 @@
     <div fxFlex fxLayout="row" fxLayoutAlign="space-around center">
       <ul fxLayout="row" fxLayoutGap="2px">
         <li>
-          <a
-            [routerLink]="['/home']"
-            routerLinkActive="active"
-            (click)="goToAbout()"
-            >Home</a
-          >
+          <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
         </li>
         <li>
           <a [routerLink]="['/blog']" routerLinkActive="active">Blogs</a>
@@ -48,4 +43,7 @@
       </ul>
     </div>
   </mat-toolbar-row>
+  <div *ngIf="loader.isLoading | async" class="loader-container">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
 </mat-toolbar>

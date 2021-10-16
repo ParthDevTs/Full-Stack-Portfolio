@@ -1,6 +1,6 @@
 <div>
   <app-top-nav></app-top-nav>
-  <div [@routeAnimations]="prepareRoute(outlet)" class="display">
+  <div [@routeAnimations]="prepareRoute(outlet)" id="display" class="display">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
 </div>

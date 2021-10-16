@@ -13,7 +13,7 @@ const routes: Routes = [
     path: 'project',
     loadChildren: () =>
       import('./project/project.module').then((m) => m.ProjectModule),
-    data: { depth: 3 },
+    data: { depth: 4 },
   },
   {
     path: '',

@@ -1,6 +1,12 @@
+import { LoaderService } from './../../loader.service';
 import { ViewportScroller } from '@angular/common';
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import Typewriter from 't-writer.js';
+import {
+  RouteConfigLoadEnd,
+  RouteConfigLoadStart,
+  Router,
+} from '@angular/router';
 
 @Component({
   selector: 'app-top-nav',
@@ -8,9 +14,18 @@ import Typewriter from 't-writer.js';
   styleUrls: ['./top-nav.component.css'],
 })
 export class TopNavComponent implements OnInit, AfterViewInit {
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(public loader: LoaderService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof RouteConfigLoadStart) {
+        this.loader.setStatus(true);
+      } else if (event instanceof RouteConfigLoadEnd) {
+        this.loader.setStatus(false);
+      }
+    });
+  }
+
   ngAfterViewInit() {
     const target = document.querySelector('.parth');
     const writer = new Typewriter(target, {
@@ -38,15 +53,6 @@ export class TopNavComponent implements OnInit, AfterViewInit {
       .start();
   }
 
-  goToAbout() {
-    this.viewportScroller.scrollToAnchor('about');
-  }
-  goToTechStack() {
-    this.viewportScroller.scrollToAnchor('techStack');
-  }
-  goToExperience() {
-    this.viewportScroller.scrollToAnchor('experience');
-  }
   navbarFixed: boolean = false;
 
   @HostListener('window:scroll', ['$event']) onScroll() {
