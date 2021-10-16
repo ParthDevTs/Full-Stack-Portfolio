@@ -1,5 +1,5 @@
 import { AfterViewChecked, Component, OnInit } from '@angular/core';
-import { HighlightServiceService } from 'src/app/highlight-service.service';
+import { HighlightService } from 'src/app/highlight.service';
 
 @Component({
   selector: 'app-first-blog',
@@ -7,9 +7,8 @@ import { HighlightServiceService } from 'src/app/highlight-service.service';
   styleUrls: ['./first-blog.component.scss', './first-blog.component.css'],
 })
 export class FirstBlogComponent implements OnInit, AfterViewChecked {
-  highlighted: boolean = false;
-  constructor(private highlightService: HighlightServiceService) {}
-
+  constructor(private highlightService: HighlightService) {}
+  private highlighted: boolean = false;
   ngOnInit(): void {}
 
   ngAfterViewChecked() {
