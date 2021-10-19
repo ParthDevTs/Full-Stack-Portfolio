@@ -12,4 +12,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     AOS.init();
   }
+
+  currentSection = 'section1';
+
+  onSectionChange(sectionId: string) {
+    this.currentSection = sectionId;
+  }
+
+  scrollTo(section) {
+    document.querySelector('#' + section).scrollIntoView();
+  }
 }

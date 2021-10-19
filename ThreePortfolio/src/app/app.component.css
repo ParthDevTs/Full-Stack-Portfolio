@@ -16,10 +16,13 @@
 }
 .containers {
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  /* place-items: center; */
+  align-items: center;
+  justify-content: center;
   position: relative;
-  z-index: -1;
+
+  overflow-y: hidden;
   /* background-image: linear-gradient(to right, #414345, #232526);
   background-image: -webkit-linear-gradient(to right, #414345, #232526); */
 }
@@ -30,6 +33,7 @@ section {
 p {
   text-transform: uppercase;
   color: rgb(255, 255, 255);
+  text-shadow: 0.3em 0.3em 0.3em rgba(181, 127, 127, 0.782);
 }
 .ml15 {
   font-weight: 200;
@@ -62,8 +66,11 @@ p {
   text-decoration: none;
   color: white;
   font-family: "Press Start 2P", cursive;
-  transition: all 1s cubic-bezier();
+  transition: all 200 cubic-bezier();
   user-select: none;
+  font-size: 1.2em;
+  z-index: 0;
+  cursor: pointer;
 }
 .scroll-down:hover {
   text-shadow: 1px 1px 1px red, 3px 3px 5px blue;

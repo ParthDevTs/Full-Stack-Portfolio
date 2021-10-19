@@ -34,11 +34,11 @@ a{
     background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); 
     background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
     @supports(background-attachment: fixed){
-        background: rgb(95, 95, 95);
-        background-attachment: fixed;
-        background-blend-mode: multiply;
-        background-image: url("/assets/code1jpg.jpg");
-        background-size: cover;
+    background: rgb(95, 95, 95);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-image: url("/assets/design.jpg");
+    background-size: cover;
     }
     
     height: 30vh;
@@ -89,3 +89,5 @@ section{
         }
     }
 }
+
+

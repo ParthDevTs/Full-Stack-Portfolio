@@ -16,6 +16,8 @@ import { DefaultComponent } from './layout/default/default.component';
 import { TopNavComponent } from './shared/top-nav/top-nav.component';
 import { HomeComponent } from './modules/home/home.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ParticlesModule } from 'angular-particle';
+import { ScrollSpyDirective } from './scroll-spy.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     DefaultComponent,
     TopNavComponent,
     HomeComponent,
+    ScrollSpyDirective,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatMenuModule,
     PlatformModule,
     MatProgressBarModule,
+    ParticlesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

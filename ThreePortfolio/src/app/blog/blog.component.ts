@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterContentChecked,
+  Component,
+  OnInit,
+  AfterViewInit,
+  AfterContentInit,
+  AfterViewChecked,
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,10 +15,13 @@ import { Router } from '@angular/router';
 })
 export class BlogComponent implements OnInit {
   highlighted: boolean = false;
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {}
-  navigateToPositioning() {
-    this.router.navigate(['/positioning']);
+
+  scrollToTop() {
+    document
+      .querySelector('#nav')
+      .scrollIntoView({ behavior: 'auto', block: 'start' });
   }
 }

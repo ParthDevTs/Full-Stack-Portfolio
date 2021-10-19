@@ -1,0 +1,152 @@
+<section id="start" class="nav-section">
+  <nav
+    style="
+      --bs-breadcrumb-divider: url(
+        &#34;data:image/svg + xml,
+        %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='currentColor'/%3E%3C/svg%3E&#34;
+      );
+    "
+    aria-label="breadcrumb"
+  >
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a class="routerLink" routerLink="/home">Home</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        <a class="routerLink" routerLink="/blog">Blogs</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        Parallax Effect
+      </li>
+    </ol>
+  </nav>
+</section>
+<section class="hero">
+  <p class="display-1 text-center">Parallax Effect</p>
+</section>
+
+<section>
+  <div class="container col-md-8">
+    <br />
+    <p class="text-right">October 19th, 2021</p>
+    <br />
+    <p class="start-note text-justify">
+      Parallax scrolling is a web site trend where the background content (i.e.
+      an image) is moved at a different speed than the foreground content while
+      scrolling.
+      <br />
+      For Reference. you can see the image above stays put while content moves.
+    </p>
+  </div>
+  <div class="container col-md-6 first-method">
+    <h1>Using Plain CSS!</h1>
+    <p>
+      While using third party libraries might be more appealing, when yur goal
+      is to reduce the bundle size, the plan old CSS (or SCSS) can get the job
+      done with only a few lines of code.
+      <br />
+      in this effect, you will target a container and change its background
+      properties so that the "Parallax" effect takes place.
+    </p>
+    <p>
+      Here, <code>.hero</code> is the target class in which you want to add a
+      parallax effect. <br />
+      Add the image background and background color by
+      <code>background: #444;</code> and
+      <code>background-image: url("/assets/anyImage.jpg");</code>, now add
+      <code>background-blend-mode: multiply;</code> to make our text more
+      readable on screen by darkening the image. Lastly, add
+      <code>background-size: cover;</code> make it stretch to the background
+      size.
+      <br />
+      Your image background is now prepped for transformation to parallax
+      effect.
+    </p>
+    <br />
+    <br />
+    <h3>CSS/SCSS Code</h3>
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    ><code class="language-css">
+.hero&#123;
+    background: rgb(95, 95, 95);
+    background-blend-mode: multiply;
+    background-image: url("/assets/code1jpg.jpg");
+    background-size: cover;
+&#125;
+        </code></pre>
+    <br />
+    <br />
+    <h3>HTML Code</h3>
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    ><code class="language-html">
+&lt;section class="hero"&gt;
+    &lt;p class="display-1 text-center"&gt;Parallax Effect&lt;/p&gt;
+&lt;/section&gt;
+    </code></pre>
+
+    <br />
+    <br />
+    <mat-divider></mat-divider>
+    <br /><br />
+    <h1>Adding parallax Effect</h1>
+    <p>
+      Just add <code>background-attachment: fixed;</code> to the above prepped
+      code and BOOM! Parallax effect!
+    </p>
+    <br /><br />
+    <h3>HTML Code</h3>
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    ><code class="language-css">
+.hero&#123;
+    background: rgb(95, 95, 95);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-image: url("/assets/code1jpg.jpg");
+    background-size: cover;
+&#125;
+      </code></pre>
+  </div>
+  <div class="gif container col-md-6">
+    <img src="assets/power.gif" alt="feeeling powerful" />
+  </div>
+  <div
+    class="container text-warn col-md-6"
+    style="font-family: 'Kodchasan', sans-serif"
+  >
+    Indeed, Its a powerfull feeling! but as they say:
+    <br /><br />
+    <div class="blockQuote">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>With Great Power Comes Great Responsibility</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">Someone famous</figcaption>
+      </figure>
+      <p class="text-center" style="font-size: 1.1em">So, Spread the word!</p>
+    </div>
+  </div>
+
+  <div class="container col-md-12">
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="display-6 end-note">
+    So, there you have it! Easy way to add Parallax effect without third-party
+    libraries. Happy Coding!
+  </div>
+</section>
