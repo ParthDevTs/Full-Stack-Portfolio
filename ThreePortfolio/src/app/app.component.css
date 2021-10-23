@@ -1,19 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
-.canvas {
+/* .canvas {
   position: absolute;
   top: 0;
   left: 0;
   outline: none;
-  mix-blend-mode: overlay;
+  mix-blend-mode: exclusion;
+} */
 
-  /* background-image: #232526;
-  background-image: -webkit-linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ) !important;
-  background-image: linear-gradient(to right, #414345, #232526) !important; */
-}
 .containers {
   height: 100vh;
   display: flex;
@@ -31,9 +24,53 @@ section {
   height: 100vh;
 }
 p {
+  z-index: 2;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.25em 1em;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  text-shadow: 0.3em 0.3em 0.3em rgba(181, 127, 127, 0.782);
+  color: rgb(43, 245, 218);
+  border: currentColor 0.125em solid;
+  position: relative;
+  text-shadow: currentColor;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0%  100%/0.3), 0 0 0.45em currentColor;
+  box-shadow: 0 0 0.5em 0 rgb(43, 245, 218), inset 0 0 0.5em 0 rgb(43, 245, 218);
+  transition: all 500ms ease-in-out;
+}
+p:hover{
+  background-color: rgba(43, 245, 218, 0.118) ;
+}
+p::before{
+  content: '';
+  background-color: rgb(43, 245, 218) ;
+  position: absolute;
+  left: 0%;
+  top: 120%;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1,0.35);
+  filter: blur(1.6em);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: all 500ms ease-in-out;
+}
+p:hover::before{
+  opacity: 1;
+}
+p::after{
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-shadow: 0 0 0 1.5em 0.5em rgb(43, 245, 218) ;
+  opacity: 0;
+  transition: 500ms ease-in-out all;
+}
+p:hover::after{
+  opacity: 1;
 }
 .ml15 {
   font-weight: 200;
@@ -64,14 +101,16 @@ p {
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "Press Start 2P", cursive;
-  transition: all 200 cubic-bezier();
+  transition: all 200ms cubic-bezier();
   user-select: none;
   font-size: 1.2em;
   z-index: 0;
   cursor: pointer;
 }
 .scroll-down:hover {
-  text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
+  text-shadow: 2px 2px 1px red, 3px 3px 5px rgb(96, 96, 255);
+  font-size: 1.3em;
 }
+

@@ -11,11 +11,14 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
   background-image: #232526;
+
+  background-image: linear-gradient(to right, #000000, #000000) !important;
+  /* background: rgb(0,0,0) important; */
   background-image: -webkit-linear-gradient(
     to right,
-    #414345,
-    #232526
-  ) !important;
-  background-image: linear-gradient(to right, #414345, #232526) !important;
+    #000000,
+    #050505
+  ) !important; 
+  /* background: linear-gradient(90deg, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 43%, rgba(17,17,17,1) 71%, rgba(42,42,42,1) 100%) important; */
   overflow-x: hidden;
 }

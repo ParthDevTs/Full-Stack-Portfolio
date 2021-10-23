@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { HighlightService } from 'src/app/highlight.service';
 
 @Component({
   selector: 'app-parallax-effect',
@@ -8,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
     './parallax-effect.component.scss',
   ],
 })
-export class ParallaxEffectComponent implements OnInit {
-  constructor() {}
+export class ParallaxEffectComponent implements OnInit, AfterViewChecked {
+  constructor(private highlightService: HighlightService) {}
+  private highlighted: boolean = false;
+  ngAfterViewChecked() {
+    if (!this.highlighted) {
+      this.highlightService.highlightAll();
+      this.highlighted = true;
+    }
+  }
 
   ngOnInit(): void {}
 }

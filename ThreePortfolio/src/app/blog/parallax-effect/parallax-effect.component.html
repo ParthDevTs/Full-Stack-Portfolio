@@ -30,20 +30,22 @@
     <br />
     <p class="text-right">October 19th, 2021</p>
     <br />
+    <h1>Introduction</h1>
     <p class="start-note text-justify">
       Parallax scrolling is a web site trend where the background content (i.e.
       an image) is moved at a different speed than the foreground content while
       scrolling.
-      <br />
-      For Reference. you can see the image above stays put while content moves.
+      <br /><br />
+      For Reference, you can see the image above stays put while content moves.
     </p>
   </div>
   <div class="container col-md-6 first-method">
-    <h1>Using Plain CSS!</h1>
+    <h1>Preparing The Code</h1>
     <p>
       While using third party libraries might be more appealing, when yur goal
       is to reduce the bundle size, the plan old CSS (or SCSS) can get the job
       done with only a few lines of code.
+      <br />
       <br />
       in this effect, you will target a container and change its background
       properties so that the "Parallax" effect takes place.
@@ -51,15 +53,15 @@
     <p>
       Here, <code>.hero</code> is the target class in which you want to add a
       parallax effect. <br />
+      <br />
       Add the image background and background color by
       <code>background: #444;</code> and
       <code>background-image: url("/assets/anyImage.jpg");</code>, now add
       <code>background-blend-mode: multiply;</code> to make our text more
-      readable on screen by darkening the image. Lastly, add
+      readable on screen by darkening the image. <br /><br />
+      Lastly, add
       <code>background-size: cover;</code> make it stretch to the background
-      size.
-      <br />
-      Your image background is now prepped for transformation to parallax
+      size. Your image background is now prepped for transformation to parallax
       effect.
     </p>
     <br />
@@ -121,32 +123,19 @@
 &#125;
       </code></pre>
   </div>
-  <div class="gif container col-md-6">
-    <img src="assets/power.gif" alt="feeeling powerful" />
-  </div>
-  <div
-    class="container text-warn col-md-6"
-    style="font-family: 'Kodchasan', sans-serif"
-  >
-    Indeed, Its a powerfull feeling! but as they say:
-    <br /><br />
-    <div class="blockQuote">
-      <figure class="text-center">
-        <blockquote class="blockquote">
-          <p>With Great Power Comes Great Responsibility</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">Someone famous</figcaption>
-      </figure>
-      <p class="text-center" style="font-size: 1.1em">So, Spread the word!</p>
-    </div>
-  </div>
 
   <div class="container col-md-12">
     <mat-divider></mat-divider>
   </div>
 
   <div class="display-6 end-note">
-    So, there you have it! Easy way to add Parallax effect without third-party
-    libraries. Happy Coding!
+    There you have it! Now add parallax effect and impress everyone. Happy
+    Coding!
+  </div>
+  <div class="gif container col-md-6">
+    <img src="assets/power.gif" alt="feeeling powerful" />
+  </div>
+  <div class="footer-call">
+    <p>Be careful, with great power comes great responsibility</p>
   </div>
 </section>

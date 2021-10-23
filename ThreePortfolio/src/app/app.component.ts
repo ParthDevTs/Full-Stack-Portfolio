@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
     this.myParams = {
       particles: {
         number: {
-          value: 400,
+          value: 200,
           density: {
             enable: true,
             value_area: 800,
@@ -92,7 +92,7 @@ export class AppComponent implements OnInit {
         },
         move: {
           enable: true,
-          speed: 3,
+          speed: 10,
           direction: 'bottom',
           random: true,
           straight: true,
