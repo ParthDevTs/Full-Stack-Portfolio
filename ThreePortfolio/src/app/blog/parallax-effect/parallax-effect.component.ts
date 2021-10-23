@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { HighlightService } from 'src/app/highlight.service';
 
@@ -10,7 +11,10 @@ import { HighlightService } from 'src/app/highlight.service';
   ],
 })
 export class ParallaxEffectComponent implements OnInit, AfterViewChecked {
-  constructor(private highlightService: HighlightService) {}
+  constructor(
+    private highlightService: HighlightService,
+    private scroller: ViewportScroller
+  ) {}
   private highlighted: boolean = false;
   ngAfterViewChecked() {
     if (!this.highlighted) {
@@ -19,5 +23,7 @@ export class ParallaxEffectComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.scroller.scrollToAnchor('nav');
+  }
 }

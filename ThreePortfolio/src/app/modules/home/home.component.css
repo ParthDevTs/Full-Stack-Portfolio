@@ -20,6 +20,10 @@
     #203a43,
     #0f2027
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ padding-right: min(20%, 10%);
+ padding-left: min(20%, 10%) ;
+ padding-top: min(10%, 8%) ;
+ padding-bottom: min(10%, 5%) ;
 }
 .section-1::before {
   position: absolute;
@@ -29,13 +33,12 @@
   left: 0;
   width: 1200%;
   height: 250px;
-  background-size: cover;
-  background: url("/assets/mountains.png") no-repeat;
+  /* background-size: cover;
+  background: url("/assets/mountains.png") no-repeat; */
 }
 
 .box1 {
   position: relative;
-  margin: 10%;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.056);
   z-index: 1;
@@ -44,13 +47,15 @@
   border-radius: 3em;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: solid 2px transparent;
+  border: solid 2px white;
   box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.131);
+  
 }
 .about-header,
 .about-footer {
   font-family: "Press Start 2P", cursive;
   color: rgba(158, 233, 243, 0.652);
+  text-shadow: 1.5px 1.5px 1.5px #ffffff, 1.5px 1.5px 1.5px #202020, #ffffff 1.5px 1.5px 1.5px;
 }
 .about-header {
   top: 0;

@@ -1,5 +1,4 @@
 import { LoaderService } from './../../loader.service';
-import { ViewportScroller } from '@angular/common';
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import Typewriter from 't-writer.js';
 import {
@@ -33,7 +32,7 @@ export class TopNavComponent implements OnInit, AfterViewInit {
       typeSpeed: 90,
       deleteSpeed: 80,
       typeColor: 'white',
-      cursorColor: 'grey',
+      cursorColor: 'black',
     });
     writer
       .type('Parth')

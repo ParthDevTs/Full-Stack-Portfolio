@@ -19,22 +19,23 @@ $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200
 section {
   background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-basis: 33%;
+  flex-wrap: wrap;
+  padding-bottom: 5vh;
+
 
   .container-fluid {
     background-color: rgb(223, 223, 223);
   }
   padding-top: 5vh;
 
-  &:last-child{
-    padding-bottom: 5vh;
-  }
-
   .card,mat-card{
     margin: 1vh;
-    box-shadow: rgba(0, 0, 0, 0.172) 10px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.172) 10px 10px 10px 10px;
+
     p{
       font-family: 'Kodchasan', sans-serif;
     }
@@ -46,6 +47,13 @@ section {
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
+  }
+}
+@media only screen and (min-width: 80em){
+  section{
+    & > * + * {
+      margin-left: 2em;
+    }
   }
 }
 .hero{

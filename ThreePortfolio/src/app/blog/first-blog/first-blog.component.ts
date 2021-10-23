@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { HighlightService } from 'src/app/highlight.service';
 
@@ -7,10 +8,15 @@ import { HighlightService } from 'src/app/highlight.service';
   styleUrls: ['./first-blog.component.scss', './first-blog.component.css'],
 })
 export class FirstBlogComponent implements OnInit, AfterViewChecked {
-  constructor(private highlightService: HighlightService) {}
+  constructor(
+    private highlightService: HighlightService,
+    private scroller: ViewportScroller
+  ) {}
 
   private highlighted: boolean = false;
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.scroller.scrollToAnchor('nav');
+  }
 
   ngAfterViewChecked() {
     if (!this.highlighted) {

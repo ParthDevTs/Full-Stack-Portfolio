@@ -9,7 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { PlatformModule } from '@angular/cdk/platform';
 import { AppRoutingModule } from './app-routing.module';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultComponent } from './layout/default/default.component';
@@ -18,6 +18,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ParticlesModule } from 'angular-particle';
 import { ScrollSpyDirective } from './scroll-spy.directive';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ScrollSpyDirective } from './scroll-spy.directive';
     TopNavComponent,
     HomeComponent,
     ScrollSpyDirective,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { ScrollSpyDirective } from './scroll-spy.directive';
     PlatformModule,
     MatProgressBarModule,
     ParticlesModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

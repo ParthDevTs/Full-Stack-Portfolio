@@ -65,7 +65,7 @@ p::after{
   width: 100%;
   height: 100%;
   position: absolute;
-  box-shadow: 0 0 0 1.5em 0.5em rgb(43, 245, 218) ;
+  box-shadow: 0 0 0 1.5em 0.8em rgb(43, 245, 218) ;
   opacity: 0;
   transition: 500ms ease-in-out all;
 }
@@ -110,7 +110,7 @@ p:hover::after{
   cursor: pointer;
 }
 .scroll-down:hover {
-  text-shadow: 2px 2px 1px red, 3px 3px 5px rgb(96, 96, 255);
+  text-shadow: 2px 2px 1px red, 3px 3px 5px rgb(3, 3, 255);
   font-size: 1.3em;
 }
 

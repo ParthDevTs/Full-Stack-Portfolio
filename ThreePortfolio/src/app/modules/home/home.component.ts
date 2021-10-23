@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 @Component({
@@ -7,9 +8,14 @@ import 'aos/dist/aos.css';
   styleUrls: ['./home.component.css', './home.style.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-
+  constructor(private scroller: ViewportScroller) {
+    console.log(this.scroller.getScrollPosition());
+  }
   ngOnInit(): void {
+    if (this.scroller.getScrollPosition()[1] > 0) {
+      this.scroller.scrollToAnchor('about');
+    }
+
     AOS.init();
   }
 

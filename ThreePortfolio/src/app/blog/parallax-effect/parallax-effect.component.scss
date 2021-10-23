@@ -93,6 +93,14 @@ section{
         font-family: $end-note-font;
         padding: 2em;
     }
+    .excited{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            border-radius: 60%;
+        }
+    }
 }
 
 

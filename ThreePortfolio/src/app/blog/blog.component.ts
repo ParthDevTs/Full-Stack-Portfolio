@@ -1,12 +1,8 @@
-import {
-  AfterContentChecked,
-  Component,
-  OnInit,
-  AfterViewInit,
-  AfterContentInit,
-  AfterViewChecked,
-} from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-blog',
@@ -15,9 +11,12 @@ import { Router } from '@angular/router';
 })
 export class BlogComponent implements OnInit {
   highlighted: boolean = false;
-  constructor() {}
+  constructor(private router: Router, private scroller: ViewportScroller) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.scroller.scrollToAnchor('nav');
+    AOS.init();
+  }
 
   scrollToTop() {
     document
