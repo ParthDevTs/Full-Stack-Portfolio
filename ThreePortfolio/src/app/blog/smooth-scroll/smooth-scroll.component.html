@@ -1,0 +1,174 @@
+<section id="start" class="nav-section" id="nav">
+  <nav
+    style="
+      --bs-breadcrumb-divider: url(
+        &#34;data:image/svg + xml,
+        %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='currentColor'/%3E%3C/svg%3E&#34;
+      );
+    "
+    aria-label="breadcrumb"
+  >
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a class="routerLink" routerLink="/home">Home</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        <a class="routerLink" routerLink="/blog">Blogs</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        Smooth Scrolling
+      </li>
+    </ol>
+  </nav>
+</section>
+<section class="hero">
+  <p class="display-1 text-center">Smooth Scrolling</p>
+</section>
+
+<section>
+  <div class="container col-md-8">
+    <br />
+    <p class="text-right">October 24th, 2021</p>
+    <br />
+    <h1>Introduction</h1>
+    <p class="start-note text-justify">
+      Smooth scrolling is an event driven effect in which after some interaction
+      from User , the website scrolls itself to a set position.
+      <br /><br />
+      For Reference, you can click on buttons below to try it:
+    </p>
+    <p class="buttons">
+      <button mat-raised-button color="warn" (click)="scroll1()" id="section1">
+        Scroll to Section 1
+      </button>
+      <button mat-raised-button color="warn" (click)="scroll2()">
+        Scroll to Section 2
+      </button>
+    </p>
+  </div>
+  <div class="container col-md-6 first-method">
+    <h1>Preparing The Code</h1>
+    <p>
+      Again, the goal of this blog is to make the use of Third Party Libraries
+      as low as possible. So, we will explore Angular's inbuilt function i.e
+      <b>ViewportScroller</b>
+      <br />
+      <br />
+      You'll need a container to scroll to and give it some height and an id.
+      Here we will give:
+      <code> &lt;section id="section1"&gt; &lt;/section&gt;</code>
+    </p>
+    <p>
+      Here, <code>id="section1"</code> is the target id to which you will scroll
+      to when an event gets triggered<br />
+      <br />
+      Add the some height and background color by
+      <code>background: #444;</code> and <code>height: 100vh;</code>
+      <br /><br />.
+    </p>
+
+    <h3>HTML Code</h3>
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    ><code class="language-html">
+  &lt;section class="section1" id="section1"&gt;
+      &lt;!-- some content --&gt;
+      &lt;!-- some content --&gt;  
+      &lt;!-- some content --&gt;
+  &lt;/section&gt;
+      </code></pre>
+
+    <br />
+    <br />
+
+    <h3>CSS/SCSS Code</h3>
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    ><code class="language-css">
+  .section1&#123;
+      background: #444;
+      height: 100vh;
+  &#125;
+          </code></pre>
+
+    <br />
+    <div class="col-md-5" class="excited">
+      <img class="letsDoThis" src="assets/letsDoThis.gif" alt="excited" />
+    </div>
+
+    <br id="section2" />
+    <br />
+    <mat-divider></mat-divider>
+    <br /><br />
+    <h1>Adding Smooth Scroll Effect</h1>
+    <p>
+      Now, go to your component.ts file and inject a inbuilt ViewportScroller to
+      you constructor like: <br />
+      <code>constructor(private scroller: ViewportScroller)&#123; &#125;</code>
+      <br /><br />
+      Create a function <code>scrollToSection1()&#123; &#125;</code>, it will be
+      responsible for scrolling to certain element when certain event calls it.
+      Here we will use Click event on the button to call this function.
+    </p>
+    <br /><br />
+    <h3>Scroll Function Defination</h3>
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    ><code class="language-typescript">
+  constructor(private scroller: ViewportScroller)&#123; &#125;  
+  
+  
+  scrollToSection1()&#123;
+    this.scroller.scrollToAnchor('section1');
+  &#125;
+        </code></pre>
+    <br />
+    <br />
+    <p>
+      Lastly, Linking the button to the above defined funtion using ng-click
+      directive of angular so that whenever user clicks this button, the
+      function gets called.
+    </p>
+    <h3>HTML Code</h3>
+    <pre
+      lang="en"
+      data-prismjs-copy="Copy"
+      data-prismjs-copy-error="Try Again"
+      data-prismjs-copy-success=" Code Copied!"
+      data-prismjs-copy-timeout="5000"
+    >
+    <code class="language-html">
+    &lt;button (click)="scrollToSection1()"&gt; Scroll To Section1 &lt;/button&gt;
+    
+    &lt;section class="section1" id="section1"&gt;
+      &lt;!-- some content --&gt;
+      &lt;!-- some content --&gt;  
+      &lt;!-- some content --&gt;
+    &lt;/section&gt;
+    </code></pre>
+  </div>
+
+  <div class="container col-md-12">
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="display-6 end-note">
+    There you have it! Now add Smooth Scroll effect and impress everyone. Happy
+    Coding!
+  </div>
+  <div class="gif container col-md-6">
+    <img src="assets/celebration.gif" alt="feeeling powerful" />
+  </div>
+</section>

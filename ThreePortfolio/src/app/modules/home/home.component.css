@@ -48,9 +48,28 @@
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: solid 2px white;
-  box-shadow: 20px 20px 20px rgba(66, 56, 54, 0.131);
+  box-shadow: 2rem 2rem 2rem rgba(4, 4, 4, 0.686);
   
 }
+.downlaod{
+  text-decoration: none;
+}
+.download-button{
+  color: rgb(43, 245, 218);
+  background-color: black;
+  color: rgb(43, 245, 218);
+  border: currentColor 0.125em solid;
+  position: relative;
+  text-shadow: currentColor;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0%  100%/0.3), 0 0 0.45em currentColor;
+  box-shadow: 0 0 0.2em 0 rgb(43, 245, 218), inset 0 0 0.2em 0 rgb(43, 245, 218);
+}
+.download-button:hover{
+  background-color: rgba(43, 245, 218, 0.118) ;
+  box-shadow: 0 0 0.6em 0 rgb(43, 245, 218), inset 0 0 0.6em 0 rgb(43, 245, 218);
+}
+
 .about-header,
 .about-footer {
   font-family: "Press Start 2P", cursive;
@@ -67,9 +86,17 @@
 .section-1 p {
   /* font-family: "Overlock", cursive; */
   font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
 }
 .section-1 ul {
   font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+}
+.projectsLink{
+  color: white;
+}
+.projectsLink:hover, projectsLink:focus{
+  color: aqua;
 }
 
 /*Section 1 ends here*/

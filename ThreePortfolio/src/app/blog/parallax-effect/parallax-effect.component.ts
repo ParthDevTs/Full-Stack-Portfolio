@@ -24,6 +24,6 @@ export class ParallaxEffectComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit(): void {
-    this.scroller.scrollToAnchor('nav');
+    this.scroller.scrollToAnchor('display');
   }
 }

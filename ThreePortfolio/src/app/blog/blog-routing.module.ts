@@ -1,3 +1,4 @@
+import { SmoothScrollComponent } from './smooth-scroll/smooth-scroll.component';
 import { FirstBlogComponent } from './first-blog/first-blog.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -9,6 +10,11 @@ const routes: Routes = [
   { path: '', component: BlogComponent },
   { path: 'positioning', component: FirstBlogComponent, data: { depth: 3 } },
   { path: 'parallax', component: ParallaxEffectComponent, data: { depth: 3 } },
+  {
+    path: 'smoothScroll',
+    component: SmoothScrollComponent,
+    data: { depth: 3 },
+  },
 ];
 
 @NgModule({

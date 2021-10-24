@@ -5,7 +5,8 @@
 .footer-dark {
     padding:50px 0;
     color:#f0f9ff;
-    background-color:#1d1f21;
+    background-color:#000000;
+    
   }
   
   .footer-dark h3 {
@@ -27,11 +28,13 @@
   .footer-dark ul a {
     color:inherit;
     text-decoration:none;
-    opacity:0.6;
+    opacity:0.8;
+    color: white;
+    
   }
   
   .footer-dark ul a:hover {
-    opacity:0.8;
+    opacity:1;
   }
   
   @media (max-width:767px) {
@@ -52,13 +55,16 @@
   }
   
   .footer-dark .item.text p {
-    opacity:0.6;
+    opacity:0.9;
     margin-bottom:0;
+    color: white;
+    
   }
   
   .footer-dark .item.social {
     text-align:center;
     margin-top: 1rem;
+    
   }
   
   @media (max-width:991px) {
@@ -79,18 +85,20 @@
     box-shadow:0 0 0 1px rgba(255,255,255,0.4);
     margin:0 2rem;
     color:#fff;
-    opacity:0.75;
+    opacity:0.8;
+    transition: all ease-in-out 200ms;
   }
   
   .footer-dark .item.social > a:hover {
-    opacity:0.9;
+    opacity:1;
     color: rgb(43, 245, 218);
+    transform: scale(1.2);
   }
   
   .footer-dark .copyright {
     text-align:center;
     padding-top:2rem;
-    opacity:0.3;
+    opacity:0.5;
     font-size:13px;
     margin-bottom:0;
   }

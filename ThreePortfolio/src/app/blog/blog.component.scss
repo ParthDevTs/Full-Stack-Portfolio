@@ -24,20 +24,26 @@ section {
   justify-content: center;
   flex-basis: 33%;
   flex-wrap: wrap;
-  padding-bottom: 5vh;
-
-
+  padding-block-start: 3rem;
+  padding-block-end: 3rem;
+  padding-left: min(5em, 1em);
+  padding-right: min(5em, 1em);
   .container-fluid {
     background-color: rgb(223, 223, 223);
   }
   padding-top: 5vh;
 
   .card,mat-card{
-    margin: 1vh;
+    margin: 1.5em;
     box-shadow: rgba(0, 0, 0, 0.172) 10px 10px 10px 10px;
+    transition: all ease-in-out 300ms;
 
     p{
       font-family: 'Kodchasan', sans-serif;
+    }
+
+    &:hover{
+      transform: scale(1.05);
     }
   }
   .example-card {
@@ -45,7 +51,7 @@ section {
   }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('/assets/profile.jpg');
     background-size: cover;
   }
 }
@@ -67,6 +73,7 @@ height: 30vh;
   background-blend-mode: multiply;
   background-image: url("/assets/parallax.jpg");
   background-size: cover;
+  background-position: center bottom;
 }
 
 
@@ -74,5 +81,8 @@ height: 30vh;
     color: white;
     font-family: 'Dancing Script', cursive;
   }
+}
+nav{
+  margin-top: 7vh;
 }
 

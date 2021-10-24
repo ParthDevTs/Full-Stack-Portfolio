@@ -57,7 +57,7 @@
       -webkit-background-clip: padding-box;
       background-clip: padding-box;
       border: solid 2px white;
-      box-shadow: 20px 20px 20px rgba(29, 29, 29, 0.131);
+      box-shadow:  1.2rem 1.2rem 1.2rem rgba(0, 0, 0, 0.734);
       position: relative;
       padding: 1em;
       border-radius: 1.5em;
@@ -91,7 +91,7 @@
     border-radius: 50%;
   }
 }
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 70em) {
   .section-3 {
     .split {
       flex-direction: row;
@@ -176,7 +176,7 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: solid 2px white;
-    box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
+    box-shadow:  1.2rem 1.2rem 1.2rem rgba(21, 20, 20, 0.727);
     position: relative;
     padding: 0;
   }
@@ -197,7 +197,7 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: solid 2px white;
-    box-shadow: 20px 20px 20px rgba(65, 56, 54, 0.131);
+    box-shadow:  1.2rem 1.2rem 1.2rem rgba(29, 28, 28, 0.72);
     position: relative;
     padding: 1.2em;
     border-radius: 1em;

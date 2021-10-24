@@ -8,9 +8,7 @@ import 'aos/dist/aos.css';
   styleUrls: ['./home.component.css', './home.style.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private scroller: ViewportScroller) {
-    console.log(this.scroller.getScrollPosition());
-  }
+  constructor(private scroller: ViewportScroller) {}
   ngOnInit(): void {
     if (this.scroller.getScrollPosition()[1] > 0) {
       this.scroller.scrollToAnchor('about');

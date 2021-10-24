@@ -1,6 +1,6 @@
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
 @import "~prismjs/themes/prism-coy";
-@import "~prismjs/plugins/line-numbers/prism-line-numbers.css";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Molengo&display=swap');
@@ -97,10 +97,17 @@ section{
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
         img{
-            border-radius: 60%;
+            height: 20rem;
+            width: 23rem;
+            border-radius: 50%;       
         }
     }
 }
 
 
+nav{
+    margin-top: 7vh;
+  }
+  

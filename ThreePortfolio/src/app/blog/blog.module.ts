@@ -8,9 +8,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { ParallaxEffectComponent } from './parallax-effect/parallax-effect.component';
+import { SmoothScrollComponent } from './smooth-scroll/smooth-scroll.component';
 
 @NgModule({
-  declarations: [BlogComponent, FirstBlogComponent, ParallaxEffectComponent],
+  declarations: [BlogComponent, FirstBlogComponent, ParallaxEffectComponent, SmoothScrollComponent],
   imports: [
     CommonModule,
     BlogRoutingModule,
