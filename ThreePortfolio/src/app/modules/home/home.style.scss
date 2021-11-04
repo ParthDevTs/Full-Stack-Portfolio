@@ -64,7 +64,7 @@
     }
   }
   .stack-text {
-    
+    flex-grow: 4;
     h3 {
       font-family: "Staatliches", cursive;
       text-align: center;
@@ -84,14 +84,14 @@
     font-family: "Press Start 2P", cursive;
     color: rgba(235, 66, 66, 0.796);
     text-shadow: 2px 2px 2px #ffffff, 2px 2px 2px #202020, #ffffff 2px 2px 2px;
-    margin: 2vh;
+    margin: 2em;
   }
   img {
     display: block;
     border-radius: 50%;
   }
 }
-@media only screen and (min-width: 70em) {
+@media only screen and (min-width: 80em) {
   .section-3 {
     .split {
       flex-direction: row;

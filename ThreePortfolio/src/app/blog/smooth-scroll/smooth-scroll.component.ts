@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { DarkModeService } from 'src/app/dark-mode.service';
 import { HighlightService } from 'src/app/highlight.service';
 
 @Component({
@@ -13,10 +14,15 @@ import { HighlightService } from 'src/app/highlight.service';
 export class SmoothScrollComponent implements OnInit, AfterViewChecked {
   constructor(
     private highlightService: HighlightService,
-    private scroller: ViewportScroller
+    private scroller: ViewportScroller,
+    private darkmode: DarkModeService
   ) {}
 
+  isDarkMode: boolean;
   ngOnInit(): void {
+    this.darkmode.darkmode.subscribe(
+      (darkmode) => (this.isDarkMode = darkmode)
+    );
     this.scroller.scrollToAnchor('display');
   }
 

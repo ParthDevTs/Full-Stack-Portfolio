@@ -22,7 +22,7 @@ $candy-app-theme: mat-light-theme(
 @include angular-material-theme($candy-app-theme);
 
 $dark-primary: mat-palette($mat-blue-grey, 900);
-$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-accent: mat-palette($mat-cyan, A200, A100, A400);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme(
   (

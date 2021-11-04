@@ -19,6 +19,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ParticlesModule } from 'angular-particle';
 import { ScrollSpyDirective } from './scroll-spy.directive';
 import { FooterComponent } from './shared/footer/footer.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     HomeComponent,
     ScrollSpyDirective,
     FooterComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     MatProgressBarModule,
     ParticlesModule,
     FontAwesomeModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { DarkModeService } from 'src/app/dark-mode.service';
 import { HighlightService } from 'src/app/highlight.service';
 
 @Component({
@@ -11,9 +12,11 @@ import { HighlightService } from 'src/app/highlight.service';
   ],
 })
 export class ParallaxEffectComponent implements OnInit, AfterViewChecked {
+  isDarkMode: boolean;
   constructor(
     private highlightService: HighlightService,
-    private scroller: ViewportScroller
+    private scroller: ViewportScroller,
+    private darkmode: DarkModeService
   ) {}
   private highlighted: boolean = false;
   ngAfterViewChecked() {
@@ -24,6 +27,9 @@ export class ParallaxEffectComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit(): void {
+    this.darkmode.darkmode.subscribe(
+      (darkmode) => (this.isDarkMode = darkmode)
+    );
     this.scroller.scrollToAnchor('display');
   }
 }

@@ -1,140 +1,158 @@
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
 @import "~prismjs/themes/prism-coy";
 
-
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Molengo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Poppins:ital,wght@1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Molengo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Poppins:ital,wght@1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
 $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
-$body-font: 'Kodchasan', sans-serif;
-$end-note-font: 'Courier Prime', monospace;
-$heading-font: 'Molengo', sans-serif;
+$body-font: "Kodchasan", sans-serif;
+$end-note-font: "Courier Prime", monospace;
+$heading-font: "Molengo", sans-serif;
 
 section {
-    background-color: white;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .container {
-    padding: 1rem;
-    margin: 1rem;
-    position: relative;
-  }
-a{
-    text-decoration: none !important;
-    color: black ;
-    transition: all 400 ease-in-out;
-    font-family: 'Mulish', sans-serif;
-
-    &:hover{
-        color: blue;
-    }
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.nav-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.container {
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+a {
+  text-decoration: none !important;
+  color: black;
+  transition: all 400 ease-in-out;
+  font-family: "Mulish", sans-serif;
 
+  &:hover {
+    color: blue;
+  }
+}
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero{
-    background: #aa4b6b; 
-    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); 
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-    @supports(background-attachment: fixed){
+.hero {
+  background: #aa4b6b;
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  @supports (background-attachment: fixed) {
     background: rgb(95, 95, 95) no-repeat;
     background-attachment: fixed;
     background-blend-mode: multiply;
     background-image: url("/assets/smooth.jpg");
     background-size: cover;
     background-position: center bottom;
+  }
+
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .display-1 {
+    color: white;
+    font-family: "Dancing Script", cursive;
+  }
+}
+section {
+  .start-note {
+    font-size: 2rem;
+    font-family: $body-font;
+  }
+
+  .buttons {
+    padding: 2rem;
+    text-align: center;
+    & * + * {
+      margin-left: 1em;
     }
-    
-    height: 30vh;
+  }
+  .first-method {
+    font-size: 1.5rem;
+    font-family: $body-font;
+    h1 {
+      font-family: $heading-font;
+    }
+  }
+  .second-method {
+    font-size: 1.5rem;
+    font-family: $body-font;
+    h1 {
+      font-family: $heading-font;
+    }
+  }
+
+  .end-note {
+    font-size: 1.6rem;
+    font-family: $end-note-font;
+    padding: 2em;
+  }
+  .gif {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    .display-1{
-        color: white;
-        font-family: 'Dancing Script', cursive;
+    img {
+      height: 20rem;
+      width: 25rem;
+      border-radius: 50%;
     }
-}
-section{
-    .start-note{
-        font-size: 2rem;
-        font-family: $body-font;
-    }
-
-    .buttons{
-        padding: 2rem;
-        text-align: center;
-        & *+*{
-            margin-left:1em ;
-        }
-    }
-    .first-method{
-        font-size: 1.5rem;
-        font-family: $body-font;
-        h1{
-            font-family: $heading-font;
-        }
-        
-    }
-    .second-method{
-        font-size: 1.5rem;
-        font-family: $body-font;
-        h1{
-            font-family: $heading-font;
-        }
-    }
-
-    .end-note{
-        font-size: 1.6rem;
-        font-family: $end-note-font;
-        padding: 2em;
-    }
-    .gif{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img{
-            height: 20rem;
-            width: 25rem;
-            border-radius: 50%;
-        }
-    }
-    .footer-call{
-        font-size: 1.2rem;
-        font-family: $end-note-font;
-        padding: 2em;
-    }
-    .excited{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        img{
-            height: 20rem;
-            width: 23rem;
-            border-radius: 50%;       
-        }
-        .letsDoThis{
-            width: 25rem;
-            border-radius: 2em;
-        }
-    }
-
-}
-
-
-nav{
-    margin-top: 7vh;
   }
-  
+  .footer-call {
+    font-size: 1.2rem;
+    font-family: $end-note-font;
+    padding: 2em;
+  }
+  .excited {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    img {
+      height: 20rem;
+      width: 23rem;
+      border-radius: 50%;
+    }
+    .letsDoThis {
+      width: 25rem;
+      border-radius: 2em;
+    }
+  }
+}
+
+nav {
+  margin-top: 7vh;
+}
+
+.SectionDark {
+  background-color: rgb(24, 23, 23);
+  color: white;
+}
+.code {
+  color: rgb(12, 167, 206);
+}
+.breadcrumb-item {
+  padding-left: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 4px;
+}
+.breadcrumb-item:first-child {
+  padding-left: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.breadcrumb-item:last-child {
+  padding-right: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}

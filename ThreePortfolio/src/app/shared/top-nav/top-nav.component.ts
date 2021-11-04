@@ -20,7 +20,9 @@ export class TopNavComponent implements OnInit, AfterViewInit {
       if (event instanceof RouteConfigLoadStart) {
         this.loader.setStatus(true);
       } else if (event instanceof RouteConfigLoadEnd) {
-        this.loader.setStatus(false);
+        setTimeout(() => {
+          this.loader.setStatus(false);
+        }, 700);
       }
     });
   }

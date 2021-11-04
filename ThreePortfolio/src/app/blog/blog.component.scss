@@ -1,19 +1,19 @@
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
 @import "~prismjs/themes/prism-coy";
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap");
 $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
-.breadcrumb-item{
-  a{
+.breadcrumb-item {
+  a {
     text-decoration: none !important;
-    color: black ;
+    color: black;
     transition: all 400 ease-in-out;
-    font-family: 'Mulish', sans-serif;
+    font-family: "Mulish", sans-serif;
 
-    &:hover{
-        color: blue;
+    &:hover {
+      color: cyan;
     }
-  } 
+  }
 }
 
 section {
@@ -28,61 +28,115 @@ section {
   padding-block-end: 3rem;
   padding-left: min(5em, 1em);
   padding-right: min(5em, 1em);
+  transition: all 200ms ease-in-out;
+
   .container-fluid {
     background-color: rgb(223, 223, 223);
   }
   padding-top: 5vh;
 
-  .card,mat-card{
+  .card,
+  mat-card {
     margin: 1.5em;
     box-shadow: rgba(0, 0, 0, 0.172) 10px 10px 10px 10px;
     transition: all ease-in-out 300ms;
 
-    p{
-      font-family: 'Kodchasan', sans-serif;
+    p {
+      font-family: "Kodchasan", sans-serif;
     }
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
     }
   }
   .example-card {
     max-width: 350px;
   }
-  
+
   .example-header-image {
-    background-image: url('/assets/profile.jpg');
+    background-image: url("/assets/profile.jpg");
     background-size: cover;
   }
 }
-@media only screen and (min-width: 80em){
-  section{
+@media only screen and (min-width: 80em) {
+  section {
     & > * + * {
       margin-left: 2em;
     }
   }
 }
-.hero{
-  background: #aa4b6b;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-height: 30vh;
-@supports(background-attachment: fixed){
-  background: rgb(95, 95, 95);
-  background-attachment: fixed;
-  background-blend-mode: multiply;
-  background-image: url("/assets/parallax.jpg");
-  background-size: cover;
-  background-position: center bottom;
-}
+.hero {
+  background: #aa4b6b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3b8d99,
+    #6b6b83,
+    #aa4b6b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3b8d99,
+    #6b6b83,
+    #aa4b6b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 30vh;
+  @supports (background-attachment: fixed) {
+    background: rgb(95, 95, 95);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-image: url("/assets/parallax.jpg");
+    background-size: cover;
+    background-position: center bottom;
+  }
 
-
-  .display-1{
+  .display-1 {
     color: white;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Dancing Script", cursive;
   }
 }
-nav{
+nav {
   margin-top: 7vh;
 }
-
+.cardSectionDark {
+  background-color: rgb(24, 23, 23);
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+.cardSectionLight {
+  background-color: white;
+}
+.darkmodeSection {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  .darkMode {
+    position: absolute;
+    right: 2em;
+  }
+}
+.moon {
+  color: rgb(61, 10, 179);
+  background-color: rgb(24, 23, 23);
+  transition: all ease-in 200ms;
+}
+.sun {
+  color: rgb(238, 210, 0);
+  transition: all ease-in 200ms;
+  background-color: white;
+}
+.breadcrumb-item {
+  padding-left: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 4px;
+}
+.breadcrumb-item:first-child {
+  padding-left: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.breadcrumb-item:last-child {
+  padding-right: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}

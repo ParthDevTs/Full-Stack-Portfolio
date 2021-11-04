@@ -1,4 +1,9 @@
-<section id="start" class="nav-section" id="nav">
+<section
+  id="start"
+  class="nav-section"
+  id="nav"
+  [ngClass]="{ SectionDark: isDarkMode }"
+>
   <nav
     style="
       --bs-breadcrumb-divider: url(
@@ -25,7 +30,7 @@
   <p class="display-1 text-center">CSS Positioning</p>
 </section>
 
-<section>
+<section [ngClass]="{ SectionDark: isDarkMode }">
   <div class="container col-md-8">
     <br />
     <p class="text-right">October 16th, 2021</p>
@@ -57,20 +62,22 @@
       and width
     </p>
     <br />
-    <pre
-      lang="en"
-      data-prismjs-copy="Copy"
-      data-prismjs-copy-error="Try Again"
-      data-prismjs-copy-success=" Code Copied!"
-      data-prismjs-copy-timeout="5000"
-    ><code class="language-typescript">
-      .any-content&#123;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-      &#125;
-      </code></pre>
+    <div class="code">
+      <pre
+        lang="en"
+        data-prismjs-copy="Copy"
+        data-prismjs-copy-error="Try Again"
+        data-prismjs-copy-success=" Code Copied!"
+        data-prismjs-copy-timeout="5000"
+      ><code class="language-typescript">
+        .any-content&#123;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        &#125;
+        </code></pre>
+    </div>
   </div>
   <div class="container col-md-10">
     <mat-divider></mat-divider>
@@ -102,7 +109,7 @@
       might want to check this space for more such content :D
     </p>
 
-    <div data-prismjs-copy-timeout="5000">
+    <div class="code" data-prismjs-copy-timeout="5000">
       <pre
         lang="en"
         data-prismjs-copy="Copy"

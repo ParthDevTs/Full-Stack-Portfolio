@@ -1,4 +1,9 @@
-<section id="start" class="nav-section" id="nav">
+<section
+  id="start"
+  class="nav-section"
+  id="nav"
+  [ngClass]="{ SectionDark: isDarkMode }"
+>
   <nav
     style="
       --bs-breadcrumb-divider: url(
@@ -25,7 +30,7 @@
   <p class="display-1 text-center">Parallax Effect</p>
 </section>
 
-<section>
+<section [ngClass]="{ SectionDark: isDarkMode }">
   <div class="container col-md-8">
     <br />
     <p class="text-right">October 19th, 2021</p>
@@ -66,35 +71,39 @@
     </p>
     <br />
     <br />
-    <h3>CSS/SCSS Code</h3>
-    <pre
-      lang="en"
-      data-prismjs-copy="Copy"
-      data-prismjs-copy-error="Try Again"
-      data-prismjs-copy-success=" Code Copied!"
-      data-prismjs-copy-timeout="5000"
-    ><code class="language-css">
-.hero&#123;
-    background: rgb(95, 95, 95);
-    background-blend-mode: multiply;
-    background-image: url("/assets/code1jpg.jpg");
-    background-size: cover;
-&#125;
-        </code></pre>
-    <br />
-    <br />
-    <h3>HTML Code</h3>
-    <pre
-      lang="en"
-      data-prismjs-copy="Copy"
-      data-prismjs-copy-error="Try Again"
-      data-prismjs-copy-success=" Code Copied!"
-      data-prismjs-copy-timeout="5000"
-    ><code class="language-html">
-&lt;section class="hero"&gt;
-    &lt;p class="display-1 text-center"&gt;Parallax Effect&lt;/p&gt;
-&lt;/section&gt;
-    </code></pre>
+    <div class="code">
+      <h3>CSS/SCSS Code</h3>
+      <pre
+        lang="en"
+        data-prismjs-copy="Copy"
+        data-prismjs-copy-error="Try Again"
+        data-prismjs-copy-success=" Code Copied!"
+        data-prismjs-copy-timeout="5000"
+        class="code"
+      ><code class="language-css">
+      .hero&#123;
+      background: rgb(95, 95, 95);
+      background-blend-mode: multiply;
+      background-image: url("/assets/code1jpg.jpg");
+      background-size: cover;
+      &#125;
+          </code></pre>
+      <br />
+      <br />
+      <h3>HTML Code</h3>
+      <pre
+        lang="en"
+        data-prismjs-copy="Copy"
+        data-prismjs-copy-error="Try Again"
+        data-prismjs-copy-success=" Code Copied!"
+        data-prismjs-copy-timeout="5000"
+        class="code"
+      ><code class="language-html">
+      &lt;section class="hero"&gt;
+      &lt;p class="display-1 text-center"&gt;Parallax Effect&lt;/p&gt;
+      &lt;/section&gt;
+      </code></pre>
+    </div>
 
     <br />
     <br />
@@ -109,22 +118,24 @@
       <img src="assets/excited.gif" alt="excited" />
     </div>
     <br /><br />
-    <h3>HTML Code</h3>
-    <pre
-      lang="en"
-      data-prismjs-copy="Copy"
-      data-prismjs-copy-error="Try Again"
-      data-prismjs-copy-success=" Code Copied!"
-      data-prismjs-copy-timeout="5000"
-    ><code class="language-css">
-.hero&#123;
-    background: rgb(95, 95, 95);
-    background-attachment: fixed;
-    background-blend-mode: multiply;
-    background-image: url("/assets/code1jpg.jpg");
-    background-size: cover;
-&#125;
-      </code></pre>
+    <h3 class="code">HTML Code</h3>
+    <div class="code">
+      <pre
+        lang="en"
+        data-prismjs-copy="Copy"
+        data-prismjs-copy-error="Try Again"
+        data-prismjs-copy-success=" Code Copied!"
+        data-prismjs-copy-timeout="5000"
+      ><code class="language-css">
+      .hero&#123;
+      background: rgb(95, 95, 95);
+      background-attachment: fixed;
+      background-blend-mode: multiply;
+      background-image: url("/assets/code1jpg.jpg");
+      background-size: cover;
+      &#125;
+        </code></pre>
+    </div>
   </div>
 
   <div class="container col-md-12">
