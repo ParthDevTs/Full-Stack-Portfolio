@@ -214,7 +214,7 @@
     }
   }
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 80em) {
   .section-4 {
     .tech-heading {
       font-size: 3em;
@@ -277,9 +277,34 @@
     .grid__item__shape {
       .heading {
         font-family: "Satisfy", cursive;
-        font-size: 5rem;
+        font-size: 4rem;
         margin: 5rem;
         color: rgb(60, 176, 253);
+      }
+      .disclaimer__box {
+        margin: 1em;
+      }
+      .disclaimer {
+        color: rgb(41, 169, 255);
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+
+        background: rgba(175, 170, 170, 0.385);
+        z-index: 1;
+        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(40px);
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+
+        box-shadow: 1.2rem 1.2rem 1.2rem rgba(29, 28, 28, 0.138);
+        position: relative;
+        padding: 1.2em;
+        border-radius: 1em;
+
+        font-weight: 800;
+        letter-spacing: 2px;
       }
       .split {
         position: relative;
@@ -296,7 +321,7 @@
           align-items: center;
           width: 100%;
           padding: 0;
-          margin: 0;
+          margin: 2em;
 
           background: rgba(151, 149, 149, 0.056);
           z-index: 1;
@@ -323,6 +348,19 @@
             position: relative;
             border-radius: 1rem;
             z-index: 1;
+            overflow: hidden;
+
+            background: rgba(151, 149, 149, 0.056);
+            z-index: 1;
+            -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(5px);
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: solid 1px white;
+            padding: 1em;
+            box-shadow: 1.2rem 1.2rem 1.2rem rgba(21, 20, 20, 0.124);
+
+            border-radius: 2rem;
 
             &::after {
               content: "";
@@ -344,6 +382,10 @@
   }
 }
 
+.reset__button {
+  margin: 1em;
+}
+
 @media only screen and (min-width: 80em) {
   .contact-me {
     .grid__item {
@@ -351,7 +393,16 @@
         .split {
           flex-direction: row;
         }
+        .heading {
+          font-size: 6rem;
+        }
       }
     }
   }
+}
+
+.contact__divider {
+  height: 1rem;
+  width: 100%;
+  background-color: rgb(86, 255, 255);
 }

@@ -215,10 +215,12 @@
     <p class="display-3 tech-heading bottom text-center">&lt;/experience&gt;</p>
   </div>
 </section>
+<section class="contact__divider"></section>
+<!-- Contact me Form -->
 <section class="contact-me">
   <div class="grid__item col-md-8">
     <div class="grid__item__shape">
-      <h1 class="text-center display-1 heading">Contact Me</h1>
+      <h1 class="text-center display-1 heading"><u>Contact Me</u></h1>
       <div class="split">
         <div class="display form__side1">
           <div class="image">
@@ -229,7 +231,7 @@
           <div class="glass">
             <form [formGroup]="emailForm" class="form" (ngSubmit)="onSubmit()">
               <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">Name : </label>
                 <input
                   type="text"
                   class="form-control"
@@ -240,7 +242,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
+                <label for="email" class="form-label">Email Address :</label>
                 <input
                   type="email"
                   class="form-control"
@@ -251,7 +253,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="subject" class="form-label">Subject</label>
+                <label for="subject" class="form-label">Subject :</label>
                 <input
                   type="text"
                   class="form-control"
@@ -261,7 +263,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
+                <label for="message" class="form-label">Message :</label>
                 <textarea
                   class="form-control"
                   formControlName="message"
@@ -277,9 +279,23 @@
               >
                 Send Email
               </button>
+              <button
+                class="reset__button"
+                color="primary"
+                mat-raised-button
+                type="reset"
+              >
+                Reset Form
+              </button>
             </form>
           </div>
         </div>
+      </div>
+      <br />
+      <div class="disclaimer__box">
+        <a class="disclaimer text-center">
+          <small>* all fields are mandatory * </small>
+        </a>
       </div>
     </div>
   </div>
