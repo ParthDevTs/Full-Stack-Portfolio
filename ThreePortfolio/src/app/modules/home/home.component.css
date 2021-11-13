@@ -7,13 +7,7 @@
   place-content: center;
 }
 .section-1 {
-  background: #0f2027; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #0f2027; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #2c5364,
@@ -43,7 +37,8 @@
   margin-top: 3rem;
   background: rgba(255, 255, 255, 0.056);
   z-index: 1;
-  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
   color: white;
   border-radius: 3em;
   -webkit-background-clip: padding-box;

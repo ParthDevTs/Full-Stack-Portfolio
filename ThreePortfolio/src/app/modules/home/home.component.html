@@ -215,3 +215,72 @@
     <p class="display-3 tech-heading bottom text-center">&lt;/experience&gt;</p>
   </div>
 </section>
+<section class="contact-me">
+  <div class="grid__item col-md-8">
+    <div class="grid__item__shape">
+      <h1 class="text-center display-1 heading">Contact Me</h1>
+      <div class="split">
+        <div class="display form__side1">
+          <div class="image">
+            <img class="parth__img" src="assets/parth.png" alt="parth image" />
+          </div>
+        </div>
+        <div class="form__side">
+          <div class="glass">
+            <form [formGroup]="emailForm" class="form" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Full Name"
+                  formControlName="name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                  formControlName="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  formControlName="subject"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  formControlName="message"
+                  id="message"
+                  required
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                mat-raised-button
+                type="submit"
+                [disabled]="emailForm.invalid"
+              >
+                Send Email
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

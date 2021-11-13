@@ -2,16 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Overlock&family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 .section-3 {
   position: relative;
-  background: #0f2027; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c5364,
-    #203a43,
-    #0f2027
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #0f2027; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #2c5364,
@@ -19,7 +14,9 @@
     #0f2027
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   overflow: hidden;
+  -webkit-padding-before: 3rem;
   padding-block-start: 3rem;
+  -webkit-padding-after: 3rem;
   padding-block-end: 3rem;
   &::before {
     position: absolute;
@@ -53,11 +50,12 @@
     .tech {
       background: rgba(253, 253, 253, 0.056);
       z-index: 1;
+      -webkit-backdrop-filter: blur(40px);
       backdrop-filter: blur(40px);
       -webkit-background-clip: padding-box;
       background-clip: padding-box;
       border: solid 2px white;
-      box-shadow:  1.2rem 1.2rem 1.2rem rgba(0, 0, 0, 0.734);
+      box-shadow: 1.2rem 1.2rem 1.2rem rgba(0, 0, 0, 0.734);
       position: relative;
       padding: 1em;
       border-radius: 1.5em;
@@ -116,10 +114,11 @@
 
 .section-4 {
   background: #0f2027;
-  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
   overflow: hidden;
+  -webkit-padding-before: 3rem;
   padding-block-start: 3rem;
+  -webkit-padding-after: 3rem;
   padding-block-end: 3rem;
   position: relative;
   &::before {
@@ -172,11 +171,12 @@
     height: 200px;
     background: rgba(151, 149, 149, 0.056);
     z-index: 1;
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: solid 2px white;
-    box-shadow:  1.2rem 1.2rem 1.2rem rgba(21, 20, 20, 0.727);
+    box-shadow: 1.2rem 1.2rem 1.2rem rgba(21, 20, 20, 0.727);
     position: relative;
     padding: 0;
   }
@@ -193,11 +193,12 @@
     margin-top: 1.6em;
     background: rgba(151, 149, 149, 0.056);
     z-index: 1;
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: solid 2px white;
-    box-shadow:  1.2rem 1.2rem 1.2rem rgba(29, 28, 28, 0.72);
+    box-shadow: 1.2rem 1.2rem 1.2rem rgba(29, 28, 28, 0.72);
     position: relative;
     padding: 1.2em;
     border-radius: 1em;
@@ -231,6 +232,126 @@
     .infosys {
       height: 270px;
       padding: 1em;
+    }
+  }
+}
+.contact-me {
+  background-color: #f7f8fc;
+  background: linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10rem;
+
+  .grid__item {
+    padding: 3rem;
+    position: relative;
+
+    z-index: 1;
+
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.309),
+        inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
+        8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      height: 400px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background: url("/assets/paper.svg") no-repeat;
+      overflow-x: hidden;
+      z-index: -1;
+    }
+    .grid__item__shape {
+      .heading {
+        font-family: "Satisfy", cursive;
+        font-size: 5rem;
+        margin: 5rem;
+        color: rgb(60, 176, 253);
+      }
+      .split {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-basis: 50%;
+        gap: 1rem;
+
+        .form__side {
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+
+          background: rgba(151, 149, 149, 0.056);
+          z-index: 1;
+          -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+          border: solid 1px white;
+          padding: 1em;
+          box-shadow: 1.2rem 1.2rem 1.2rem rgba(21, 20, 20, 0.124);
+
+          border-radius: 2rem;
+        }
+        .form__side1 {
+          display: flex;
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          position: relative;
+          .image {
+            position: relative;
+            border-radius: 1rem;
+            z-index: 1;
+
+            &::after {
+              content: "";
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              position: absolute;
+              box-shadow: 1.2rem 1.2rem 1.2rem rgba(21, 20, 20, 0.124);
+            }
+
+            .parth__img {
+              border-radius: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .contact-me {
+    .grid__item {
+      .grid__item__shape {
+        .split {
+          flex-direction: row;
+        }
+      }
     }
   }
 }

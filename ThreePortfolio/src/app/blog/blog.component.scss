@@ -24,7 +24,9 @@ section {
   justify-content: center;
   flex-basis: 33%;
   flex-wrap: wrap;
+  -webkit-padding-before: 3rem;
   padding-block-start: 3rem;
+  -webkit-padding-after: 3rem;
   padding-block-end: 3rem;
   padding-left: min(5em, 1em);
   padding-right: min(5em, 1em);
@@ -66,13 +68,7 @@ section {
   }
 }
 .hero {
-  background: #aa4b6b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #3b8d99,
-    #6b6b83,
-    #aa4b6b
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #aa4b6b; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #3b8d99,
@@ -115,7 +111,7 @@ nav {
   }
 }
 .moon {
-  color: rgb(61, 10, 179);
+  color: rgb(66, 250, 247);
   background-color: rgb(24, 23, 23);
   transition: all ease-in 200ms;
 }
