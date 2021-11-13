@@ -227,7 +227,7 @@
             <img class="parth__img" src="assets/email.png" alt="email icon" />
           </div>
         </div>
-        <div class="form__side">
+        <div class="form__side" data-aos="zoom-in-left">
           <div class="glass">
             <form [formGroup]="emailForm" class="form" (ngSubmit)="onSubmit()">
               <div class="mb-3">
@@ -288,15 +288,15 @@
                 Reset Form
               </button>
             </form>
+            <div class="disclaimer__box">
+              <a class="disclaimer text-center">
+                <small>* all fields are mandatory * </small>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <br />
-      <div class="disclaimer__box">
-        <a class="disclaimer text-center">
-          <small>* all fields are mandatory * </small>
-        </a>
-      </div>
     </div>
   </div>
 </section>

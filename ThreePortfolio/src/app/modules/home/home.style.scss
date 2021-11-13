@@ -245,7 +245,7 @@
   padding: 10rem;
 
   .grid__item {
-    padding: 3rem;
+    padding: 4rem 4rem 1rem 4rem;
     position: relative;
 
     z-index: 1;
@@ -280,14 +280,16 @@
         font-size: 4rem;
         margin: 5rem;
         color: rgb(60, 176, 253);
+        text-shadow: 0.8rem 0.8rem 1rem white,
+          0.3rem 0.3rem 0.3rem rgb(180, 176, 176);
       }
       .disclaimer__box {
-        margin: 1em;
+        margin-top: 0.5em;
       }
       .disclaimer {
-        color: rgb(41, 169, 255);
+        color: rgb(201, 233, 255);
         text-decoration: none;
-        padding: 10px;
+        padding: 5px;
         border-radius: 5px;
         position: relative;
 
@@ -300,7 +302,6 @@
 
         box-shadow: 1.2rem 1.2rem 1.2rem rgba(29, 28, 28, 0.138);
         position: relative;
-        padding: 1.2em;
         border-radius: 1em;
 
         font-weight: 800;
@@ -321,7 +322,7 @@
           align-items: center;
           width: 100%;
           padding: 0;
-          margin: 2em;
+          margin: 1em;
 
           background: rgba(151, 149, 149, 0.056);
           z-index: 1;
