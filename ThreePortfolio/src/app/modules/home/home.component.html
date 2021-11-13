@@ -230,11 +230,13 @@
         <div class="form__side">
           <div class="glass">
             <form [formGroup]="emailForm" class="form" (ngSubmit)="onSubmit()">
-              <div class="mb-3">
-                <label for="name" class="form-label" data-aos="fade-in"
+              <mat-form-field class="mb-3">
+                <mat-label for="name" class="form-label" data-aos="fade-in"
                   >Name :
-                </label>
+                </mat-label>
                 <input
+                  appearance="fill"
+                  matInput
                   data-aos="fade-in"
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
@@ -245,12 +247,27 @@
                   formControlName="name"
                   required
                 />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label" data-aos="fade-in"
-                  >Email Address :</label
+                <mat-error
+                  *ngIf="
+                    name.hasError('required') && (name.dirty || name.touched)
+                  "
+                >
+                  Name is <b>Required</b>
+                </mat-error>
+                <mat-error
+                  *ngIf="
+                    name.hasError('minLength') && (name.dirty || name.touched)
+                  "
+                >
+                  Name must be greater than 3 Characters
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="mb-3">
+                <mat-label for="email" class="form-label" data-aos="fade-in"
+                  >Email Address :</mat-label
                 >
                 <input
+                  matInput
                   type="email"
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
@@ -261,62 +278,100 @@
                   required
                   data-aos="fade-in"
                 />
-              </div>
-              <div class="mb-3">
-                <label for="subject" class="form-label" data-aos="fade-in"
-                  >Subject :</label
+                <mat-error
+                  *ngIf="
+                    email.hasError('required') && (email.dirty || email.touched)
+                  "
                 >
+                  Email is <b>Required</b>
+                </mat-error>
+                <mat-error
+                  *ngIf="
+                    email.hasError('email') && (email.dirty || email.touched)
+                  "
+                >
+                  Email must be <b>Valid</b>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="mb-3">
+                <mat-label for="subject" class="form-label" data-aos="fade-in"
+                  >Subject :
+                </mat-label>
                 <input
+                  matInput
                   type="text"
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
                   class="form-control"
                   id="subject"
                   formControlName="subject"
-                  required
                   data-aos="fade-in"
                   data-aos-anchor="#email"
                 />
-              </div>
-              <div class="mb-3">
-                <label
+              </mat-form-field>
+              <mat-form-field class="mb-3">
+                <mat-label
                   for="message"
                   class="form-label"
                   data-aos="fade-in"
                   data-aos-anchor="#email"
-                  >Message :</label
                 >
+                  Message :
+                </mat-label>
+
                 <textarea
+                  matInput
                   class="form-control"
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
                   formControlName="message"
                   id="message"
                   required
-                  rows="4"
+                  rows="3"
                   data-aos="fade-in"
                   data-aos-anchor="#email"
-                ></textarea>
+                  placeholder="Write a Text Message"
+                >
+                </textarea>
+                <mat-error
+                  *ngIf="
+                    message.hasError('required') &&
+                    (message.dirty || message.touched)
+                  "
+                >
+                  Text Message should be <b>Atleast 3 characters</b>
+                </mat-error>
+                <mat-error
+                  *ngIf="
+                    message.hasError('minLength') &&
+                    (message.dirty || message.touched)
+                  "
+                >
+                  Text Message is <b>Required</b>
+                </mat-error>
+              </mat-form-field>
+              <div>
+                <button
+                  class="block"
+                  mat-raised-button
+                  type="submit"
+                  [disabled]="emailForm.invalid || !showSend"
+                  data-aos="fade-in"
+                  data-aos-anchor="#email"
+                >
+                  Send Email
+                </button>
+                <button
+                  class="reset__button block"
+                  color="primary"
+                  mat-raised-button
+                  type="reset"
+                  data-aos="fade-in"
+                  data-aos-anchor="#email"
+                >
+                  Reset
+                </button>
               </div>
-              <button
-                mat-raised-button
-                type="submit"
-                [disabled]="emailForm.invalid"
-                data-aos="fade-in"
-                data-aos-anchor="#email"
-              >
-                Send Email
-              </button>
-              <button
-                class="reset__button"
-                color="primary"
-                mat-raised-button
-                type="reset"
-                data-aos="fade-in"
-                data-aos-anchor="#email"
-              >
-                Reset
-              </button>
             </form>
             <div class="disclaimer__box">
               <a class="disclaimer text-center">
