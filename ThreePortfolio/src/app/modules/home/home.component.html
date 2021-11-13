@@ -227,12 +227,17 @@
             <img class="parth__img" src="assets/email.png" alt="email icon" />
           </div>
         </div>
-        <div class="form__side" data-aos="zoom-in-left">
+        <div class="form__side">
           <div class="glass">
             <form [formGroup]="emailForm" class="form" (ngSubmit)="onSubmit()">
               <div class="mb-3">
-                <label for="name" class="form-label">Name : </label>
+                <label for="name" class="form-label" data-aos="fade-in"
+                  >Name :
+                </label>
                 <input
+                  data-aos="fade-in"
+                  data-aos-duration="600"
+                  data-aos-easing="ease-in-out-quart"
                   type="text"
                   class="form-control"
                   id="name"
@@ -242,40 +247,63 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email Address :</label>
+                <label for="email" class="form-label" data-aos="fade-in"
+                  >Email Address :</label
+                >
                 <input
                   type="email"
+                  data-aos-duration="600"
+                  data-aos-easing="ease-in-out-quart"
                   class="form-control"
                   id="email"
                   placeholder="name@example.com"
                   formControlName="email"
                   required
+                  data-aos="fade-in"
                 />
               </div>
               <div class="mb-3">
-                <label for="subject" class="form-label">Subject :</label>
+                <label for="subject" class="form-label" data-aos="fade-in"
+                  >Subject :</label
+                >
                 <input
                   type="text"
+                  data-aos-duration="600"
+                  data-aos-easing="ease-in-out-quart"
                   class="form-control"
                   id="subject"
                   formControlName="subject"
                   required
+                  data-aos="fade-in"
+                  data-aos-anchor="#email"
                 />
               </div>
               <div class="mb-3">
-                <label for="message" class="form-label">Message :</label>
+                <label
+                  for="message"
+                  class="form-label"
+                  data-aos="fade-in"
+                  data-aos-anchor="#email"
+                  >Message :</label
+                >
                 <textarea
                   class="form-control"
+                  data-aos-duration="600"
+                  data-aos-easing="ease-in-out-quart"
                   formControlName="message"
                   id="message"
                   required
                   rows="4"
+                  data-aos="fade-in"
+                  data-aos-anchor="#email"
                 ></textarea>
               </div>
               <button
                 mat-raised-button
                 type="submit"
                 [disabled]="emailForm.invalid"
+                data-aos="fade-in"
+                data-aos-anchor="#email"
               >
                 Send Email
               </button>
@@ -284,8 +312,10 @@
                 color="primary"
                 mat-raised-button
                 type="reset"
+                data-aos="fade-in"
+                data-aos-anchor="#email"
               >
-                Reset Form
+                Reset
               </button>
             </form>
             <div class="disclaimer__box">

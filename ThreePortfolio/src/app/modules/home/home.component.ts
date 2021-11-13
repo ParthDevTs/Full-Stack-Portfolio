@@ -64,18 +64,18 @@ export class HomeComponent implements OnInit {
 
   openSnacBarSuccess() {
     this._snackBar.open(
-      'Email Sent Successfully by',
-      `${this.emailForm.value.name}`,
+      `Email Sent Successfully by ${this.emailForm.value.name}`,
+      `Close`,
       {
-        duration: 1000,
+        duration: 3000,
         horizontalPosition: 'right',
         verticalPosition: 'bottom',
       }
     );
   }
   openSnacBarFail() {
-    this._snackBar.open('Some Error Occured', '', {
-      duration: 1000,
+    this._snackBar.open('Some Error Occured', 'Close', {
+      duration: 3000,
       horizontalPosition: 'right',
       verticalPosition: 'bottom',
     });
