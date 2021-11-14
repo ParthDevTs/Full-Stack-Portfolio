@@ -6,6 +6,7 @@ import {
   RouteConfigLoadStart,
   Router,
 } from '@angular/router';
+import { DarkModeService } from 'src/app/dark-mode.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -13,7 +14,13 @@ import {
   styleUrls: ['./top-nav.component.css'],
 })
 export class TopNavComponent implements OnInit, AfterViewInit {
-  constructor(public loader: LoaderService, private router: Router) {}
+  isDarkMode;
+
+  constructor(
+    public loader: LoaderService,
+    private router: Router,
+    private darkmode: DarkModeService
+  ) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
@@ -25,6 +32,10 @@ export class TopNavComponent implements OnInit, AfterViewInit {
         }, 700);
       }
     });
+
+    this.darkmode.darkmode.subscribe(
+      (darkmode) => (this.isDarkMode = darkmode)
+    );
   }
 
   ngAfterViewInit() {

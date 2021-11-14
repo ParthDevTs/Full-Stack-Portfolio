@@ -13,14 +13,14 @@ import 'aos/dist/aos.css';
 })
 export class HomeComponent implements OnInit {
   emailForm: FormGroup;
+  showSend: boolean = true;
+  isloading: boolean = false;
 
   constructor(
     private scroller: ViewportScroller,
     private emailService: EmailService,
     private _snackBar: MatSnackBar
   ) {}
-
-  showSend: boolean = true;
 
   ngOnInit(): void {
     if (this.scroller.getScrollPosition()[1] > 0) {
@@ -49,16 +49,19 @@ export class HomeComponent implements OnInit {
 
   onSubmit() {
     this.showSend = false;
+    this.isloading = true;
     this.emailService.sendEmail(this.emailForm.value).subscribe(
       (res) => {
         this.openSnacBarSuccess();
         this.showSend = true;
         this.removeValues();
+        this.isloading = false;
       },
       (error) => {
         this.openSnacBarFail();
         console.log(error);
         this.showSend = true;
+        this.isloading = false;
       }
     );
   }

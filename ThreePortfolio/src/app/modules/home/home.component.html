@@ -230,7 +230,7 @@
         <div class="form__side">
           <div class="glass">
             <form [formGroup]="emailForm" class="form" (ngSubmit)="onSubmit()">
-              <mat-form-field class="mb-3">
+              <mat-form-field class="mb-3" data-aos="fade-in">
                 <mat-label for="name" class="form-label" data-aos="fade-in"
                   >Name :
                 </mat-label>
@@ -262,7 +262,7 @@
                   Name must be greater than 3 Characters
                 </mat-error>
               </mat-form-field>
-              <mat-form-field class="mb-3">
+              <mat-form-field data-aos="fade-in" class="mb-3">
                 <mat-label for="email" class="form-label" data-aos="fade-in"
                   >Email Address :</mat-label
                 >
@@ -293,7 +293,12 @@
                   Email must be <b>Valid</b>
                 </mat-error>
               </mat-form-field>
-              <mat-form-field class="mb-3">
+              <mat-form-field
+                data-aos-anchor="#email"
+                data-aos="fade-in"
+                data-aos-delay="200"
+                class="mb-3"
+              >
                 <mat-label for="subject" class="form-label" data-aos="fade-in"
                   >Subject :
                 </mat-label>
@@ -309,7 +314,12 @@
                   data-aos-anchor="#email"
                 />
               </mat-form-field>
-              <mat-form-field class="mb-3">
+              <mat-form-field
+                data-aos-anchor="#email"
+                data-aos="fade-in"
+                data-aos-delay="350"
+                class="mb-3"
+              >
                 <mat-label
                   for="message"
                   class="form-label"
@@ -339,6 +349,7 @@
                     (message.dirty || message.touched)
                   "
                 >
+                  Text Message is <b>Required</b> <br />
                   Text Message should be <b>Atleast 3 characters</b>
                 </mat-error>
                 <mat-error
@@ -347,7 +358,7 @@
                     (message.dirty || message.touched)
                   "
                 >
-                  Text Message is <b>Required</b>
+                  Text Message should be <b>Atleast 3 characters</b>
                 </mat-error>
               </mat-form-field>
               <div>
@@ -378,6 +389,17 @@
                 <small>* all fields are mandatory * </small>
               </a>
             </div>
+          </div>
+          <div class="sk-cube-grid" *ngIf="isloading">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
           </div>
         </div>
       </div>
