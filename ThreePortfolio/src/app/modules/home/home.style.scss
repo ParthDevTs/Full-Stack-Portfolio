@@ -499,3 +499,34 @@ mat-form-field {
     transform: scale3D(0, 0, 1);
   }
 }
+
+.stats_section {
+  background-color: black;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  box-sizing: border-box;
+
+  .split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1rem;
+    color: white;
+    box-sizing: border-box;
+    gap: 5rem;
+
+    .stats {
+      padding: 1rem;
+      color: white;
+      box-sizing: border-box;
+      border-bottom: 2px solid white;
+      height: 25rem;
+      width: 15rem;
+    }
+  }
+}

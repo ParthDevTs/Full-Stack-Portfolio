@@ -27,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
+import { statsModel } from './models/stats';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [statsModel],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -407,3 +407,16 @@
     </div>
   </div>
 </section>
+<section class="stats_section">
+  <h1 class="text-center display-1">Stats For Nerds</h1>
+  <div class="split">
+    <div class="col-md-4 stats">
+      <h3 class="display-1">Total Number of Emails sent:</h3>
+      {{ EmailStats.hits }}
+    </div>
+    <div class="col-md-4 stats">
+      <h3 class="display-1">Total Unique Users:</h3>
+      {{ EmailStats.totalEmails }}
+    </div>
+  </div>
+</section>

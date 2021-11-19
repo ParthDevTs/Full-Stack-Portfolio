@@ -5,6 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { statsModel } from '../../models/stats';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private scroller: ViewportScroller,
     private emailService: EmailService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    public EmailStats: statsModel
   ) {}
 
   ngOnInit(): void {
@@ -35,6 +37,7 @@ export class HomeComponent implements OnInit {
       subject: new FormControl(''),
       message: new FormControl('', Validators.minLength(3)),
     });
+    this.getStatsApi();
   }
 
   currentSection = 'section1';
@@ -56,10 +59,10 @@ export class HomeComponent implements OnInit {
         this.showSend = true;
         this.removeValues();
         this.isloading = false;
+        this.getStatsApi();
       },
       (error) => {
         this.openSnacBarFail();
-        console.log(error);
         this.showSend = true;
         this.isloading = false;
       }
@@ -82,6 +85,13 @@ export class HomeComponent implements OnInit {
       duration: 3000,
       horizontalPosition: 'center',
       verticalPosition: 'top',
+    });
+  }
+
+  getStatsApi() {
+    this.emailService.getStats().subscribe((stats) => {
+      let a = JSON.stringify(stats);
+      this.EmailStats = JSON.parse(a);
     });
   }
 
