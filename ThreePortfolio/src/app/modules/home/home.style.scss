@@ -542,6 +542,10 @@ mat-form-field {
       align-items: center;
       transition: all 200ms ease-in-out;
 
+      background: url("/assets/stats-back.jpg") rgb(82, 80, 80);
+      background-blend-mode: multiply;
+      background-attachment: fixed;
+
       .stat__text {
         margin-top: 3rem;
         font-family: "Press Start 2P", cursive;
@@ -562,6 +566,7 @@ mat-form-field {
 @media only screen and (min-width: 80em) {
   .stats_section {
     .split {
+      margin-top: 5rem;
       width: 80rem;
       gap: 10rem;
       .stats {

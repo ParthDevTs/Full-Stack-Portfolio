@@ -1,4 +1,38 @@
 <section id="comingSoon">
-  <h1>Coming Soon<mat-icon>settings</mat-icon></h1>
-  <img src="assets/cool.gif" alt="cool gif" />
+  <mat-card class="example-card col-md-4">
+    <mat-card-subtitle>Server</mat-card-subtitle>
+    <mat-card-title>NodeMailer Server</mat-card-title>
+    <img
+      mat-card-image
+      src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+      alt="Photo of a Shiba Inu"
+    />
+    <mat-card-content>
+      <p>
+        This is a server application made using NodeJs + Express for sending the
+        email from the Contact-Me Form on the home page and Retrieving UserData
+        from MongoDB Atlas
+      </p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions align="end">
+      <button mat-button>
+        <a
+          href="https://parth-kathuria-nodemailer.herokuapp.com/"
+          target="_blank"
+        >
+          Live Site
+        </a>
+      </button>
+      <a href="https://github.com/ParthDevTs/EmailServer" target="_blank">
+        <button mat-button color="warn">View Code</button>
+      </a>
+      <button mat-raised-button color="accent" routerLink="/project/nodemailer">
+        Read More
+      </button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
 </section>

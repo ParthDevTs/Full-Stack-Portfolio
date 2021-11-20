@@ -1,9 +1,9 @@
 @import "~highlight.js/styles/github.css";
 
 section {
-  height: 100vh;
+  padding:5rem;
   width: 100%vw;
-  background-color: white;
+  background-color: rgb(226, 225, 225);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,4 +16,7 @@ section {
     color: white;
   }
   
+}
+a{
+  text-decoration: none;
 }
