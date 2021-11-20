@@ -28,6 +28,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { statsModel } from './models/stats';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { statsModel } from './models/stats';
     OverlayModule,
     MatInputModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
   ],
   providers: [statsModel],
   bootstrap: [AppComponent],

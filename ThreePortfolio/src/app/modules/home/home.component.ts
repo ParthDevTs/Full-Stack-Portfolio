@@ -24,6 +24,9 @@ export class HomeComponent implements OnInit {
     public EmailStats: statsModel
   ) {}
 
+  totalEmailvalue;
+  totalEmailsSent;
+
   ngOnInit(): void {
     if (this.scroller.getScrollPosition()[1] > 0) {
       this.scroller.scrollToAnchor('about');
@@ -92,6 +95,10 @@ export class HomeComponent implements OnInit {
     this.emailService.getStats().subscribe((stats) => {
       let a = JSON.stringify(stats);
       this.EmailStats = JSON.parse(a);
+      this.totalEmailvalue =
+        (this.EmailStats.totalEmails / this.EmailStats.hits) * 100;
+      this.totalEmailsSent =
+        (this.EmailStats.hits / (this.EmailStats.totalEmails * 10)) * 100;
     });
   }
 

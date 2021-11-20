@@ -408,15 +408,29 @@
   </div>
 </section>
 <section class="stats_section">
-  <h1 class="text-center display-1">Stats For Nerds</h1>
+  <h1 class="text-center display-1 heading">Stats For Nerds</h1>
   <div class="split">
     <div class="col-md-4 stats">
-      <h3 class="display-1">Total Number of Emails sent:</h3>
-      {{ EmailStats.hits }}
+      <mat-progress-spinner
+        class="stat__spinner"
+        color="accent"
+        mode="determinate"
+        [value]="totalEmailsSent"
+      >
+      </mat-progress-spinner>
+      <p class="text-center stat__numbers">{{ EmailStats.hits }}</p>
+      <p class="text-center stat__text">Total Emails Sent</p>
     </div>
     <div class="col-md-4 stats">
-      <h3 class="display-1">Total Unique Users:</h3>
-      {{ EmailStats.totalEmails }}
+      <mat-progress-spinner
+        class="stat__spinner"
+        color="accent"
+        mode="determinate"
+        [value]="totalEmailvalue"
+      >
+      </mat-progress-spinner>
+      <p class="text-center stat__numbers">{{ EmailStats.totalEmails }}</p>
+      <p class="text-center stat__text">Unqiue Users</p>
     </div>
   </div>
 </section>

@@ -510,6 +510,13 @@ mat-form-field {
   color: white;
   box-sizing: border-box;
 
+  .heading {
+    font-family: "Press Start 2P", cursive;
+    color: rgb(150, 191, 252);
+    text-shadow: 0.3rem 0.3rem 0.4rem white,
+      0.4rem 0.4rem 0.4rem rgb(100, 96, 96);
+  }
+
   .split {
     display: flex;
     align-items: center;
@@ -519,14 +526,52 @@ mat-form-field {
     color: white;
     box-sizing: border-box;
     gap: 5rem;
+    width: 40rem;
 
     .stats {
       padding: 1rem;
       color: white;
       box-sizing: border-box;
-      border-bottom: 2px solid white;
-      height: 25rem;
+      border-bottom: 0.2rem solid rgb(253, 128, 141);
+      height: 30rem;
       width: 15rem;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      transition: all 200ms ease-in-out;
+
+      .stat__text {
+        margin-top: 3rem;
+        font-family: "Press Start 2P", cursive;
+        color: rgb(255, 51, 72);
+        letter-spacing: 0.4rem;
+      }
+
+      .stat__numbers {
+        margin-top: 3rem;
+        font-family: "Press Start 2P", cursive;
+        color: rgb(253, 128, 141);
+        transition: all ease-in-out 200ms;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .stats_section {
+    .split {
+      width: 80rem;
+      gap: 10rem;
+      .stats {
+        padding: 4rems;
+        height: 40rem;
+        width: 35rem;
+        .stat__numbers {
+          margin-top: 5rem;
+        }
+      }
     }
   }
 }
