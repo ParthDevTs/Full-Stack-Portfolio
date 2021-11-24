@@ -6,7 +6,7 @@ import { ProjectComponent } from './project.component';
 
 const routes: Routes = [
   { path: '', component: ProjectComponent },
-  { path: 'nodemailer', component: NodemailerComponent, data: { depth: 5 } },
+  { path: 'nodemailer', component: NodemailerComponent, data: { depth: 3 } },
 ];
 
 @NgModule({

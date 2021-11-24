@@ -9,7 +9,7 @@ import {
 } from '@angular/animations';
 
 export const slideInAnimation = trigger('routeAnimations', [
-  transition('1 => 2, 2 => 3,1=>3,1=>4,3=>4,2=>4', [
+  transition('1 => 2,1=>4,2=>4', [
     style({ height: '!' }),
     query(':enter', style({ transform: 'translateX(100%)' })),
     query(
@@ -34,7 +34,7 @@ export const slideInAnimation = trigger('routeAnimations', [
       ),
     ]),
   ]),
-  transition('3 => 2, 2 => 1, 3=>1,4=>2,4=>1,4=>3', [
+  transition('2 => 1,4=>2,4=>1', [
     style({ height: '!' }),
     query(':enter', style({ transform: 'translateX(-100%)' })),
     query(
@@ -56,6 +56,25 @@ export const slideInAnimation = trigger('routeAnimations', [
           '0.3s cubic-bezier(.35,0,.25,1)',
           style({ transform: 'translateX(0)' })
         )
+      ),
+    ]),
+  ]),
+  transition('5=>2,5=>1, 3 => 2, 3=>1, 4=>3 , 2 => 3 ,1=>3,3=>4', [
+    style({ height: '!' }),
+    query(':enter', style({ opacity: 0 })),
+    query(
+      ':enter, :leave',
+      style({ position: 'absolute', top: 0, right: 0, left: 0, bottom: 0 })
+    ),
+    // animate the leave page away
+    group([
+      query(':leave', [
+        animate('0.6s cubic-bezier(.35,0,.25,1)', style({ opacity: 0 })),
+      ]),
+      // and now reveal the enter
+      query(
+        ':enter',
+        animate('0.6s cubic-bezier(.35,0,.25,1)', style({ opacity: 1 }))
       ),
     ]),
   ]),

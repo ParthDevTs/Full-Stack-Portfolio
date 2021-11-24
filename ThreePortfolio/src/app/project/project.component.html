@@ -1,38 +1,62 @@
-<section id="comingSoon">
-  <mat-card class="example-card col-md-4">
-    <mat-card-subtitle>Server</mat-card-subtitle>
-    <mat-card-title>NodeMailer Server</mat-card-title>
-    <img
-      mat-card-image
-      src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
-      alt="Photo of a Shiba Inu"
-    />
-    <mat-card-content>
-      <p>
-        This is a server application made using NodeJs + Express for sending the
-        email from the Contact-Me Form on the home page and Retrieving UserData
-        from MongoDB Atlas
-      </p>
-    </mat-card-content>
-    <mat-divider inset></mat-divider>
-    <mat-card-actions align="end">
-      <button mat-button>
-        <a
-          href="https://parth-kathuria-nodemailer.herokuapp.com/"
-          target="_blank"
-        >
-          Live Site
+<section class="projects" id="comingSoon">
+  <section class="spacing_section">
+    <nav
+      style="
+        --bs-breadcrumb-divider: url(
+          &#34;data:image/svg + xml,
+          %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='currentColor'/%3E%3C/svg%3E&#34;
+        );
+      "
+      aria-label="breadcrumb"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="routerLink" routerLink="/home">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Projects</li>
+      </ol>
+    </nav>
+  </section>
+  <section class="banner">
+    <h1 class="display-1">Projects</h1>
+  </section>
+  <section class="project__cards">
+    <mat-card class="example-card col-md-4">
+      <mat-card-subtitle>Server</mat-card-subtitle>
+      <mat-card-title>NodeMailer Server</mat-card-title>
+      <img
+        mat-card-image
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <p class="card__content">
+          This is a server application made using NodeJs + Express for sending
+          the email from the Contact-Me Form on the home page and Retrieving
+          UserData from MongoDB Atlas
+        </p>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions align="end">
+        <button mat-button>
+          <a
+            href="https://parth-kathuria-nodemailer.herokuapp.com/"
+            target="_blank"
+          >
+            Live Site
+          </a>
+        </button>
+        <a href="https://github.com/ParthDevTs/EmailServer" target="_blank">
+          <button mat-button color="warn">View Code</button>
         </a>
-      </button>
-      <a href="https://github.com/ParthDevTs/EmailServer" target="_blank">
-        <button mat-button color="warn">View Code</button>
-      </a>
-      <button mat-raised-button color="accent" routerLink="/project/nodemailer">
-        Read More
-      </button>
-    </mat-card-actions>
-    <mat-card-footer>
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    </mat-card-footer>
-  </mat-card>
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/project/nodemailer"
+        >
+          Read More
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
 </section>

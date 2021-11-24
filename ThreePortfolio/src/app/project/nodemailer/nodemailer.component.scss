@@ -1,13 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+$main__heading1: "Alfa Slab One", cursive;
+
+$content_heading: "Bebas Neue", cursive;
+$content__paragraph: "PT Sans Caption", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  p {
+    font-family: $content__paragraph;
+  }
+  box-sizing: border-box;
+}
 .node__section {
-  height: 100vh;
-  width: 100vw;
-  color: white;
   position: relative;
-  background: url();
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    font-size: 3rem;
+  background-color: white;
+  z-index: 1;
+  padding: 4rem, 0rem, 4rem, 0rem;
+  position: relative;
+
+  z-index: 1;
+  .spacing_section {
+    padding: 4rem;
+    height: 20rem;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+  }
+  .banner {
+    margin-bottom: 5rem;
+    height: 40rem;
+    width: 100%;
+    background: rgb(85, 85, 85) url("/assets/mail.jpg") no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: inset 1rem rgb(129, 232, 255);
+    position: relative;
+
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      box-shadow: 0.3rem 0.4rem 5rem rgba(3, 208, 188, 0.686),
+        inset 0.2rem 0.2rem 3rem rgb(164, 252, 243);
+    }
+
+    .banner__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .banner__heading {
+        font-family: $main__heading1;
+        font-size: 3rem;
+        color: rgb(251, 251, 252);
+      }
+    }
+  }
+  .main__content {
+    margin: 3rem 3rem 0rem 3rem;
+    padding: 2rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(253, 253, 253, 0.056);
+    z-index: 1;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(15px);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: solid 1rem rgba(17, 17, 17, 0.076);
+    box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.07);
+    position: relative;
+    padding: 2em;
+    border-radius: 1em;
+
+    flex-direction: column;
+    .api__intro {
+      margin: 2rem 2rem 0rem 2rem;
+      padding: 2rem;
+
+      h1 {
+        font-family: $content_heading;
+      }
+    }
+    .api__documentation {
+      h3 {
+        font-family: $content_heading;
+        font-size: 2rem;
+        margin-top: 3rem;
+      }
+      p {
+        margin: 2rem;
+      }
+
+      .code__card {
+        margin: 2rem 1rem 4rem 1rem;
+        position: relative;
+      }
+    }
+    .closing__remarks {
+      padding: 2rem;
+      margin: 1rem 3rem 0rem 3rem;
+      background-color: rgba(214, 209, 209, 0.193);
+      border-radius: 1em;
+
+      h1 {
+        font-family: $content_heading;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5rem;
+    width: 2rem;
+    background-color: rgba(86, 141, 223, 0.604);
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10rem;
+    width: 2rem;
+    background-color: rgba(86, 219, 223, 0.604);
+    z-index: -1;
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .node__section {
+    .banner {
+      .banner__container {
+        .banner__heading {
+          font-size: 5rem;
+        }
+        .muted__text {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &::after {
+      left: 12rem;
+      width: 3rem;
+    }
+    &::before {
+      left: 18rem;
+      width: 3rem;
+    }
+  }
+}
+
+.divider {
+  height: 0.2rem;
+  width: 70%;
+  background-color: black;
+  padding: 0.1rem;
+  margin: 5rem;
+  position: relative;
+
+  &::after {
+    content: "x";
+    color: black;
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+  }
+  &::before {
+    content: "x";
+    color: black;
+    position: absolute;
+    top: -1rem;
+    right: -2rem;
+  }
+}
+
+.documentation {
+  font-family: $content_heading;
+  text-align: left;
+  margin: 2rem;
+}
+
+.contact__me {
+  color: rgb(0, 153, 255);
+}
+nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 0.8rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: $content__paragraph;
+    font-weight: 600;
+
+    padding: 1rem;
+    &:hover,
+    &:focus {
+      color: rgb(0, 195, 255);
+    }
+  }
+}
+
+@media only screen and (max-width: 39.9em) and (min-width: 23em) {
+  nav {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  nav {
+    font-size: 1.5rem;
   }
 }

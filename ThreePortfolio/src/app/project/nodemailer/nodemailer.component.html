@@ -1,8 +1,131 @@
-<section class="node__section">
-  <h1>
-    COMING SOON
-    <span class="icon">
-      <mat-icon>settings</mat-icon>
-    </span>
-  </h1>
+<section class="node__section" id="node__section">
+  <section class="spacing_section">
+    <nav
+      style="
+        --bs-breadcrumb-divider: url(
+          &#34;data:image/svg + xml,
+          %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='currentColor'/%3E%3C/svg%3E&#34;
+        );
+      "
+      aria-label="breadcrumb"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="routerLink" routerLink="/home">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="routerLink" routerLink="/project">Projects</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Mailer Server
+        </li>
+      </ol>
+    </nav>
+  </section>
+  <section class="banner">
+    <div class="banner__container">
+      <h1 class="banner__heading display-1">Email Delivery Server</h1>
+      <p class="text-right text-muted muted__text">
+        - Using NodeJs and Express
+      </p>
+    </div>
+  </section>
+  <div class="main__content">
+    <div class="col-md-8 api__intro">
+      <h1 class="text-left display-1">Introduction</h1>
+      <p>
+        <span class="display-6">E</span>very portfolio is designed with the sole
+        purpose that it should encourage future job and business prospects.
+        While your design should be convincing, the Client or Recruiter must be
+        provided with a way to contact you. This Mailer server solved that
+        problem. It uses the following dependencies:
+        <br />
+        <li>Nodemailer</li>
+        <li>Nodemon</li>
+        <li>ExpressJs</li>
+        <li>Mongoose</li>
+      </p>
+    </div>
+
+    <div class="divider"></div>
+    <h1 class="documentation display-1 text-left">API Documentation</h1>
+    <div class="col-md-6 api__documentation">
+      <h3 class="display-3 text-left">Send Email API</h3>
+      <p>
+        This <code>POST</code> API takes a JSON input and sends mail to my email
+        account using Nodemailer. After successful operation of Sending Mail,
+        the
+        <b>
+          emailID & UserName is stored in the MongoDB Atlas Database if the
+          Entry is Unique.
+        </b>
+      </p>
+      <div class="code__card">
+        <img
+          class="img-fluid"
+          src="assets/EmailRequest.svg"
+          alt="Email Request"
+        />
+      </div>
+      <p>
+        The Above Code snippet is an example of Form Data Provided to the API as
+        an Input which is linked to my
+        <span class="contact__me">Contact Me</span> Form.
+      </p>
+      <h3 class="display-3 text-left">Get Statistics API</h3>
+      <p>
+        This <code>GET</code> API which returns the DATA of the Mail Server as a
+        JSON object. This Data is provided by sending a <code>GET</code> request
+        to the below end-point.
+        <br />
+        <code
+          >url =
+          "https://parth-kathuria-nodemailer.herokuapp.com/api/getEmailStats"
+        </code>
+      </p>
+
+      <div class="code__card">
+        <img
+          class="img-fluid"
+          src="assets/Email Stats Endpoint.svg"
+          alt="Email Stats Endpoint"
+        />
+      </div>
+
+      <p>
+        The Endpoint returns total Number of Emails sent using the
+        <b>Send Mail</b> API and the <b>Number of Unique Users</b> that have
+        used the API service.
+      </p>
+
+      <div class="code__card">
+        <img
+          class="img-fluid"
+          src="assets/EmailStats.svg"
+          alt="Email Stats Response"
+        />
+      </div>
+
+      <p>
+        This API is used in the Home Page in Stats For Nerds Section to display
+        stats in form of progress spinner.
+      </p>
+    </div>
+    <div class="divider"></div>
+    <div class="col-md-8 closing__remarks">
+      <h1>Closing Remarks</h1>
+      <p>
+        This is a very basic API which uses Express and Nodejs to send email and
+        talk to backend. It also has a few shortcoming that are:
+
+        <li>
+          It does have any user based authentication, making it a target for
+          cyber attacks
+        </li>
+        <li>User Data is not hashed before storing</li>
+      </p>
+      <p>These functionalities will be implemented in Future Updates.</p>
+    </div>
+  </div>
+  <section class="spacing_section"></section>
 </section>

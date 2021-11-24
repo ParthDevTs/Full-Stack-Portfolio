@@ -1,22 +1,99 @@
-@import "~highlight.js/styles/github.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
+$content__paragraph: "PT Sans Caption", sans-serif;
+.projects {
+  width: 100%;
+  background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-section {
-  padding:5rem;
-  width: 100%vw;
-  background-color: rgb(226, 225, 225);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  h1 {
-    top: 50%;
+
+  .project__cards {
+    margin: 5rem;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-basis: 50%;
+  }
+}
+
+nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: $content__paragraph;
+    font-weight: 600;
+    &:hover,
+    &:focus {
+      color: rgb(0, 195, 255);
+    }
+  }
+}
+
+.spacing_section {
+  height: 10rem;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  box-sizing: border-box;
+  margin: 4rem;
+
+  nav {
     position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: $content__paragraph;
+      font-weight: 600;
+      padding: 0.3rem;
+      &:hover,
+      &:focus {
+        color: rgb(0, 195, 255);
+      }
+    }
   }
-  
 }
-a{
+
+.banner {
+  box-sizing: border-box;
+  padding: 5rem;
+  height: 30rem;
+  width: 100%;
+  background-color: black;
+  border: inset 1rem rgb(174, 255, 228);
+  box-shadow: 0.2rem 0.2rem 4rem rgb(24, 240, 255);
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    color: rgb(24, 240, 255);
+    font-family: "Press Start 2P", cursive;
+    font-size: 4rem;
+  }
+}
+
+a {
   text-decoration: none;
+  color: black;
 }
