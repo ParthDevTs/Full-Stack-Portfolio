@@ -43,7 +43,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: inset 1rem rgb(129, 232, 255);
+    border: inset 0.4rem 0rem 0.4rem 0rem rgb(129, 232, 255);
     position: relative;
 
     &::before {
@@ -53,8 +53,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
       right: 0;
       bottom: 0;
       position: absolute;
-      box-shadow: 0.3rem 0.4rem 5rem rgba(3, 208, 188, 0.686),
-        inset 0.2rem 0.2rem 3rem rgb(164, 252, 243);
+      box-shadow: 0.3rem 0.4rem 5rem rgba(3, 208, 188, 0.686);
     }
 
     .banner__container {
@@ -70,8 +69,8 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     }
   }
   .main__content {
-    margin: 3rem 3rem 0rem 3rem;
-    padding: 2rem;
+    margin: 3rem 0rem 3rem 0rem;
+    padding: 1rem;
     display: flex;
     position: relative;
     justify-content: center;
@@ -83,7 +82,6 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     backdrop-filter: blur(15px);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: solid 1rem rgba(17, 17, 17, 0.076);
     box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.07);
     position: relative;
     padding: 2em;
@@ -91,7 +89,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
 
     flex-direction: column;
     .api__intro {
-      margin: 2rem 2rem 0rem 2rem;
+      margin: 2rem 0rem 2rem 0rem;
       padding: 2rem;
 
       h1 {
@@ -105,7 +103,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
         margin-top: 3rem;
       }
       p {
-        margin: 2rem;
+        margin-top: 2rem;
       }
 
       .code__card {
@@ -115,7 +113,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     }
     .closing__remarks {
       padding: 2rem;
-      margin: 1rem 3rem 0rem 3rem;
+      margin: 3rem 0rem 3rem 0rem;
       background-color: rgba(214, 209, 209, 0.193);
       border-radius: 1em;
 
@@ -197,8 +195,9 @@ $content__paragraph: "PT Sans Caption", sans-serif;
 
 .documentation {
   font-family: $content_heading;
-  text-align: left;
-  margin: 2rem;
+  // text-align: center;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .contact__me {

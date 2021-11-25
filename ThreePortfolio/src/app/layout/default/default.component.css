@@ -5,10 +5,10 @@
 .display > * {
   display: block;
 }
-.top{
+.top {
   position: fixed;
-  right:1em;
-  top:85%;
+  right: 1em;
+  top: 85%;
   z-index: 99;
   color: rgb(43, 245, 218);
   background-color: black;
@@ -16,35 +16,70 @@
   text-shadow: currentColor;
   height: 4em;
   width: 4em;
-  text-shadow: 0 0 0.125em hsl(0 0%  100%/0.3), 0 0 0.45em currentColor;
+  text-shadow: 0 0 0.125em hsl(0 0% 100%/0.3), 0 0 0.45em currentColor;
   box-shadow: 0 0 0.5em 0 rgb(43, 245, 218), inset 0 0 0.5em 0 rgb(43, 245, 218);
   transition: all 500ms ease-in-out;
 }
-.top:hover{
-  background-color: rgba(34, 36, 36, 0.919) ;
+.top:hover {
+  background-color: rgba(34, 36, 36, 0.919);
 }
-.top::before{
-  content: '';
+.top::before {
+  content: "";
   position: absolute;
   z-index: -1;
   left: 0%;
   top: 120%;
   width: 100%;
   height: 100%;
+  -webkit-filter: blur(1.6em);
   filter: blur(1.6em);
   pointer-events: none;
   opacity: 1;
   transition: all 500ms ease-in-out;
   border-radius: 50%;
-  box-shadow: 0 0 0 1.5em 0.8em rgb(43, 245, 218) ;
-
-  
+  box-shadow: 0 0 0 1.5em 0.8em rgb(43, 245, 218);
 }
-.notVisible{
+.notVisible {
   transform: scale(0);
   transition: all 0.2s ease-in-out;
 }
-.visible{
+.visible {
   transform: all scale(1);
-  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.back {
+  position: fixed;
+  left: 1em;
+  top: 13%;
+  z-index: 10;
+  color: rgb(43, 245, 218);
+  background-color: black;
+  border: currentColor 0.125em solid;
+  text-shadow: currentColor;
+  height: 4em;
+  width: 4em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100%/0.3), 0 0 0.45em currentColor;
+  box-shadow: 0 0 0.5em 0 rgb(43, 245, 218), inset 0 0 0.5em 0 rgb(43, 245, 218);
+  transition: all 300ms ease-in-out;
+}
+.back::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 120%;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(1.6em);
+  filter: blur(1.6em);
+  pointer-events: none;
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5em 0.8em rgb(43, 245, 218);
+}
+
+.back:hover {
+  background-color: rgba(34, 36, 36, 0.919);
 }

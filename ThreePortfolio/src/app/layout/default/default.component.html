@@ -18,4 +18,15 @@
     ><span class="material-icons-two-tone"> arrow_upward </span></mat-icon
   >
 </button>
+<button
+  [ngClass]="goBackIcon && backIcon ? 'visible' : 'notVisible'"
+  id="back"
+  class="back"
+  mat-icon-button
+  (click)="goBack()"
+  matTooltip="Go Back"
+  aria-label="Button that scrolls back"
+>
+  <mat-icon><span class="material-icons-two-tone">west </span></mat-icon>
+</button>
 <app-loader *ngIf="loader.isLoading | async"></app-loader>

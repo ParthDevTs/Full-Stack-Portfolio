@@ -29,6 +29,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { statsModel } from './models/stats';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { Location } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatSnackBarModule,
     MatProgressSpinnerModule,
   ],
-  providers: [statsModel],
+  providers: [statsModel, Location],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -18,7 +18,35 @@ body {
     to right,
     #000000,
     #050505
-  ) !important; 
+  ) !important;
   /* background: linear-gradient(90deg, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 43%, rgba(17,17,17,1) 71%, rgba(42,42,42,1) 100%) important; */
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background: #000000;
+  background-image: #232526;
+
+  background-image: linear-gradient(to right, #000000, #000000);
+
+  background-image: -webkit-linear-gradient(to right, #000000, #050505);
+  width: 1.2rem;
+}
+::-webkit-scrollbar-track {
+  background: rgb(94, 93, 93);
+  border-radius: 100vw;
+  margin-block: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(43, 245, 218);
+  border-radius: 100vw;
+  box-shadow: 0.4rem 0.4rem 6rem aqua;
+  border: 2px solid rgb(94, 93, 93);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(1, 231, 201);
+  border-radius: 50vw;
 }
