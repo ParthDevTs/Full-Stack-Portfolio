@@ -2,6 +2,7 @@ import { LoaderService } from './../../loader.service';
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import Typewriter from 't-writer.js';
 import {
+  NavigationEnd,
   RouteConfigLoadEnd,
   RouteConfigLoadStart,
   Router,
@@ -15,6 +16,7 @@ import { DarkModeService } from 'src/app/dark-mode.service';
 })
 export class TopNavComponent implements OnInit, AfterViewInit {
   isDarkMode;
+  showDarkMode = false;
 
   constructor(
     public loader: LoaderService,
@@ -36,6 +38,16 @@ export class TopNavComponent implements OnInit, AfterViewInit {
     this.darkmode.darkmode.subscribe(
       (darkmode) => (this.isDarkMode = darkmode)
     );
+
+    this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        if (this.router.url == '/home') {
+          this.showDarkMode = false;
+        } else {
+          this.showDarkMode = true;
+        }
+      }
+    });
   }
 
   ngAfterViewInit() {
@@ -73,5 +85,11 @@ export class TopNavComponent implements OnInit, AfterViewInit {
     } else {
       this.navbarFixed = false;
     }
+  }
+
+  toggleMode() {
+    this.isDarkMode = !this.isDarkMode;
+    this.darkmode.setStatus(this.isDarkMode);
+    localStorage.setItem('theme', this.isDarkMode ? 'Dark' : 'Light');
   }
 }

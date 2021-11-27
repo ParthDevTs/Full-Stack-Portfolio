@@ -20,27 +20,6 @@
     </ol>
   </nav>
 </section>
-<section
-  class="darkmodeSection"
-  [ngClass]="{ 'dark-mode cardSectionDark': isDarkMode }"
->
-  <button
-    class="darkMode"
-    [ngClass]="isDarkMode ? 'moon' : 'sun'"
-    mat-icon-button
-    (click)="toggleMode()"
-  >
-    <mat-icon>
-      <span *ngIf="!isDarkMode" class="material-icons-two-tone">
-        light_mode
-      </span>
-      <span *ngIf="isDarkMode" class="material-icons-outlined">
-        nights_stay
-      </span>
-    </mat-icon>
-  </button>
-</section>
-
 <section class="hero section-1">
   <p class="display-1">My Blogs</p>
 </section>

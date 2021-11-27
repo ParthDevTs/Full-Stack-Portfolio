@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap");
 $content__paragraph: "PT Sans Caption", sans-serif;
 .projects {
   width: 100%;
@@ -90,10 +91,48 @@ nav {
     color: rgb(24, 240, 255);
     font-family: "Press Start 2P", cursive;
     font-size: 4rem;
+    text-shadow: 0.4rem 0.4rem 5rem rgb(2, 238, 255);
   }
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.dark-mode-link {
+  color: rgb(62, 236, 248);
+}
+
+.card__content {
+  font-family: "Kodchasan", sans-serif;
+}
+.dark-mode {
+  transition: all 0.5s ease-in-out;
+}
+mat-card {
+  padding: 3rem;
+  transition: all 0.5s ease-in-out;
+}
+.node__card {
+  position: relative;
+  border-radius: 1em;
+  mat-card-title {
+    color: rgb(106, 196, 106);
+    font-weight: 600;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0.4rem 0.4rem 6rem rgba(4, 197, 20, 0.802);
+    border-radius: 1em;
+    z-index: -1;
+  }
+}
+section {
+  transition: all 0.5s ease-in-out;
 }

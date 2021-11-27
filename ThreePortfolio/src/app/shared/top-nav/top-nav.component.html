@@ -7,6 +7,21 @@
     <span class="parth"></span>
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="10px">
+        <li *ngIf="showDarkMode">
+          <button
+            class="darkMode"
+            [ngClass]="isDarkMode ? 'moon' : 'sun'"
+            mat-icon-button
+            (click)="toggleMode()"
+          >
+            <mat-icon *ngIf="!isDarkMode" class="material-icons-two-tone">
+              light_mode
+            </mat-icon>
+            <mat-icon *ngIf="isDarkMode" class="material-icons-outlined">
+              nights_stay
+            </mat-icon>
+          </button>
+        </li>
         <li fxHide.lt-md>
           <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
         </li>

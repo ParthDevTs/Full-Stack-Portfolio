@@ -1,6 +1,8 @@
 import { DarkModeService } from 'src/app/dark-mode.service';
 import { ViewportScroller } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-nodemailer',
@@ -16,12 +18,13 @@ export class NodemailerComponent implements OnInit, OnDestroy {
     this.darkmode.darkmode.unsubscribe;
   }
 
-  isDarkmode;
+  isDarkMode;
 
   ngOnInit(): void {
     this.scroller.scrollToAnchor('node__section');
     this.darkmode.darkmode.subscribe((data) => {
-      this.isDarkmode = data;
+      this.isDarkMode = data;
     });
+    AOS.init();
   }
 }

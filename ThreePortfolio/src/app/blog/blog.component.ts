@@ -30,9 +30,4 @@ export class BlogComponent implements OnInit {
       .querySelector('#nav')
       .scrollIntoView({ behavior: 'auto', block: 'start' });
   }
-  toggleMode() {
-    this.isDarkMode = !this.isDarkMode;
-    this.darkModeService.setStatus(this.isDarkMode);
-    localStorage.setItem('theme', this.isDarkMode ? 'Dark' : 'Light');
-  }
 }

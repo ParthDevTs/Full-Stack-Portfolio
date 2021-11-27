@@ -17,13 +17,12 @@ import { LoaderService } from 'src/app/loader.service';
 })
 export class DefaultComponent implements OnInit {
   topIcon: boolean = false;
-  goBackIcon: boolean = true;
+  goBackIcon: boolean = false;
   backIcon;
   constructor(
     public loader: LoaderService,
     private scroller: ViewportScroller,
     private location: Location,
-    private route: ActivatedRoute,
     private router: Router
   ) {}
   prepareRoute(outlet: RouterOutlet) {
@@ -54,7 +53,6 @@ export class DefaultComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
-        console.log('this.router.url', this.router.url);
         if (this.router.url == '/home') {
           this.goBackIcon = false;
         } else {

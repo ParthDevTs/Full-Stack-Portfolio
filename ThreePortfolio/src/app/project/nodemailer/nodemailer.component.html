@@ -1,4 +1,8 @@
-<section class="node__section" id="node__section">
+<section
+  class="node__section"
+  id="node__section"
+  [ngClass]="{ 'dark-mode dark_mode_spacer': isDarkMode }"
+>
   <section class="spacing_section">
     <nav
       style="
@@ -127,5 +131,5 @@
       <p>These functionalities will be implemented in Future Updates.</p>
     </div>
   </div>
-  <section class="spacing_section"></section>
+  <section class="bottom__spacer"></section>
 </section>

@@ -19,9 +19,9 @@ $content__paragraph: "PT Sans Caption", sans-serif;
   position: relative;
   background-color: white;
   z-index: 1;
-  padding: 4rem, 0rem, 4rem, 0rem;
+  padding: 4rem, 1rem, 2rem, 1rem;
   position: relative;
-
+  transition: all 500ms ease-in-out;
   z-index: 1;
   .spacing_section {
     padding: 4rem;
@@ -64,12 +64,13 @@ $content__paragraph: "PT Sans Caption", sans-serif;
       .banner__heading {
         font-family: $main__heading1;
         font-size: 3rem;
-        color: rgb(251, 251, 252);
+        color: rgb(100, 250, 255);
+        text-shadow: 0.2rem 0.2rem 4rem aqua;
       }
     }
   }
   .main__content {
-    margin: 3rem 0rem 3rem 0rem;
+    margin: 8rem 1rem 2rem 1rem;
     padding: 1rem;
     display: flex;
     position: relative;
@@ -157,6 +158,9 @@ $content__paragraph: "PT Sans Caption", sans-serif;
         }
       }
     }
+    .main__content {
+      margin: 9rem 5rem 0rem 5rem;
+    }
 
     &::after {
       left: 12rem;
@@ -235,4 +239,14 @@ nav {
   nav {
     font-size: 1.5rem;
   }
+}
+
+.dark_mode_spacer {
+  background-color: rgb(31, 31, 31);
+  transition: all 500ms ease-in-out;
+  color: white;
+}
+.bottom__spacer {
+  padding: 2rem;
+  height: 8rem;
 }

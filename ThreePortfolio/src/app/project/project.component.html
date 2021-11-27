@@ -20,10 +20,17 @@
   <section class="banner">
     <h1 class="display-1">Projects</h1>
   </section>
-  <section class="project__cards">
-    <mat-card class="example-card col-md-4">
+  <section class="project__cards" [ngClass]="{ 'dark-mode': isDarkMode }">
+    <mat-card
+      class="example-card col-md-4 node__card"
+      data-aos="fade-up"
+      data-aos-easing="ease-in-sine"
+      data-aos-offset="10"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+    >
       <mat-card-subtitle>Server</mat-card-subtitle>
-      <mat-card-title>NodeMailer Server</mat-card-title>
+      <mat-card-title>Email Delivery Server</mat-card-title>
       <img
         mat-card-image
         src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
@@ -42,12 +49,18 @@
           <a
             href="https://parth-kathuria-nodemailer.herokuapp.com/"
             target="_blank"
+            class="live__site"
+            [ngClass]="{ 'dark-mode-link': isDarkMode }"
           >
             Live Site
           </a>
         </button>
-        <a href="https://github.com/ParthDevTs/EmailServer" target="_blank">
-          <button mat-button color="warn">View Code</button>
+        <a
+          [ngClass]="{ 'dark-mode-link': isDarkMode }"
+          href="https://github.com/ParthDevTs/EmailServer"
+          target="_blank"
+        >
+          <button mat-button>View Code</button>
         </a>
         <button
           mat-raised-button

@@ -93,3 +93,14 @@ a {
     height: 2em;
   }
 }
+
+.moon {
+  color: rgb(66, 250, 247);
+  background-color: transparent;
+  transition: all ease-in 200ms;
+}
+.sun {
+  color: rgb(238, 210, 0);
+  transition: all ease-in 200ms;
+  background-color: transparent;
+}
