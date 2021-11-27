@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap");
 $content__paragraph: "PT Sans Caption", sans-serif;
+* {
+  transition: all ease-in-out 200ms;
+}
 .projects {
   width: 100%;
   background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */

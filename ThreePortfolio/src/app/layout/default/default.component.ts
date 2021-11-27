@@ -1,11 +1,11 @@
 import { Location, ViewportScroller } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
 import {
-  ActivatedRoute,
-  NavigationEnd,
-  Router,
-  RouterOutlet,
-} from '@angular/router';
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  OnInit,
+} from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from 'src/app/animation';
 import { LoaderService } from 'src/app/loader.service';
 
@@ -14,6 +14,7 @@ import { LoaderService } from 'src/app/loader.service';
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.css'],
   animations: [slideInAnimation],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DefaultComponent implements OnInit {
   topIcon: boolean = false;

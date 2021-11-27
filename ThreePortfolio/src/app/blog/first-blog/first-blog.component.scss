@@ -11,6 +11,9 @@ $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200
 $body-font: "Kodchasan", sans-serif;
 $end-note-font: "Courier Prime", monospace;
 $heading-font: "Molengo", sans-serif;
+*{
+  transition: all 200ms ease-in-out;
+}
 a {
   text-decoration: none !important;
   color: black;
@@ -93,6 +96,7 @@ nav {
 .SectionDark {
   background-color: rgb(24, 23, 23);
   color: white;
+  transition: all 200ms ease-in-out;
 }
 .code {
   color: rgb(12, 167, 206);

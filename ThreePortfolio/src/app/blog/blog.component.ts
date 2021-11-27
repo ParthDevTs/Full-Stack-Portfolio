@@ -1,6 +1,11 @@
 import { DarkModeService } from './../dark-mode.service';
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+} from '@angular/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -8,12 +13,14 @@ import 'aos/dist/aos.css';
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogComponent implements OnInit {
   highlighted: boolean = false;
   constructor(
     private darkModeService: DarkModeService,
-    private scroller: ViewportScroller
+    private scroller: ViewportScroller,
+    private cd: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -21,6 +28,7 @@ export class BlogComponent implements OnInit {
     AOS.init();
     this.darkModeService.darkmode.subscribe((isDarkMode) => {
       this.isDarkMode = isDarkMode;
+      this.cd.markForCheck();
     });
   }
   isDarkMode;

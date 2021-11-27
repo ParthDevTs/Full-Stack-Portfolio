@@ -21,7 +21,6 @@ import { ScrollSpyDirective } from './scroll-spy.directive';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { ContactComponent } from './modules/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -40,7 +39,6 @@ import { Location } from '@angular/common';
     ScrollSpyDirective,
     FooterComponent,
     LoaderComponent,
-    ContactComponent,
   ],
   imports: [
     BrowserModule,

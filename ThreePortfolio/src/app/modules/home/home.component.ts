@@ -1,6 +1,11 @@
 import { EmailService } from './email.service';
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import AOS from 'aos';
@@ -11,6 +16,7 @@ import { statsModel } from '../../models/stats';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css', './home.style.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
   emailForm: FormGroup;
@@ -21,7 +27,8 @@ export class HomeComponent implements OnInit {
     private scroller: ViewportScroller,
     private emailService: EmailService,
     private _snackBar: MatSnackBar,
-    public EmailStats: statsModel
+    public EmailStats: statsModel,
+    private cd: ChangeDetectorRef
   ) {}
 
   totalEmailvalue;
@@ -99,6 +106,7 @@ export class HomeComponent implements OnInit {
         (this.EmailStats.totalEmails / this.EmailStats.hits) * 100;
       this.totalEmailsSent =
         (this.EmailStats.hits / (this.EmailStats.totalEmails * 10)) * 100;
+      this.cd.markForCheck();
     });
   }
 

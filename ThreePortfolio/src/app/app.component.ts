@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 // import * as THREE from 'three';
 import anime from 'animejs/lib/anime.es.js';
 import { slideInAnimation } from './animation';
@@ -8,6 +8,7 @@ import { slideInAnimation } from './animation';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [slideInAnimation],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
   title = 'ThreePortfolio';

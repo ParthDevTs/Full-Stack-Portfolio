@@ -1,5 +1,11 @@
 import { LoaderService } from './../../loader.service';
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 import Typewriter from 't-writer.js';
 import {
   NavigationEnd,
@@ -13,6 +19,7 @@ import { DarkModeService } from 'src/app/dark-mode.service';
   selector: 'app-top-nav',
   templateUrl: './top-nav.component.html',
   styleUrls: ['./top-nav.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopNavComponent implements OnInit, AfterViewInit {
   isDarkMode;
