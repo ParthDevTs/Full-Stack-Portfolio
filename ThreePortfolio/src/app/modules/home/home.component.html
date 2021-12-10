@@ -180,22 +180,10 @@
       <h4 class="exp-subheading text-center text-muted">
         Full Stack WebDevelopment
       </h4>
-      <h3 class="text-right text-muted">04/21 to Present</h3>
+      <h3 class="text-right text-muted">04/21 to 12/21</h3>
       <div class="split">
-        <img
-          data-aos="fade-left"
-          data-aos-duration="600"
-          data-aos-easing="ease-in-out-quart"
-          class="infosys"
-          src="assets/infosys.png"
-          alt=""
-        />
-        <div
-          class="stack-text"
-          data-aos="fade-right"
-          data-aos-duration="600"
-          data-aos-easing="ease-in-out-quart"
-        >
+        <img class="infosys" src="assets/infosys.png" alt="" />
+        <div class="stack-text infosys__text">
           <p>
             Developed Cortex AI platform, a Full Stack web application to create
             Chatbots and its analytics panels.
@@ -209,6 +197,43 @@
             <li>Git,Figma</li>
           </p>
           <p><b>Placed In HPF with 90% Agg</b></p>
+          <p>
+            Recognised as <b>Maven of FP</b> by being in top 50 employees in Q2
+            of 2021
+          </p>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="container">
+      <h2>Shell</h2>
+      <h4 class="exp-subheading text-center text-muted">
+        Process Data Engineer
+      </h4>
+      <h3 class="text-right text-muted">12/21 to Present</h3>
+      <div class="split">
+        <div class="shell__container">
+          <img
+            class="shell"
+            src="assets/shell.svg"
+            alt="Royal Dutch Shell Logo"
+          />
+        </div>
+        <div class="stack-text shell__text">
+          <p class="text-center">
+            <br />
+            Part of Technical Assets Operations <br />
+            Managing Shell Assets and Analysing Data to provide business
+            solutions to Stakeholders.
+          </p>
+          <br /><br />
+          <p>
+            Technologies used:
+            <br />
+
+            <li>Power Bi, Excel</li>
+            <li>Python: Pandas, MatPlotLib, NumPy</li>
+          </p>
         </div>
       </div>
     </div>
@@ -241,11 +266,9 @@
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
                   type="text"
-                  class="form-control"
                   id="name"
                   placeholder="Full Name"
                   formControlName="name"
-                  required
                 />
                 <mat-error
                   *ngIf="
@@ -271,11 +294,9 @@
                   type="email"
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
-                  class="form-control"
                   id="email"
                   placeholder="name@example.com"
                   formControlName="email"
-                  required
                   data-aos="fade-in"
                 />
                 <mat-error
@@ -307,7 +328,6 @@
                   type="text"
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
-                  class="form-control"
                   id="subject"
                   formControlName="subject"
                   data-aos="fade-in"
@@ -331,12 +351,10 @@
 
                 <textarea
                   matInput
-                  class="form-control"
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out-quart"
                   formControlName="message"
                   id="message"
-                  required
                   rows="3"
                   data-aos="fade-in"
                   data-aos-anchor="#email"
@@ -418,7 +436,7 @@
         [value]="totalEmailsSent"
       >
       </mat-progress-spinner>
-      <p class="text-center stat__numbers">{{ EmailStats.hits }}</p>
+      <p class="text-center stat__numbers">{{ hits }}</p>
       <p class="text-center stat__text">Total Emails Sent</p>
     </div>
     <div class="col-md-4 stats">
@@ -429,7 +447,7 @@
         [value]="totalEmailvalue"
       >
       </mat-progress-spinner>
-      <p class="text-center stat__numbers">{{ EmailStats.totalEmails }}</p>
+      <p class="text-center stat__numbers">{{ totalEmails }}</p>
       <p class="text-center stat__text">Unqiue Users</p>
     </div>
   </div>

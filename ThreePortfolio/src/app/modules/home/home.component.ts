@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
   emailForm: FormGroup;
   showSend: boolean = true;
   isloading: boolean = false;
+  hits: number = 0;
+  totalEmails: number = 0;
 
   constructor(
     private scroller: ViewportScroller,
@@ -31,8 +33,8 @@ export class HomeComponent implements OnInit {
     private cd: ChangeDetectorRef
   ) {}
 
-  totalEmailvalue;
-  totalEmailsSent;
+  totalEmailvalue: number = 0;
+  totalEmailsSent: number = 0;
 
   ngOnInit(): void {
     if (this.scroller.getScrollPosition()[1] > 0) {
@@ -45,7 +47,10 @@ export class HomeComponent implements OnInit {
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       subject: new FormControl(''),
-      message: new FormControl('', Validators.minLength(3)),
+      message: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+      ]),
     });
     this.getStatsApi();
   }
@@ -102,6 +107,8 @@ export class HomeComponent implements OnInit {
     this.emailService.getStats().subscribe((stats) => {
       let a = JSON.stringify(stats);
       this.EmailStats = JSON.parse(a);
+      this.hits = this.EmailStats.hits;
+      this.totalEmails = this.EmailStats.totalEmails;
       this.totalEmailvalue =
         (this.EmailStats.totalEmails / this.EmailStats.hits) * 100;
       this.totalEmailsSent =

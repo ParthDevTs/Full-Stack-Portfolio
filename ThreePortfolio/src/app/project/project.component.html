@@ -71,5 +71,46 @@
         </button>
       </mat-card-actions>
     </mat-card>
+    <mat-card
+      class="example-card col-md-4 portfolio__card"
+      data-aos="fade-up"
+      data-aos-easing="ease-in-sine"
+      data-aos-offset="10"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+    >
+      <mat-card-subtitle>Website</mat-card-subtitle>
+      <mat-card-title>Portfolio</mat-card-title>
+      <img
+        mat-card-image
+        class="angular_picture"
+        src="assets/angular.png"
+        alt="Photo of Parth Kathuria"
+      />
+      <mat-card-content>
+        <p class="card__content">
+          This is a Full Stack Portfolio website made using Angular 10 deployed
+          on Netlify and backend Using NodeJs deployed on Heroku.
+        </p>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions align="end">
+        <a
+          [ngClass]="{ 'dark-mode-link': isDarkMode }"
+          href="https://github.com/ParthDevTs/threeJs-Portfolio"
+          target="_blank"
+        >
+          <button mat-button>View Code</button>
+        </a>
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/project/nodemailer"
+          disabled
+        >
+          Read More
+        </button>
+      </mat-card-actions>
+    </mat-card>
   </section>
 </section>

@@ -29,6 +29,7 @@ import { MatInputModule } from '@angular/material/input';
 import { statsModel } from './models/stats';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Location } from '@angular/common';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { Location } from '@angular/common';
     MatInputModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
+    MatDividerModule,
   ],
   providers: [statsModel, Location],
   bootstrap: [AppComponent],

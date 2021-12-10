@@ -3,7 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-
+*img {
+  image-rendering: optimizeSpeed;
+}
 .section-3 {
   position: relative;
   background: #0f2027; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
@@ -175,10 +177,27 @@
     backdrop-filter: blur(40px);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: solid 2px white;
-    box-shadow: 1.2rem 1.2rem 1.2rem rgba(21, 20, 20, 0.727);
+    border: solid 0.2rem white;
     position: relative;
     padding: 0;
+    box-shadow: 0.3rem 0.3rem 2.5rem rgb(54, 199, 252),
+      0.8rem 0.8rem 4rem rgb(143, 186, 243);
+  }
+
+  .shell {
+    border-radius: 1rem;
+    height: 200px;
+    image-rendering: auto;
+    background: rgba(151, 149, 149, 0.056);
+    z-index: 1;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: transparent 2px white;
+    position: relative;
+    padding: 0;
+    box-shadow: 0.4rem 0.4rem 4rem yellow, 0.8rem 0.8rem 6rem red;
   }
   .exp-heading {
     h3 {
@@ -198,10 +217,10 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: solid 2px white;
-    box-shadow: 1.2rem 1.2rem 1.2rem rgba(29, 28, 28, 0.72);
     position: relative;
     padding: 1.2em;
     border-radius: 1em;
+
     h3 {
       font-family: "Staatliches", cursive;
       text-align: center;
@@ -211,6 +230,43 @@
       justify-self: center;
       font-family: "Gemunu Libre", sans-serif;
       font-size: 1.2em;
+    }
+  }
+
+  .shell__text {
+    position: relative;
+    z-index: 1;
+    border-radius: 1em;
+    min-height: 250px;
+    &::after {
+      content: "";
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: -1;
+      box-shadow: 0.4rem 0.4rem 4rem yellow, 0.8rem 0.8rem 6rem red;
+      border-radius: 1em;
+    }
+  }
+  .infosys__text {
+    position: relative;
+    z-index: 1;
+    border-radius: 1em;
+    &::after {
+      content: "";
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: -1;
+      // box-shadow: 0.4rem 0.4rem 4rem rgba(255, 255, 255, 0.618),
+      //   0.8rem 0.8rem 6rem rgb(0, 174, 255);
+      box-shadow: 0.4rem 0.4rem 2.5rem rgb(54, 199, 252),
+        0.5rem 0.5rem 5rem rgb(20, 118, 247);
+      border-radius: 1em;
     }
   }
 }
@@ -231,7 +287,9 @@
     }
     .infosys {
       height: 270px;
-      padding: 1em;
+    }
+    .shell {
+      height: 270px;
     }
   }
 }

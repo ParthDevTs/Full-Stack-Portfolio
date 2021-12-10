@@ -24,8 +24,9 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-basis: 50%;
+    gap: 8rem;
   }
 }
 
@@ -131,11 +132,48 @@ mat-card {
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0.4rem 0.4rem 6rem rgba(4, 197, 20, 0.802);
+    box-shadow: 0.4rem 0.4rem 4rem rgba(4, 197, 20, 0.802),
+      0.6rem 0.6rem 6rem white;
+    border-radius: 1em;
+    z-index: -1;
+  }
+}
+.portfolio__card {
+  position: relative;
+  border-radius: 1em;
+  mat-card-title {
+    color: rgb(255, 115, 115);
+    font-weight: 600;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0.4rem 0.4rem 4rem red, 0.8rem 0.8rem 6rem white;
     border-radius: 1em;
     z-index: -1;
   }
 }
 section {
   transition: all 0.5s ease-in-out;
+}
+.example-card {
+  img {
+    height: 15rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .projects {
+    .project__cards {
+      flex-direction: row;
+    }
+  }
+  .example-card {
+    img {
+      height: 30rem;
+    }
+  }
 }
