@@ -9,8 +9,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 @NgModule({
-  declarations: [ProjectComponent, NodemailerComponent],
+  declarations: [ProjectComponent, NodemailerComponent, PortfolioComponent],
   imports: [
     CommonModule,
     ProjectRoutingModule,

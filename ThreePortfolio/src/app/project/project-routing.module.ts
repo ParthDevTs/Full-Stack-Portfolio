@@ -1,3 +1,4 @@
+import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NodemailerComponent } from './nodemailer/nodemailer.component';
@@ -7,6 +8,7 @@ import { ProjectComponent } from './project.component';
 const routes: Routes = [
   { path: '', component: ProjectComponent },
   { path: 'nodemailer', component: NodemailerComponent, data: { depth: 3 } },
+  { path: 'portfolio', component: PortfolioComponent, data: { depth: 3 } },
 ];
 
 @NgModule({

@@ -169,7 +169,7 @@
     }
   }
   .infosys {
-    border-radius: 50%;
+    border-radius: 1em;
     height: 200px;
     background: rgba(151, 149, 149, 0.056);
     z-index: 1;
@@ -209,7 +209,7 @@
   }
   .stack-text {
     color: white;
-    margin-top: 1.6em;
+    margin-top: 8rem;
     background: rgba(151, 149, 149, 0.056);
     z-index: 1;
     -webkit-backdrop-filter: blur(40px);
@@ -238,6 +238,9 @@
     z-index: 1;
     border-radius: 1em;
     min-height: 250px;
+    background-color: white;
+    color: red;
+    font-weight: 600;
     &::after {
       content: "";
       top: 0;
@@ -254,6 +257,7 @@
     position: relative;
     z-index: 1;
     border-radius: 1em;
+    background-color: rgb(7, 124, 195);
     &::after {
       content: "";
       top: 0;
@@ -262,10 +266,9 @@
       bottom: 0;
       position: absolute;
       z-index: -1;
-      // box-shadow: 0.4rem 0.4rem 4rem rgba(255, 255, 255, 0.618),
-      //   0.8rem 0.8rem 6rem rgb(0, 174, 255);
-      box-shadow: 0.4rem 0.4rem 2.5rem rgb(54, 199, 252),
-        0.5rem 0.5rem 5rem rgb(20, 118, 247);
+
+      box-shadow: 0.5rem 0.5rem 4.5rem rgb(54, 199, 252),
+        0.8rem 0.8rem 4rem rgb(143, 186, 243);
       border-radius: 1em;
     }
   }
@@ -275,9 +278,12 @@
     .tech-heading {
       font-size: 3em;
     }
+    .stack-text {
+      margin-top: 0;
+    }
     .split {
       flex-direction: row;
-      margin-top: 2em;
+      margin-top: 3rem;
     }
     .split > * {
       flex-basis: 100%;

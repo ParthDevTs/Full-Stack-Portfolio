@@ -1,4 +1,8 @@
-<section class="projects" id="comingSoon">
+<section
+  class="projects"
+  id="comingSoon"
+  [ngClass]="{ light_background: !isDarkMode }"
+>
   <section class="spacing_section">
     <nav
       style="
@@ -84,7 +88,7 @@
       <img
         mat-card-image
         class="angular_picture"
-        src="assets/angular.png"
+        src="assets/angular.svg"
         alt="Photo of Parth Kathuria"
       />
       <mat-card-content>
@@ -105,8 +109,7 @@
         <button
           mat-raised-button
           color="accent"
-          routerLink="/project/nodemailer"
-          disabled
+          routerLink="/project/portfolio"
         >
           Read More
         </button>

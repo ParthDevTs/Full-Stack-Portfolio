@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@1,200&display=swap");
+$card__color: grey;
 $content__paragraph: "PT Sans Caption", sans-serif;
 * {
   transition: all ease-in-out 200ms;
 }
 .projects {
   width: 100%;
-  background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #243b55,
-    #141e30
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to right,
+  //   #243b55,
+  //   #141e30
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-color: rgb(10, 10, 10);
 
   display: flex;
   align-items: center;
@@ -81,7 +84,7 @@ nav {
   padding: 5rem;
   height: 30rem;
   width: 100%;
-  background-color: black;
+  background-color: rgb(37, 37, 37);
 
   box-shadow: 0.2rem 0.2rem 4rem rgb(24, 240, 255);
   z-index: 5;
@@ -121,6 +124,7 @@ mat-card {
 .node__card {
   position: relative;
   border-radius: 1em;
+
   mat-card-title {
     color: rgb(106, 196, 106);
     font-weight: 600;
@@ -176,4 +180,8 @@ section {
       height: 30rem;
     }
   }
+}
+
+.light_background {
+  background-color: rgb(255, 255, 255);
 }
