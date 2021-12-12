@@ -38,13 +38,13 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-    background-attachment: fixed;
     background-blend-mode: multiply;
     display: flex;
     align-items: center;
     justify-content: center;
     border: inset 0.4rem 0rem 0.4rem 0rem rgb(129, 232, 255);
     position: relative;
+    image-rendering: optimizeSpeed;
 
     &::before {
       content: "";
@@ -65,7 +65,6 @@ $content__paragraph: "PT Sans Caption", sans-serif;
         font-family: $main__heading1;
         font-size: 3rem;
         color: rgb(100, 250, 255);
-        text-shadow: 0.2rem 0.2rem 4rem aqua;
       }
     }
   }

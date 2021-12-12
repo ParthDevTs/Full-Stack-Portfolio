@@ -84,21 +84,32 @@ nav {
   padding: 5rem;
   height: 30rem;
   width: 100%;
-  background-color: rgb(37, 37, 37);
+  background: rgb(37, 37, 37) url("/assets/projects.jpg");
 
-  box-shadow: 0.2rem 0.2rem 4rem rgb(24, 240, 255);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-blend-mode: multiply;
+  position: relative;
   z-index: 5;
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    box-shadow: 0.2rem 0.2rem 4rem rgb(24, 240, 255);
+  }
   h1 {
     color: rgb(24, 240, 255);
     font-family: "Press Start 2P", cursive;
     font-size: 4rem;
-    text-shadow: 0.4rem 0.4rem 5rem rgb(2, 238, 255);
+    // text-shadow: 0.4rem 0.4rem 5rem rgb(2, 238, 255);
   }
 }
 
