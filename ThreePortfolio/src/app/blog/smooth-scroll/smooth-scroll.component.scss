@@ -13,6 +13,7 @@ $end-note-font: "Courier Prime", monospace;
 $heading-font: "Molengo", sans-serif;
 *{
   transition: all ease-in-out 200ms;
+  content-visibility: auto;
 }
 section {
   background-color: white;

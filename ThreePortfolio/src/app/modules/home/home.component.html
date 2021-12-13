@@ -250,16 +250,11 @@
         <div class="form__side">
           <div class="glass">
             <form [formGroup]="emailForm" class="form" (ngSubmit)="onSubmit()">
-              <mat-form-field class="mb-3" data-aos="fade-in">
-                <mat-label for="name" class="form-label" data-aos="fade-in"
-                  >Name :
-                </mat-label>
+              <mat-form-field class="mb-3">
+                <mat-label for="name" class="form-label">Name : </mat-label>
                 <input
                   appearance="fill"
                   matInput
-                  data-aos="fade-in"
-                  data-aos-duration="600"
-                  data-aos-easing="ease-in-out-quart"
                   type="text"
                   id="name"
                   placeholder="Full Name"
@@ -280,19 +275,16 @@
                   Name must be greater than 3 Characters
                 </mat-error>
               </mat-form-field>
-              <mat-form-field data-aos="fade-in" class="mb-3">
-                <mat-label for="email" class="form-label" data-aos="fade-in"
+              <mat-form-field class="mb-3">
+                <mat-label for="email" class="form-label"
                   >Email Address :</mat-label
                 >
                 <input
                   matInput
                   type="email"
-                  data-aos-duration="600"
-                  data-aos-easing="ease-in-out-quart"
                   id="email"
                   placeholder="name@example.com"
                   formControlName="email"
-                  data-aos="fade-in"
                 />
                 <mat-error
                   *ngIf="
@@ -309,50 +301,27 @@
                   Email must be <b>Valid</b>
                 </mat-error>
               </mat-form-field>
-              <mat-form-field
-                data-aos-anchor="#email"
-                data-aos="fade-in"
-                data-aos-delay="200"
-                class="mb-3"
-              >
-                <mat-label for="subject" class="form-label" data-aos="fade-in"
+              <mat-form-field data-aos-anchor="#email" class="mb-3">
+                <mat-label for="subject" class="form-label"
                   >Subject :
                 </mat-label>
                 <input
                   matInput
                   type="text"
-                  data-aos-duration="600"
-                  data-aos-easing="ease-in-out-quart"
                   id="subject"
                   formControlName="subject"
-                  data-aos="fade-in"
-                  data-aos-anchor="#email"
                 />
               </mat-form-field>
-              <mat-form-field
-                data-aos-anchor="#email"
-                data-aos="fade-in"
-                data-aos-delay="350"
-                class="mb-3"
-              >
-                <mat-label
-                  for="message"
-                  class="form-label"
-                  data-aos="fade-in"
-                  data-aos-anchor="#email"
-                >
+              <mat-form-field class="mb-3">
+                <mat-label for="message" class="form-label">
                   Message :
                 </mat-label>
 
                 <textarea
                   matInput
-                  data-aos-duration="600"
-                  data-aos-easing="ease-in-out-quart"
                   formControlName="message"
                   id="message"
                   rows="3"
-                  data-aos="fade-in"
-                  data-aos-anchor="#email"
                   placeholder="Write a Text Message"
                 >
                 </textarea>
@@ -380,8 +349,6 @@
                   mat-raised-button
                   type="submit"
                   [disabled]="emailForm.invalid || !showSend"
-                  data-aos="fade-in"
-                  data-aos-anchor="#email"
                 >
                   Send Email
                 </button>
@@ -390,8 +357,6 @@
                   color="primary"
                   mat-raised-button
                   type="reset"
-                  data-aos="fade-in"
-                  data-aos-anchor="#email"
                 >
                   Reset
                 </button>

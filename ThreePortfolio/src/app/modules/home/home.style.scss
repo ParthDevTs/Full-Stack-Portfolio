@@ -116,6 +116,7 @@
 
 .section-4 {
   background: #0f2027;
+  content-visibility: auto;
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
   overflow: hidden;
   -webkit-padding-before: 3rem;
@@ -409,6 +410,7 @@
           padding: 0;
           margin: 0;
           position: relative;
+          content-visibility: auto;
           .image {
             position: relative;
             border-radius: 1rem;
@@ -573,6 +575,7 @@ mat-form-field {
   flex-direction: column;
   color: white;
   box-sizing: border-box;
+  content-visibility: auto;
 
   .heading {
     font-family: "Press Start 2P", cursive;

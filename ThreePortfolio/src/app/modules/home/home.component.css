@@ -14,10 +14,11 @@
     #203a43,
     #0f2027
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- padding-right: min(20%, 10%);
- padding-left: min(20%, 10%) ;
- padding-top: min(20%, 10%) ;
- padding-bottom: min(10%, 5em) ;
+  padding-right: min(20%, 10%);
+  padding-left: min(20%, 10%);
+  padding-top: min(20%, 10%);
+  padding-bottom: min(10%, 5em);
+  content-visibility: auto;
 }
 .section-1::before {
   position: absolute;
@@ -38,19 +39,18 @@
   background: rgba(255, 255, 255, 0.056);
   z-index: 1;
   -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
   color: white;
   border-radius: 3em;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: solid 2px white;
   box-shadow: 2rem 2rem 2rem rgba(4, 4, 4, 0.686);
-  
 }
-.downlaod{
+.downlaod {
   text-decoration: none;
 }
-.download-button{
+.download-button {
   color: rgb(43, 245, 218);
   background-color: black;
   color: rgb(43, 245, 218);
@@ -58,11 +58,11 @@
   position: relative;
   text-shadow: currentColor;
   border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0%  100%/0.3), 0 0 0.45em currentColor;
+  text-shadow: 0 0 0.125em hsl(0 0% 100%/0.3), 0 0 0.45em currentColor;
   box-shadow: 0 0 0.2em 0 rgb(43, 245, 218), inset 0 0 0.2em 0 rgb(43, 245, 218);
 }
-.download-button:hover{
-  background-color: rgba(43, 245, 218, 0.118) ;
+.download-button:hover {
+  background-color: rgba(43, 245, 218, 0.118);
   box-shadow: 0 0 0.6em 0 rgb(43, 245, 218), inset 0 0 0.6em 0 rgb(43, 245, 218);
 }
 
@@ -70,7 +70,8 @@
 .about-footer {
   font-family: "Press Start 2P", cursive;
   color: rgba(158, 233, 243, 0.652);
-  text-shadow: 1.5px 1.5px 1.5px #ffffff, 1.5px 1.5px 1.5px #202020, #ffffff 1.5px 1.5px 1.5px;
+  text-shadow: 1.5px 1.5px 1.5px #ffffff, 1.5px 1.5px 1.5px #202020,
+    #ffffff 1.5px 1.5px 1.5px;
 }
 .about-header {
   top: 0;
@@ -88,10 +89,11 @@
   font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
 }
-.projectsLink{
+.projectsLink {
   color: white;
 }
-.projectsLink:hover, projectsLink:focus{
+.projectsLink:hover,
+projectsLink:focus {
   color: aqua;
 }
 

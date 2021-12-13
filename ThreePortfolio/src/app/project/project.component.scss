@@ -96,6 +96,8 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  image-rendering: auto;
+
   &::after {
     content: "";
     top: 0;
@@ -176,8 +178,10 @@ section {
   transition: all 0.5s ease-in-out;
 }
 .example-card {
+  min-width: 320px;
   img {
     height: 15rem;
+    content-visibility: auto;
   }
 }
 @media only screen and (min-width: 40em) {

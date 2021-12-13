@@ -45,6 +45,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     border: inset 0.4rem 0rem 0.4rem 0rem rgb(129, 232, 255);
     position: relative;
     image-rendering: optimizeSpeed;
+    content-visibility: auto;
 
     &::before {
       content: "";
@@ -61,6 +62,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      content-visibility: auto;
       .banner__heading {
         font-family: $main__heading1;
         font-size: 3rem;
@@ -75,6 +77,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
     position: relative;
     justify-content: center;
     align-items: center;
+    content-visibility: auto;
 
     background: rgba(253, 253, 253, 0.056);
     z-index: 1;
@@ -116,6 +119,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
       margin: 3rem 0rem 3rem 0rem;
       background-color: rgba(214, 209, 209, 0.193);
       border-radius: 1em;
+      content-visibility: auto;
 
       h1 {
         font-family: $content_heading;
@@ -201,6 +205,7 @@ $content__paragraph: "PT Sans Caption", sans-serif;
   // text-align: center;
   margin-top: 2rem;
   width: 100%;
+  content-visibility: auto;
 }
 
 .contact__me {
@@ -213,7 +218,7 @@ nav {
   transform: translate(-50%, -50%);
 
   font-size: 0.8rem;
-
+  content-visibility: auto;
   a {
     text-decoration: none;
     color: black;
