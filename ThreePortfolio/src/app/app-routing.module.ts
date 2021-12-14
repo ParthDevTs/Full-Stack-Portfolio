@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, data: { depth: 1 } },
+  { path: '', component: HomeComponent, data: { depth: 1 } },
   {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
@@ -16,13 +16,13 @@ const routes: Routes = [
     data: { depth: 4 },
   },
   {
-    path: '',
-    redirectTo: 'home',
+    path: 'home',
+    redirectTo: '',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '',
   },
 ];
 

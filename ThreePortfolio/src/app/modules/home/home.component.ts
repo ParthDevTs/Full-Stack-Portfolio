@@ -1,5 +1,6 @@
 import { EmailService } from './email.service';
 import { ViewportScroller } from '@angular/common';
+import { SwUpdate } from '@angular/service-worker';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -11,6 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { statsModel } from '../../models/stats';
+import { Alert } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-home',
@@ -30,7 +32,8 @@ export class HomeComponent implements OnInit {
     private emailService: EmailService,
     private _snackBar: MatSnackBar,
     public EmailStats: statsModel,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private updates: SwUpdate
   ) {}
 
   totalEmailvalue: number = 0;
@@ -53,6 +56,10 @@ export class HomeComponent implements OnInit {
       ]),
     });
     this.getStatsApi();
+
+    this.updates.available.subscribe((event) => {
+      alert('New Update available, Please Reload the page');
+    });
   }
 
   currentSection = 'section1';

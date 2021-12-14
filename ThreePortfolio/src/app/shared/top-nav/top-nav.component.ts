@@ -48,7 +48,7 @@ export class TopNavComponent implements OnInit, AfterViewInit {
 
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
-        if (this.router.url == '/home') {
+        if (this.router.url == '' || this.router.url == '/') {
           this.showDarkMode = false;
         } else {
           this.showDarkMode = true;

@@ -30,6 +30,8 @@ import { statsModel } from './models/stats';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Location } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatDividerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [statsModel, Location],
   bootstrap: [AppComponent],
