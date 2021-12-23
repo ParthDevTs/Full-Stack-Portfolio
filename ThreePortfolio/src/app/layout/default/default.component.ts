@@ -54,7 +54,7 @@ export class DefaultComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
-        if (this.router.url == '/home') {
+        if (this.router.url == '/'||this.router.url == '') {
           this.goBackIcon = false;
         } else {
           this.goBackIcon = true;

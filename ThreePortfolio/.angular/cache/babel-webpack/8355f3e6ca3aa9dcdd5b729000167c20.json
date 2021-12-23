@@ -1,0 +1,1 @@
+{"ast":null,"code":"(function () {\n  if (typeof self !== 'undefined' && !self.Prism || typeof global !== 'undefined' && !global.Prism) {\n    return;\n  }\n\n  Prism.hooks.add('wrap', function (env) {\n    if (env.type !== \"keyword\") {\n      return;\n    }\n\n    env.classes.push('keyword-' + env.content);\n  });\n})();","map":null,"metadata":{},"sourceType":"script"}
