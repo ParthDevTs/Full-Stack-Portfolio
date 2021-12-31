@@ -1,42 +1,200 @@
-<section class="coming__soon">
-  <h1>
-    <mat-icon
-      color="accent"
-      matBadge="number"
-      matBadgePosition="above after"
-      matBadgeColor="warn"
+<main class="all__section">
+  <header id="header" class="header" [ngClass]="{ dark_header: true }">
+    <div class="split">
+      <h1 class="main__heading" [ngClass]="{ dark_main_heading: true }">
+        Portfolio
+        <p
+          class="text-muted small__heading"
+          [ngClass]="{ dark_small_heading: !true }"
+        >
+          ~By <span class="name">Parth Kathuria</span> with
+          <span class="heart">&#10084;</span>
+        </p>
+      </h1>
+
+      <div class="img__section"></div>
+    </div>
+  </header>
+  <section class="main_content">
+    <article
+      class="introduction"
+      [ngClass]="{ dark__introduction: isDarkMode }"
     >
-      settings
-    </mat-icon>
-    COMING SOON
-    <mat-icon
-      color="accent"
-      matBadge="number"
-      matBadgePosition="above after"
-      matBadgeColor="warn"
-    >
-      settings
-    </mat-icon>
-  </h1>
-</section>
-<section class="coming__soon">
-  <h1>
-    <mat-icon
-      color="accent"
-      matBadge="number"
-      matBadgePosition="above after"
-      matBadgeColor="warn"
-    >
-      settings
-    </mat-icon>
-    COMING SOON
-    <mat-icon
-      color="accent"
-      matBadge="number"
-      matBadgePosition="above after"
-      matBadgeColor="warn"
-    >
-      settings
-    </mat-icon>
-  </h1>
-</section>
+      <div class="col-md-8 col-lg-6">
+        <h2>Introduction</h2>
+        <p>
+          This Portfolio Project is an extensive insight to my Web Development
+          career. The site summarizes my journey thus far in my career along
+          with the technologies i have used along the way to get me here.
+          <br />
+          <br />
+          This site has been optimised to look well on a range of devices such
+          as tablets, mobiles and PCs. The emphaisis was to provide a rich
+          experience along with a consistent theme which is followed throughout
+          the website.
+        </p>
+      </div>
+    </article>
+    <article class="technologies__used" [ngClass]="{ dark: isDarkMode }">
+      <div class="col-md-8 col-lg-6">
+        <h3>Technologies Used</h3>
+        <p>
+          As this is a FullStack Website, it uses a range of technologies which
+          are used to develop Frontend, backend and Database.
+          <br />
+          The Technologies are listed below:
+        </p>
+        <div class="tech__list">
+          <ul class="tech__ul">
+            <li class="tech__angular">
+              <h4 class="tech__angular__heading text-center">ANGULAR</h4>
+              <p class="tech__angular__description">
+                Angular is one of the most popular front end frameworks that is
+                available to use which offers a hassle free experience along
+                with many useful in-built features such as a
+                <span class="angular__highlights">Router</span>,
+                <span class="angular__highlights"> Angular Animations </span>,
+                <span class="angular__highlights">Pipes</span>,
+                <span class="angular__highlights">RxJS support</span>,
+                <span class="angular__highlights">Change Detection Ref</span>,
+                <span class="angular__highlights"> two way binding </span>,
+                <span class="angular__highlights"
+                  >Light Dependency Injection</span
+                >
+                .
+                <br />
+                <br />
+                This makes making single page applications very easy.
+              </p>
+            </li>
+            <li class="tech__node">
+              <h4 class="tech__node__heading text-center">NODE JS</h4>
+              <p class="tech__node__description">
+                NodeJs is a javascript asynchronous event-driven runtime
+                environment which is used to build scalable applications.
+                <br />
+                <br />
+                Here, I am using NodeJs in Tandem with
+                <span class="express__highlights">ExpressJs</span> , another
+                Javascript framework which is a major part of
+                <span class="express__highlights">M.E.A.N stack</span>
+                applications. To connect with backend, I have used
+                <span class="express__highlights">Mongoose</span>
+                which can also be used to create schema.
+              </p>
+            </li>
+            <li class="tech__mongo">
+              <h4 class="tech__mongo__heading text-center">MongoDB Atlas</h4>
+              <p class="tech__mongo__description">
+                MongoDB Atlas is a
+                <span class="mongo__highlights"
+                  >Cloud based database service</span
+                >
+                which is built and managed by MongoDB. It provides users cloud
+                data base which can be deployed at an instant without having to
+                use on-premise database
+                <br />
+                <br />
+                It is a
+                <span class="mongo__highlights">NoSQL database</span> and with
+                <span class="mongo__highlights">NodeJs</span> it is very easy to
+                setup and use. This, along with Angular , NodeJs and ExpressJs,
+                completes <span class="mongo__highlights">M.E.A.N stack</span>.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <p>
+          These technologies coupled with some libraries like PrismJs,
+          ParticleJs, AnimeJs and TypewriterJs complete this Portfolio website.
+        </p>
+      </div>
+    </article>
+
+    <article class="features" [ngClass]="{ dark_features: isDarkMode }">
+      <h3 class="text-center feature__heading">Features</h3>
+      <div class="col-md-7 feature__intro">
+        <p>
+          Well, User Experience is as important as User Interface but is often
+          very neglected. In this portfoliio I have added features which aim to
+          improve User Experience.
+        </p>
+      </div>
+      <div class="col-md-7 feature__main">
+        <div class="cosmetic__features">
+          <h4 class="text-center features__subheading">Cosmetic Features</h4>
+          <p>
+            This site contains some
+            <span class="feature__highlights">Cosmetic Features</span> such as
+            <span class="feature__highlights">Scroll To Top</span>, Go back ,
+            <span class="feature__highlights">Light/Dark mode</span> ,
+            <span class="feature__highlights">Sticky Navigation Bar</span>.
+          </p>
+        </div>
+        <div class="functional__features">
+          <h4 class="text-center features__subheading">Functional Features</h4>
+          <p>
+            Along with cosmetic features, there are some
+            <span class="feature__highlights">Functional Features</span> such as
+            <span class="feature__highlights"
+              >PWA or Progressive Web Application</span
+            >
+            , <span class="feature__highlights">Responsiveness</span> ,
+            <span class="feature__highlights"
+              >Service Worker for Offline Loading</span
+            >
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="content" [ngClass]="{ dark: isDarkMode }">
+      <div class="col-md-8 col-lg-6">
+        <h2>Contents</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
+          voluptatem ea repellat facilis a, autem cupiditate, nulla vel maiores
+          beatae quasi fugiat nisi nam nihil quisquam amet labore. Repudiandae,
+          accusamus!
+        </p>
+        <p>
+          Est tempora provident dolorum at consequatur ullam aut excepturi sint!
+          Dicta repellendus illo mollitia totam perspiciatis eveniet optio,
+          aperiam quisquam qui sit? Dolor sint voluptatem alias autem nihil
+          doloremque non.
+        </p>
+        <p>
+          Nemo assumenda, deleniti vitae ipsam officiis eveniet quisquam
+          delectus enim, ex cumque praesentium pariatur laudantium dolorum nobis
+          ad voluptate dolore aut! Voluptatibus quisquam ab illum at molestiae
+          et ipsam numquam.
+        </p>
+      </div>
+    </article>
+
+    <article class="last__notes" [ngClass]="{ dark__last__notes: isDarkMode }">
+      <div class="col-md-9 col-lg-8">
+        <h2>Last Notes</h2>
+        <p>
+          <span
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+            nemo ad atque voluptatum cupiditate laboriosam aliquid qui, ipsam
+            sapiente ipsa eaque natus quam corporis officia id deleniti alias a
+            doloribus!</span
+          ><span
+            >Dignissimos voluptatem repudiandae laudantium necessitatibus
+            temporibus officia eos pariatur facere in. Nisi ex explicabo ipsam
+            dolorem tempore eius laborum sapiente, ad, porro consequuntur nobis
+            harum itaque, tenetur voluptates facilis eum!</span
+          ><span
+            >Temporibus quidem odio assumenda, unde delectus quos nemo debitis
+            magni ratione dolore iusto voluptatibus eum facilis dolorem
+            obcaecati! Temporibus blanditiis illum eos nisi voluptate odio
+            atque, impedit facere laudantium ratione.</span
+          >
+        </p>
+      </div>
+    </article>
+  </section>
+</main>

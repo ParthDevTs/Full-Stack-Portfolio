@@ -14,11 +14,19 @@
             mat-icon-button
             (click)="toggleMode()"
           >
-            <mat-icon *ngIf="!isDarkMode" class="material-icons-two-tone">
-              light_mode
+            <mat-icon
+              *ngIf="!isDarkMode"
+              class="material-icons-two-tone"
+              matTooltip="Turn On Dark Mode"
+            >
+              flashlight_on
             </mat-icon>
-            <mat-icon *ngIf="isDarkMode" class="material-icons-outlined">
-              nights_stay
+            <mat-icon
+              *ngIf="isDarkMode"
+              class="material-icons-outlined"
+              matTooltip="Turn on Light Mode"
+            >
+              flashlight_off
             </mat-icon>
           </button>
         </li>

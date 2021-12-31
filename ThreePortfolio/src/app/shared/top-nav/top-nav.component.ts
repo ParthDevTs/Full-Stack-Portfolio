@@ -42,9 +42,9 @@ export class TopNavComponent implements OnInit, AfterViewInit {
       }
     });
 
-    this.darkmode.darkmode.subscribe(
-      (darkmode) => (this.isDarkMode = darkmode)
-    );
+    this.darkmode.darkmode.subscribe((darkmode) => {
+      this.isDarkMode = darkmode;
+    });
 
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
