@@ -36,9 +36,9 @@
       </div>
     </article>
     <article class="technologies__used" [ngClass]="{ dark: isDarkMode }">
-      <div class="col-md-8 col-lg-6">
-        <h3>Technologies Used</h3>
-        <p>
+      <div class="col-md-10 col-lg-10">
+        <h2 class="tech__used__heading">Technologies Used</h2>
+        <p class="tech__used">
           As this is a FullStack Website, it uses a range of technologies which
           are used to develop Frontend, backend and Database.
           <br />
@@ -105,7 +105,7 @@
           </ul>
         </div>
         <br />
-        <p>
+        <p class="tech__used__end">
           These technologies coupled with some libraries like PrismJs,
           ParticleJs, AnimeJs and TypewriterJs complete this Portfolio website.
         </p>
@@ -113,7 +113,7 @@
     </article>
 
     <article class="features" [ngClass]="{ dark_features: isDarkMode }">
-      <h3 class="text-center feature__heading">Features</h3>
+      <h2 class="text-center feature__heading">Features</h2>
       <div class="col-md-7 feature__intro">
         <p>
           Well, User Experience is as important as User Interface but is often
@@ -151,48 +151,59 @@
 
     <article class="content" [ngClass]="{ dark: isDarkMode }">
       <div class="col-md-8 col-lg-6">
-        <h2>Contents</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
-          voluptatem ea repellat facilis a, autem cupiditate, nulla vel maiores
-          beatae quasi fugiat nisi nam nihil quisquam amet labore. Repudiandae,
-          accusamus!
+        <h2 class="content__heading">Contents</h2>
+        <p class="page__rarchy">
+          Landing Page <br />
+          | <br />
+          |---Home Page <br />
+          | <br />
+          |---Blogs <br />
+          <span class="sub__page">|</span> <br />
+          <span class="sub__page">|--Content Positioning <br /></span>
+          <span class="sub__page">|--Parallax Effect <br /></span>
+          <span class="sub__page">|--Smooth Scrolling <br /></span>
+          <br />
+          |<br />
+          |---Projects <br />
+          <span class="sub__page">|</span><br />
+          <span class="sub__page">|--Email Delivery Server </span><br />
+          <span class="sub__page">|--Portfolio website </span><br />
         </p>
-        <p>
-          Est tempora provident dolorum at consequatur ullam aut excepturi sint!
-          Dicta repellendus illo mollitia totam perspiciatis eveniet optio,
-          aperiam quisquam qui sit? Dolor sint voluptatem alias autem nihil
-          doloremque non.
-        </p>
-        <p>
-          Nemo assumenda, deleniti vitae ipsam officiis eveniet quisquam
-          delectus enim, ex cumque praesentium pariatur laudantium dolorum nobis
-          ad voluptate dolore aut! Voluptatibus quisquam ab illum at molestiae
-          et ipsam numquam.
-        </p>
+
+        <div class="content__pages">
+          <h3 class="content__sub__heading">Home Page</h3>
+          <p>
+            Home page offers a gist into My Personal and Professional life along
+            with the technologies I use and a contact page. <br />
+            It offers a summary of my achievements and experience.
+          </p>
+          <h3 class="content__sub__heading">Blog Page</h3>
+          <p>
+            As the name suggests, it's a page with my articles which I give Tips
+            and Tricks to make your corner of internet better.
+          </p>
+          <h3 class="content__sub__heading">Projects</h3>
+          <p>
+            In this section you'll find a breif description of my projects and
+            their characteristics.
+          </p>
+        </div>
       </div>
     </article>
 
     <article class="last__notes" [ngClass]="{ dark__last__notes: isDarkMode }">
       <div class="col-md-9 col-lg-8">
-        <h2>Last Notes</h2>
+        <h2 class="last__notes__heading">Last Notes</h2>
         <p>
-          <span
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
-            nemo ad atque voluptatum cupiditate laboriosam aliquid qui, ipsam
-            sapiente ipsa eaque natus quam corporis officia id deleniti alias a
-            doloribus!</span
-          ><span
-            >Dignissimos voluptatem repudiandae laudantium necessitatibus
-            temporibus officia eos pariatur facere in. Nisi ex explicabo ipsam
-            dolorem tempore eius laborum sapiente, ad, porro consequuntur nobis
-            harum itaque, tenetur voluptates facilis eum!</span
-          ><span
-            >Temporibus quidem odio assumenda, unde delectus quos nemo debitis
-            magni ratione dolore iusto voluptatibus eum facilis dolorem
-            obcaecati! Temporibus blanditiis illum eos nisi voluptate odio
-            atque, impedit facere laudantium ratione.</span
-          >
+          This portfolio is designed as a Get-To-Know-You and acts as a Proof of
+          Concept, showcasing my Web-Development Skills to possible recruiters
+          and BLogs to help clear doubts of budding Web Developers.
+          <br />
+          Sourcecode of this project is available on Github and to get in touch,
+          you can contact me via Contact me section on
+          <a class="home__link" href="/home">Home Page</a> .
+          <br />
+          Happy Coding!
         </p>
       </div>
     </article>

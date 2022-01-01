@@ -41,7 +41,7 @@ section {
   mat-card {
     margin: 1.5em;
     box-shadow: rgba(0, 0, 0, 0.172) 10px 10px 10px 10px;
-    transition: all ease-in-out 300ms;
+    transition: all ease-in-out 150ms;
 
     p {
       font-family: "Kodchasan", sans-serif;
@@ -110,16 +110,7 @@ nav {
     right: 2em;
   }
 }
-.moon {
-  color: rgb(66, 250, 247);
-  background-color: rgb(24, 23, 23);
-  transition: all ease-in 200ms;
-}
-.sun {
-  color: rgb(238, 210, 0);
-  transition: all ease-in 200ms;
-  background-color: white;
-}
+
 .breadcrumb-item {
   padding-left: 4px;
   padding-top: 3px;
@@ -135,4 +126,52 @@ nav {
   padding-right: 4px;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+.smooth__scrollling{
+  position: relative;
+  border-radius: 1em;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 1em;
+    transition: all 280ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0.5rem 0.5rem 4rem blue;
+  }
+}
+.parallax__effect{
+  position: relative;
+  border-radius: 1em;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 1em;
+    transition: all 280ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0.5rem 0.5rem 4rem beige;
+  }
+}
+.positioning__card{
+  position: relative;
+  border-radius: 1em;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 1em;
+    transition: all 280ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0.5rem 0.5rem 4rem red;
+  }
 }

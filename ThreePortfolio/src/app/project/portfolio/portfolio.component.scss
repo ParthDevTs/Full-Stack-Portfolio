@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Permanent+Marker&family=Pushster&display=swap");
+
+$bungee: "Bungee", cursive;
+$marker: "Permanent Marker", cursive;
+$pushter: "Pushster", cursive;
+$kanit: "Kanit", sans-serif;
 
 * {
   margin: 0;
   padding: 0;
+  transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 220ms;
+
+  h2 {
+    font-family: $bungee;
+  }
 }
+
 .all__section {
   position: relative;
   &::after {
@@ -22,13 +34,13 @@
   color: #03045e;
   font-weight: 800;
   padding: 1rem;
-  height: 100vh;
+
   padding: 1rem 3rem 0 3rem;
   position: relative;
   .split {
     display: flex;
     flex-direction: column-reverse;
-
+    height: 100vh;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -206,7 +218,7 @@ article > * {
   color: hsl(224, 100%, 69%);
 }
 .dark__introduction {
-  background-color: #b7094c;
+  background-color: #b7094ca1;
   color: #caf0f8;
 }
 
@@ -219,19 +231,20 @@ article > * {
   flex-direction: column;
   transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 220ms;
   .feature__heading {
-    font-size: 2rem;
-    font-family: "Kanit", sans-serif;
-    font-weight: 500;
+    font-family: $bungee;
   }
   .feature__intro {
     font-size: 1.6rem;
   }
 
   .feature__main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     flex-basis: 1;
 
@@ -241,7 +254,7 @@ article > * {
       line-height: 2.1rem;
       .features__subheading {
         top: 5%;
-        font-family: "Kanit", sans-serif;
+        font-family: $bungee;
         font-weight: 500;
         font-size: 1.6rem;
       }
@@ -252,7 +265,7 @@ article > * {
       line-height: 2.1rem;
       .features__subheading {
         top: 5%;
-        font-family: "Kanit", sans-serif;
+        font-family: $bungee;
         font-weight: 500;
         font-size: 1.6rem;
       }
@@ -261,7 +274,7 @@ article > * {
 }
 
 .dark_features {
-  background-color: #5c4d7da6;
+  background-color: #a01a589a;
   color: #caf0f8;
   transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 320ms;
 }
@@ -279,6 +292,21 @@ article > * {
   color: #03045e;
   padding: 3rem;
   transition: all 200ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.content {
+  width: 100%;
+  .content__heading {
+    font-family: $bungee;
+  }
+  .content__pages {
+    padding: 1rem 3rem 1rem 3rem;
+    .content__sub__heading {
+      font-family: $marker;
+    }
+    p {
+      font-family: $kanit;
+    }
+  }
 }
 
 .technologies__used {
@@ -305,7 +333,7 @@ article > * {
           font-size: 2rem;
 
           font-family: 500;
-          font-family: "Kanit", sans-serif;
+          font-family: $bungee;
           letter-spacing: 0.3rem;
           text-shadow: 0.2rem 0.2rem 2rem currentColor;
         }
@@ -365,7 +393,7 @@ article > * {
           font-size: 2rem;
           text-shadow: 0.2rem 0.2rem 2rem currentColor;
           font-family: 500;
-          font-family: "Kanit", sans-serif;
+          font-family: $bungee;
           letter-spacing: 0.3rem;
         }
         .tech__node__description {
@@ -425,7 +453,7 @@ article > * {
           font-size: 2rem;
           text-shadow: 0.2rem 0.2rem 2rem currentColor;
           font-family: 500;
-          font-family: "Kanit", sans-serif;
+          font-family: $bungee;
           letter-spacing: 0.3rem;
         }
         .tech__mongo__description {
@@ -478,10 +506,25 @@ article > * {
 
 @media only screen and (min-width: 844px) {
   .technologies__used {
+    .tech__used__heading {
+      padding: 1rem 10rem 1rem 10rem;
+      font-family: $bungee;
+      text-align: center;
+    }
+    .tech__used__end {
+      padding: 1rem 10rem 1rem 10rem;
+    }
+    .tech__used {
+      padding: 1rem 10rem 1rem 10rem;
+    }
     .tech__list {
-      padding: 1.5rem;
+      padding: 0.5rem;
       margin: 1rem;
       .tech__ul {
+        display: grid;
+        place-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
         .tech__angular {
           padding: 2rem;
         }
@@ -506,6 +549,8 @@ article > * {
   background-color: #fec5bb;
   color: #03045e;
   padding: 5rem;
+  width: 100%;
+  font-family: $pushter;
 }
 .dark__last__notes {
   background-color: #a01a589a;
@@ -542,4 +587,57 @@ article > * {
   text-shadow: white 0.1rem 0.1rem 0.1rem;
   background-color: #023d8a38;
   padding: 0.3rem;
+}
+.page__rarchy {
+  padding: 5rem 2rem 5rem 2rem;
+  background-color: #4b0520;
+  border-radius: 1em;
+  font-family: $bungee;
+  color: #b5f4f7;
+  position: relative;
+  margin: 3rem 0 3rem 0;
+  z-index: 1;
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1em;
+    position: absolute;
+    box-shadow: inset 0.3rem 0.3rem 4rem rgba(255, 0, 0, 0.767);
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1em;
+    position: absolute;
+    box-shadow: 0.3rem 0.3rem 4rem rgba(255, 0, 0, 0.767);
+    z-index: -1;
+  }
+}
+@media only screen and (min-width: 844px) {
+  .page__rarchy {
+    padding: 5rem;
+  }
+}
+.sub__page {
+  margin-left: 2.4rem;
+  color: rgb(172, 208, 255);
+  font-family: $kanit;
+  font-size: 1.2rem;
+}
+.home__link {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.411);
+  color: white;
+  padding: 0.3rem;
+
+  &:hover {
+    color: #ade8f4;
+  }
 }
