@@ -130,6 +130,7 @@ nav {
 .smooth__scrollling{
   position: relative;
   border-radius: 1em;
+  z-index: 1;
   &::before {
     content: "";
     position: absolute;
@@ -137,7 +138,7 @@ nav {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1;
+    z-index: -1;
     border-radius: 1em;
     transition: all 280ms cubic-bezier(0.075, 0.82, 0.165, 1);
     box-shadow: 0.5rem 0.5rem 4rem blue;
@@ -146,6 +147,7 @@ nav {
 .parallax__effect{
   position: relative;
   border-radius: 1em;
+  z-index: 1;
   &::before {
     content: "";
     position: absolute;
@@ -153,7 +155,7 @@ nav {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1;
+    z-index: -1;
     border-radius: 1em;
     transition: all 280ms cubic-bezier(0.075, 0.82, 0.165, 1);
     box-shadow: 0.5rem 0.5rem 4rem beige;
@@ -162,6 +164,7 @@ nav {
 .positioning__card{
   position: relative;
   border-radius: 1em;
+  z-index: 1;
   &::before {
     content: "";
     position: absolute;
@@ -169,7 +172,7 @@ nav {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1;
+    z-index: -1;
     border-radius: 1em;
     transition: all 280ms cubic-bezier(0.075, 0.82, 0.165, 1);
     box-shadow: 0.5rem 0.5rem 4rem red;
